@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reservations</title>
-
-
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reservation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -35,16 +35,16 @@
     </header>
   <main>
 
-  <form action id="customerData">
+  <form action="reservations.html" id="customerData">
 <fieldset>
 <label for="lable1"> where are you from </label>
     <input type="text" id="customerFrom" name="from">
     
     <label id="lable2"> how many person? </label>
-    <input type="number" id="numberOfPpl">
+    <input type="number" name="numberOfPpl" id="numberOfPpl">
 
     <label for="slider">slide your budget</label>
-    <input type="range" min="15" max="250" value="50"  id="slider">
+    <input type="range" min="15" max="250" value="50" name="slider"  id="slider">
 
     <!-- getting the submitter value ------------------------------------------------------------------>
     <!-- <script>
@@ -57,25 +57,27 @@
         }
         console.log(output.innerHTML);
         </script> ---------------------------------------------------------------------------------------->
-    <label for="city"> choose one </label>
-        <select name=”city” id="city">
-            <optgroup label="treatment">
-            <option value="jerash">Jerash</option>
-            <option value="madaba">Madaba </option>
-            <option value="jerash">Jerash</option>
-            </optgroup>
-            <optgroup label="culture">
-            <option value="rum">RUM </option>
-            <option value="wadi">wadi</option>
-            <option value="hh">ll </option>
-        </optgroup>
+    <label for="categoury"> choose one </label>
+        <select name="categoury" id="categoury">
+            
+            <option value="Treatment">Treatment</option>
+            <option value="Religious">Religious</option>
+            <option value="Culture">Culture</option>
+            <option value="Entertainment">Entertainment</option>
+                  
             </select>
-    
+ 
+            <label for="hotel">Hotel Included?</label>
+        <input type="checkbox" name="hotel" id="hotel" checked>
+
+            
    <input id="submit" type="submit"> 
 </fieldset>
 </form>
-<p>here where you can check the result </p>
-<div id="result"> </div>
+<section id="result">
+
+
+</section>
 
 
 
@@ -89,7 +91,7 @@
     <p> phone:+9627999999 </p>
 <p> our vision:- we took it on us to show you all of the jordanian culture</p>
 </footer>
-
+<script src="JS/app.js"></script>
 </body>
 
 </html>

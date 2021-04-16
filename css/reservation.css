@@ -1,0 +1,17 @@
+#result{
+    height: 600px;
+    width: 90%;
+    margin:0px 100px;
+    border: 1px solid black;
+  }
+  #customerData{
+    margin-left: 100px;
+    margin-bottom: 20px ;
+  }
+  #result div img{
+   width: 250px;
+   height: 250px;
+  }
+  #result div{
+    border: 1px solid #000;
+  }
