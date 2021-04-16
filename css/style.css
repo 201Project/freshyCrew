@@ -1,24 +1,152 @@
+*{box-sizing: border-box}
+
+header{
+
+  background-color: #717171;
+  height: 100px;
+  top: 0;
+  width: 100%;
+  margin-left:-25px;
+  position: fixed;
+  z-index:22;
+
+  }
+
+  header h1{
+
+    padding-top: 2%;
+
+
+  }
+  
+  #logo{
+  
+  float: left;
+  margin-left: 1%;
+  margin-top: 0%;
+  }
+
+  header nav ul{
+
+padding-right: 150px;
+
+
+
+  }
+  header nav ul li {
+  
+      display: inline;
+
+  }
+  
+  header nav ul li a {
+  
+      color:#AC0D0D ;
+  
+      text-decoration: none;
+      padding: 5px;;
+  }
+  
+  header button{
+  
+  float: right;
+  margin-right: 10px;
+  
+  }
+ 
 
 /* dark mode designing */
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 80px;
+	height: 40px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 130px;
+}
+
+
+#DarkSwitch{
+float: right;
+margin-top:10px;
+}
+
+
 body {
     padding: 25px;
     background-color: rgb(187, 176, 176);
     color: black;
   
 
-  }
+}
   
   .dark-mode {
     background-color: black;
     color: white;
-  }
+}
+
+ #DarkSwitch{
+position: relative;
+top:-52px;
+right: 30px;
+
+}
+
+
+
 /* the end of thw dark-mode design  */
 
+
+
+
+
+
+
+
 /* first of all add the images container sec from the html */
- *{box-sizing: border-box}
+
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
+
+
+#hero{
+  margin-top: 80px;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -111,4 +239,24 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+
+/*footer*/
+
+footer{
+  position: relative;
+  bottom: -25px;
+  clear: both;
+  width: 1518px;
+  background-color: rgb(113, 113, 113);
+  height: 100px;
+  margin-left: -25px;
+ 
+}
+
+footer ul li {
+
+  display: inline;
+  float: right;
 }
