@@ -1,4 +1,19 @@
-/* 
+
+/* dark mode designing */
+body {
+    padding: 25px;
+    background-color: rgb(187, 176, 176);
+    color: black;
+  
+
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+/* the end of thw dark-mode design  */
+
 /* first of all add the images container sec from the html */
  *{box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
