@@ -15,7 +15,7 @@
 // }
 
 
-/
+
 let locations = [
   {
     locationName: 'Amman',
@@ -67,9 +67,9 @@ let locations = [
 
 
 
-let form = document.getElementById('customerData');
+
 let result = document.getElementById('result');
-form.addEventListener('submit', submit);
+
 
 
 function inject() {
@@ -78,10 +78,10 @@ function inject() {
 
     let locationContainer = document.createElement('div');
     let description = document.createElement('p');
-    let price= document.createElement('p');
+    let price = document.createElement('p');
     let heading = document.createElement('h2');
     let locationImage = document.createElement('img');
-    let reserveBtn= document.createElement('button');
+    let reserveBtn = document.createElement('button');
 
     locationContainer.appendChild(heading);
     locationContainer.appendChild(price);
@@ -90,13 +90,136 @@ function inject() {
     locationContainer.appendChild(reserveBtn);
     result.appendChild(locationContainer);
 
-   
-    price.textContent=locations[i].price;
+
+    price.textContent = locations[i].price;
     heading.textContent = locations[i].locationName;
     description.textContent = locations[i].description;
     locationImage.src = locations[i].locationImg;
-    reserveBtn.textContent='Book Now!';//add link in array to book
+    reserveBtn.textContent = 'Book Now!';//add link in array to book
+
+  }
+
+
+}
+
+
+inject();
+//--------------------------------------------------------------------------------------------
+
+let form = document.getElementById('customerData');
+
+form.addEventListener('submit', handleCustomerSubmit);
+
+function handleCustomerSubmit(event) {
+
+  event.preventDefault();
+
+
+  // let from = event.target.from.value;
+
+  /*let NameReg=event.target.NameRegion.value;
+     console.log(NameReg);*/
+
+
+
+  let countPer = event.target.numberOfPer.value;
+  console.log(countPer);
+
+
+  let budget = event.target.slider.value;
+  console.log(budget);
+
+
+  let tripCategouries = event.target.categoury.value;
+  console.log(tripCategouries);
+
+
+  let hotelBooked = event.target.hotel.value;
+
+  console.log(hotelBooked);
+
+  //to hide result
+
+  result.style.display ='none';
+
+
+  if (budget <= 50) {
+
+    if (tripCategouries === 'NoCategoury') {
+
     
+
+
+    } else if (tripCategouries === 'Treatment') {
+
+
+
+    } else if (tripCategouries === 'Religious') {
+
+
+
+    } else if (tripCategouries === 'Culture') {
+
+
+    } else if (tripCategouries === 'Entertainment') {
+
+
+
+    }
+
+
+  }else if(budget>50&&budget<=150){
+
+
+    if (tripCategouries === 'NoCategoury') {
+
+      console.log()
+
+
+    } else if (tripCategouries === 'Treatment') {
+
+
+
+    } else if (tripCategouries === 'Religious') {
+
+
+
+    } else if (tripCategouries === 'Culture') {
+
+
+    } else if (tripCategouries === 'Entertainment') {
+
+
+
+    }
+
+
+  }else if(budget>150&&budget<=250){
+
+
+    if (tripCategouries === 'NoCategoury') {
+
+  
+
+
+    } else if (tripCategouries === 'Treatment') {
+
+
+
+    } else if (tripCategouries === 'Religious') {
+
+
+
+    } else if (tripCategouries === 'Culture') {
+
+
+    } else if (tripCategouries === 'Entertainment') {
+
+
+
+    }
+
+
   }
 
 
@@ -108,15 +231,15 @@ function inject() {
 
 
 
-}
-inject();
 
 
-function submit(event) {
-  event.preventDefault();
-  let from = event.target.from.value;
-  let count = event.target.numberOfPpl.value;
-  let budget = event.target.slider.value;
-  console.log(count);
 
-}
+
+
+
+
+
+
+
+
+}//end function
