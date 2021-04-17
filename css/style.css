@@ -113,7 +113,8 @@ body {
     padding: 25px;
     background-color: rgb(187, 176, 176);
     color: black;
-  
+    max-width: 100%;
+    overflow-x: hidden;
 
 }
   
@@ -185,3 +186,9 @@ footer ul li {
   margin-right:15px ;
 }
 
+#userInfo{
+  border: solid black 1px;
+  margin-top: 100px;
+  width: 60%;
+  margin-left: 250px;
+}
