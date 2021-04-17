@@ -37,15 +37,37 @@
 
   <form action="reservations.html" id="customerData">
 <fieldset>
-<label for="lable1"> where are you from </label>
-    <input type="text" id="customerFrom" name="from">
+    <label for="lable1"> Name Region </label>
+    <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required>
+   
     
     <label id="lable2"> how many person? </label>
-    <input type="number" name="numberOfPpl" id="numberOfPpl">
+    <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20">
 
     <label for="slider">slide your budget</label>
-    <input type="range" min="15" max="250" value="50" name="slider"  id="slider">
+    <input type="range" min="15" max="250" value="50" name="slider"  id="slider"required>
 
+
+
+     <label for="categoury"> choose one </label>
+        <select name="categoury" id="categoury">
+            <option value="NoCategoury">--Please choose an option--</option> 
+            <option value="Treatment"required>Treatment</option>
+            <option value="Religious"required>Religious</option>
+            <option value="Culture"required>Culture</option>
+            <option value="Entertainment"required>Entertainment</option>
+                  
+            </select>
+ 
+            <label for="hotel">Hotel Included?</label>
+           <input type="checkbox" name="hotel" id="hotel" >
+
+            
+   <input id="submit" type="submit"> 
+</fieldset>
+</form>
+
+  
     <!-- getting the submitter value ------------------------------------------------------------------>
     <!-- <script>
         var slider = document.getElementById("myRange");
@@ -57,23 +79,7 @@
         }
         console.log(output.innerHTML);
         </script> ---------------------------------------------------------------------------------------->
-    <label for="categoury"> choose one </label>
-        <select name="categoury" id="categoury">
-            
-            <option value="Treatment">Treatment</option>
-            <option value="Religious">Religious</option>
-            <option value="Culture">Culture</option>
-            <option value="Entertainment">Entertainment</option>
-                  
-            </select>
- 
-            <label for="hotel">Hotel Included?</label>
-        <input type="checkbox" name="hotel" id="hotel" checked>
-
-            
-   <input id="submit" type="submit"> 
-</fieldset>
-</form>
+  
 <section id="result">
 
 
