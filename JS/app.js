@@ -13,6 +13,7 @@
 //   x[myIndex-1].style.display = "block";  
 //   setTimeout(carousel, 2000); // Change image every 2 seconds
 // }
+// }
 
 
 
@@ -21,7 +22,6 @@ let locations = [
     locationName: 'Amman',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex. ',
     locationImg: './img/locations/2.jpg',
-    locationImg: './img/locations/2.jpg ',
     price: 100,
     category: 'city',
     // visitors: localStorage
