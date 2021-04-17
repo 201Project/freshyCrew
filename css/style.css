@@ -1,160 +1,135 @@
-*{box-sizing: border-box}
+* {
+  box-sizing: border-box
+}
 
-header{
+body {
+  padding: 25px;
+  background-color: rgb(187, 176, 176);
+  color: black;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+/*************************** Header Area Style **********************************/
+
+header {
   background-color: #717171;
   height: 75px;
   top: 0;
   width: 100%;
-  margin-left:-25px;
+  margin-left: -25px;
   position: fixed;
-  z-index:22;
+  z-index: 22;
+}
 
-  }
+header h1 {
+  padding-top: 2%;
+}
 
-  header h1{
-
-    padding-top: 2%;
-
-
-  }
-  
-  #logo{
-  
+#logo {
   float: left;
   margin-left: 1%;
   margin-top: 0%;
-  }
+}
 
-  header nav ul{
+header nav ul {
+  padding-right: 150px;
+}
 
-padding-right: 150px;
+header nav ul li {
+  display: inline;
+}
 
+header nav ul li a {
+  color: #afacac;
+  text-decoration: none;
+  padding: 5px;
+  ;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+}
 
-
-  }
-  header nav ul li {
-  
-      display: inline;
-
-  }
-  
-  header nav ul li a {
-  
-      color:#afacac ;
-  
-      text-decoration: none;
-      padding: 5px;;
-      font-weight: bolder;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 25px;
-  }
-  
-  header button{
-  
+header button {
   float: right;
   margin-right: 10px;
-  
-  }
- 
-
-/* dark mode designing */
-
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
 }
 
-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 80px;
-	height: 40px;
-	background: grey;
-	display: block;
-	border-radius: 100px;
-	position: relative;
+/************************* Dark Mode Style *****************************/
+
+#switch-check{
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
-label:after {
-	content: '';
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 30px;
-	height: 30px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
+#toggle{
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
 }
 
-input:checked + label {
-	background: #bada55;
+#toggle:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
 }
 
-input:checked + label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
+#switch-check:checked+#toggle {
+  background: #bada55;
 }
 
-label:active:after {
-	width: 130px;
+#switch-check:checked+#toggle:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
 }
 
-
-#DarkSwitch{
-float: right;
-margin-top:-13px;
+#toggle:active:after {
+  width: 130px;
 }
 
-
-body {
-    padding: 25px;
-    background-color: rgb(187, 176, 176);
-    color: black;
-    max-width: 100%;
-    overflow-x: hidden;
-
+#DarkSwitch {
+  float: right;
+  margin-top: -13px;
+  position: relative;
+  top: -52px;
+  right: 30px;
 }
-  
-  .dark-mode {
-    background-color: black;
-    color: white;
+.dark-mode {
+  background-color: black;
+  color: white;
 }
+/************************* Dark Mode Style End ***********************************/
 
- #DarkSwitch{
-position: relative;
-top:-52px;
-right: 30px;
-
-}
-
+/*************************** Header Area Style **********************************/
 
 
 /* the end of thw dark-mode design  */
 
-
-
-
-
-
-
-
 /* first of all add the images container sec from the html */
 
-body {font-family: Verdana, sans-serif; margin:0}
-
-
-#hero{
+#hero {
   margin-top: 60px;
-
 }
-.mySlides {display:none;}
-/*footer*/
 
+.mySlides {
+  display: none;
+}
 
-footer{
+/*********************************Footer Area Style****************************************/
+
+footer {
   position: relative;
   bottom: -25px;
   clear: both;
@@ -162,33 +137,157 @@ footer{
   background-color: rgb(113, 113, 113);
   height: 100px;
   margin-left: -25px;
- 
 }
 
 footer ul li {
-
   display: inline;
   float: right;
 }
-#introPar{
+
+/*********************************Footer Area Style End****************************************/
+
+#introPar {
   margin-top: 10px;
   text-align: justify;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
-#ourInfo{
-  display: inline;
 
+#ourInfo {
+  display: inline;
 }
-#ourInfo li{
+
+#ourInfo li {
   margin-top: -4px;
   margin-left: 15px;
-  margin-right:15px ;
+  margin-right: 15px;
 }
 
-#userInfo{
+#userInfo {
   border: solid black 1px;
   margin-top: 100px;
   width: 60%;
   margin-left: 250px;
 }
+
+/**************************************Reservations Style****************************/
+
+#result {
+  margin: 0px 100px;
+  border: 1px solid black;
+}
+
+#customerData {
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+#result div img {
+  width: 250px;
+  height: 250px;
+}
+
+.location {
+  margin: 10px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.divLeft {
+  width: 15%;
+  float: left;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+.divRight {
+  margin-top: 20px;
+  width: 75%;
+  float: right;
+  margin-right: 10px;
+}
+
+.divRight h2 {
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+.divRight p {
+  padding-bottom: 10px;
+}
+
+.description {
+  height: 130px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin-bottom: 10px;
+}
+
+/**************************************Reservations Style End****************************/
+
+/**************************************About US Style***********************************/
+
+.row {
+  margin: 5px;
+  display: block;
+  margin-left: 170px;
+  margin-bottom: 50px;
+}
+
+.container h2 {
+  padding: 5px;
+  font-weight: 900;
+  font-size: larger;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-weight: 800;
+  font-size: large;
+}
+
+.container p {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.card {
+  width: 300px;
+  display: inline-block;
+  border: solid 1px black;
+  text-transform: capitalize;
+  margin-right: 60px;
+}
+
+.card img {
+  height: 250px;
+  width: 250px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 30px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 10px;
+}
+
+.container ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.container ul {
+  width: 80%;
+  margin-left: 70px;
+}
+
+/**************************************About US Style End***********************************/
