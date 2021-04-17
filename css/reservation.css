@@ -1,6 +1,7 @@
+*{
+  box-sizing: border-box;
+}
 #result{
-    height: 600px;
-    width: 90%;
     margin:0px 100px;
     border: 1px solid black;
   }
@@ -12,6 +13,41 @@
    width: 250px;
    height: 250px;
   }
-  #result div{
-    border: 1px solid #000;
+  
+  .card{
+    margin: 10px;
+    height: 300px;
+    border: 1px solid black;
+
   }
+  .divLeft{
+    width: 15%;
+    float: left;
+    margin: 5px;
+    margin-top: 20px;
+  }
+
+  .divRight{
+    margin-top: 20px;
+    width: 75%;
+    float: right;
+    margin-right: 10px;
+   
+  }
+
+  .divRight h2{
+    font-size: 30px;
+    font-weight: 800;
+    padding-bottom: 10px;
+  }
+  .divRight p{
+    padding-bottom: 10px;
+  }
+
+  .description{
+    height: 150px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    margin-bottom: 10px;
+  }
+ 
