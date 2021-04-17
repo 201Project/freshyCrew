@@ -15,7 +15,7 @@
 // }
 
 
-/
+
 let locations = [
   {
     locationName: 'Amman',
@@ -29,9 +29,9 @@ let locations = [
   {
     locationName: 'Amman',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
+    locationImg: './img/locations/2.jpg',
     price: 100,
-    category: 'city',
+    category: 'treatment',
     // visitors: localStorage
   },
   {
@@ -118,5 +118,8 @@ function submit(event) {
   let count = event.target.numberOfPpl.value;
   let budget = event.target.slider.value;
   console.log(count);
+
+
+
 
 }
