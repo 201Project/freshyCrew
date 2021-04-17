@@ -89,7 +89,7 @@ function inject() {
 
 
     description.className = "description";
-    locationContainer.className = "card";
+    locationContainer.className = "location";
     locationContainer.appendChild(imgContainer);
     imgContainer.className = "divLeft";
     locationContainer.appendChild(textContainer);
