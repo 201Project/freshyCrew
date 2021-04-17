@@ -51,25 +51,75 @@
     <hr>
 
     <main>
+        <!-----------------------Section for add Form By Alaa & Zainb-------------------------->
         <section id="userInfo">
-            <form action="">
-                <label for="userName"></label>
-                <input type="text" name="userName" id="userName">
 
-                <label for="email"></label>
-                <input type="email" name="email" id="email">
-
-                <label for="phone"></label>
-                <input type="number" name="phone" id="phone">
-
-                <label for="address"></label>
-                <input type="text" name="address" id="address">
-
-                <label for="submit"></label>
+            <form  id="formCheckout">
+               <fieldset>
+                <label for="userName">Name:</label>
+                <input type="text" name="userName" id="userName" required autocomplete="off">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="example@gmail.com" name="email" id="email" required autocomplete="off">
+                <br>
+                <label for="phone">Phone:</label>
+                <input type="tel" placeholder="962-792955860" name="phone" id="phone" required autocomplete="off" >
+                <br>
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" required autocomplete="off">
+                <br>
+                <label for="submit">Submit:</label>
                 <input type="submit" name="submit" id="submit">
-            </form>
+               </fieldset>
+              </form> 
         </section>
-
+        <!-----------------This div for render the form data By Alaa & Zainb----------------------->
+        <div id="detailsCheckout">
+         
+        </div>
+        <!--Add Script to Form checkout (We added it here because in app.js there is an error)-->
+        <script>
+            //-------------start form function for the checkout page By Alaa & Zainb----------
+            let details = document.getElementById('detailsCheckout');
+            let formCheckout = document.getElementById('formCheckout');
+            formCheckout.addEventListener('submit', handleSaveCheckout);
+            
+            function handleSaveCheckout(e){
+             e.preventDefault();
+            let userName = e.target.userName.value;
+            let email = e.target.email.value;
+            let phone = e.target.phone.value ;
+            let address = e.target.address.value;
+            let ulElement = document.createElement('ul');
+            details.appendChild(ulElement);
+            let infoUser = [userName,email,phone,address];
+            let liElement1=document.createElement('li');
+            let liElement2=document.createElement('li');
+            let liElement3=document.createElement('li');
+            let liElement4=document.createElement('li'); 
+            
+              ulElement.appendChild(liElement1);
+              ulElement.appendChild(liElement2);
+              ulElement.appendChild(liElement3);
+              ulElement.appendChild(liElement4);
+            
+              liElement1.textContent = `Name:${userName} `;
+              liElement2.textContent = `Email: ${email}`;
+              liElement3.textContent = `Phone:${phone}`;
+              liElement4.textContent = `Address:${address}` ;
+            
+            
+            }
+            
+            
+            </script>
+            <!----------------------End of script form------------------>
+            <!----------------------Div for PLAY part by Alaa & Zainb(not finish yet)------------>
+            <div>
+                <p>Lets play to get discount!</p>
+                <img src="img/letsplayimg.gif" alt="play_icon" onclick="c">
+            </div>
+            <!----------------------END of work Alaa & Zainb --------------------->
     </main>
 
     <footer>
