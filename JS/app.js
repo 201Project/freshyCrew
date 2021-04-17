@@ -17,11 +17,11 @@
 // }
 /////////////declare an array to add the cities/////
 
-const cities=['amman','karak'];
-const description=['loremAmman','loremKarak'];
-const image=['urlImgAmman','urlImgkarak'];
-const price=['100amman','150karak'];
-const category=['ammanTreatment','karakTreatment'];
+const cities=['amman','karak','ewe'];
+const description=['loremAmman','loremKarak','urlImgkarak'];
+const image=['urlImgAmman','urlImgkarak','wewdsa'];
+const price=[50,150,100];
+const category=['Treatment','Religious','Treatment'];
 ///////////////end of the cities info array//////
 
 let locations = [];
@@ -41,7 +41,7 @@ for (let i = 0; i < cities.length; i++) {
   new Categories(cities[i],description[i],image[i],price[i],category[i]); 
    
 }
-console.log(locations);
+// console.log(locations);
 /////////////the end of instaces/////////
 
 
@@ -52,29 +52,51 @@ function inject() {
   for (let i = 0; i < locations.length; i++) {
 
     let locationContainer = document.createElement('div');
+    locationContainer.className = "location";
+    locationContainer.appendChild(textContainer);
+    locationContainer.appendChild(imgContainer);
+    
+    
+    
     let imgContainer = document.createElement('div');
-    let textContainer = document.createElement('div');
+    imgContainer.appendChild(locationImage);
+    imgContainer.className = "divLeft";
+    
 
+    let textContainer = document.createElement('div');
+    
     let description = document.createElement('p');
+    
+    
+    description.className = "description";
+    textContainer.appendChild(description);
+    textContainer.className = "divRight";
+    
+
+
     let price = document.createElement('p');
     let heading = document.createElement('h2');
     let locationImage = document.createElement('img');
     let reserveBtn = document.createElement('button');
 
 
-    description.className = "description";
-    locationContainer.className = "location";
-    locationContainer.appendChild(imgContainer);
-    imgContainer.className = "divLeft";
-    locationContainer.appendChild(textContainer);
-    textContainer.className = "divRight";
 
-    imgContainer.appendChild(locationImage);
+
+
+
+
+
+
+
     textContainer.appendChild(heading);
-    textContainer.appendChild(description);
-    // locationContainer.appendChild(locationImage);
+
+
+  
+
     textContainer.appendChild(price);
+
     textContainer.appendChild(reserveBtn);
+
     result.appendChild(locationContainer);
 
 
@@ -91,7 +113,6 @@ function inject() {
 
 
 }
-
 
 inject();
 //--------------------------------------------------------------------------------------------
@@ -112,123 +133,32 @@ function handleCustomerSubmit(event) {
 
 
   let countPer = event.target.numberOfPer.value;
-  console.log(countPer);
+  // console.log(countPer);
 
 
   let budget = event.target.slider.value;
-  console.log(budget);
+  // console.log(budget);
 
 
   let tripCategouries = event.target.categoury.value;
-  console.log(tripCategouries);
+  // console.log(tripCategouries);
 
 
   let hotelBooked = event.target.hotel.value;
 
-  console.log(hotelBooked);
+  // console.log(hotelBooked);
 
-  //to hide result
-
-  result.style.display ='none';
-
-
-  if (budget <= 50) {
-
-    if (tripCategouries === 'NoCategoury') {
-
+  for (let i=0 ;i < locations.length ;i++){
+  if (tripCategouries !=='NoCategoury'){
+    if (locations[i].category == tripCategouries&&locations[i].price <= budget ) {
+      console.log('fadi',locations[i]);
+  }}
+  else{
+    if(locations[i].price <= budget){
+      console.log('else',locations[i]);
+    }
+  }
+    
     
 
-
-    } else if (tripCategouries === 'Treatment') {
-
-
-
-    } else if (tripCategouries === 'Religious') {
-
-
-
-    } else if (tripCategouries === 'Culture') {
-
-
-    } else if (tripCategouries === 'Entertainment') {
-
-
-
-    }
-
-
-  }else if(budget>50&&budget<=150){
-
-
-    if (tripCategouries === 'NoCategoury') {
-
-      console.log();
-
-
-    } else if (tripCategouries === 'Treatment') {
-
-
-
-    } else if (tripCategouries === 'Religious') {
-
-
-
-    } else if (tripCategouries === 'Culture') {
-
-
-    } else if (tripCategouries === 'Entertainment') {
-
-
-
-    }
-
-
-  }else if(budget>150&&budget<=250){
-
-
-    if (tripCategouries === 'NoCategoury') {
-
-  
-
-
-    } else if (tripCategouries === 'Treatment') {
-
-
-
-    } else if (tripCategouries === 'Religious') {
-
-
-
-    } else if (tripCategouries === 'Culture') {
-
-
-    } else if (tripCategouries === 'Entertainment') {
-
-
-
-    }
-
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}//end function
+  }}

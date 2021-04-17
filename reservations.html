@@ -37,7 +37,7 @@
 
         </span>
 
-        <!-- ------------------if we want to move it to app.js-------------------------------dark mode Function -->
+        <!--------------------if we want to move it to app.js-------------------------------dark mode Function -->
         <script>
             function myFunction() {
                 var element = document.body;
@@ -54,16 +54,16 @@
 
   <form action="reservations.html" id="customerData">
 <fieldset>
-    <label for="lable1"> Name Region </label>
-    <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required>
+    <!-- <label for="lable1"> Name Region </label> -->
+    <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
    
     
     <label id="lable2"> how many person? </label>
     <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20">
 
     <label for="slider">slide your budget</label>
-    <input type="range" min="15" max="250" value="50" name="slider"  id="slider"required>
-
+    <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required>
+<p id='sliderValue'></p>
 
 
      <label for="categoury"> choose one </label>
@@ -86,16 +86,16 @@
 
   
     <!-- getting the submitter value ------------------------------------------------------------------>
-    <!-- <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
+     <script>
+        var slider = document.getElementById("slider");
+        var output = document.getElementById("sliderValue");
         output.innerHTML = slider.value;
         
         slider.oninput = function() {
           output.innerHTML = this.value;
         }
         console.log(output.innerHTML);
-        </script> ---------------------------------------------------------------------------------------->
+        </script> 
   
 <section id="result">
 
