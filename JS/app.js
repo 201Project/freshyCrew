@@ -1,3 +1,4 @@
+'use strict';
 // first of all add the codes of the images container sec from the html
 // var myIndex = 0;
 // carousel();
@@ -14,64 +15,37 @@
 //   setTimeout(carousel, 2000); // Change image every 2 seconds
 // }
 // }
+/////////////declare an array to add the cities/////
 
+const cities=['amman','karak'];
+const description=['loremAmman','loremKarak'];
+const image=['urlImgAmman','urlImgkarak'];
+const price=['100amman','150karak'];
+const category=['ammanTreatment','karakTreatment'];
+///////////////end of the cities info array//////
 
+let locations = [];
 
-let locations = [
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex. ',
-    locationImg: './img/locations/2.jpg',
-    price: 100,
-    category: 'city',
-    // visitors: localStorage
+function Categories(name,description,image,price,category){
+  this.name=name,
+  this.description=description;
+  this.image=image;
+  this.price=price;
+  this.category=category;
 
-  },
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 100,
-    category: 'city',
-    // visitors: localStorage
-  },
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 160,
-    category: 'city',
-    // visitors: localStorage
-  },
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 150,
-    category: 'city',
-    // visitors: localStorage
-  },
-
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 200,
-    category: 'city',
-    // visitors: localStorage
-  }
-
-
-
-
-];
-
-
+  locations.push(this);
+}
+//////for loop to loop over the cities ifo arrays to insance the objects///////
+for (let i = 0; i < cities.length; i++) {
+  
+  new Categories(cities[i],description[i],image[i],price[i],category[i]); 
+   
+}
+console.log(locations);
+/////////////the end of instaces/////////
 
 
 let result = document.getElementById('result');
-
-
 
 function inject() {
 
@@ -137,7 +111,6 @@ function handleCustomerSubmit(event) {
      console.log(NameReg);*/
 
 
-
   let countPer = event.target.numberOfPer.value;
   console.log(countPer);
 
@@ -189,7 +162,7 @@ function handleCustomerSubmit(event) {
 
     if (tripCategouries === 'NoCategoury') {
 
-      console.log()
+      console.log();
 
 
     } else if (tripCategouries === 'Treatment') {
