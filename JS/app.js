@@ -1,20 +1,22 @@
 'use strict';
 
 // }
-
 /////////////declare an array to add the cities/////
 
-const cities = ['amman', 'karak', 'ewe'];
-const description = ['loremAmman', 'loremKarak', 'urlImgkarak'];
-const image = ['../img/locations/2.jpg', 'urlImgkarak', 'wewdsa'];
-const price = [50, 150, 100];
-const category = ['Treatment', 'Religious', 'Treatment'];
-///////////////end of the cities info array//////
 
+const names = ['gym1', 'gym2', 'gym3', 'gym4', 'gym4', 'gym5', 'gym6', 'gym7', 'gym8'];
+const cities = ['Amman', 'Zarqa', 'Irbid', 'Amman', 'Zarqa', 'Irbid', 'Online', 'Online'];
+const description = ['FirstDesqAmman', 'SecondDesqZarqa', 'ThirdDesqIrbid', '2FirstDesqAmman', '2SecondDesqZarqa', '2ThirdDesqIrbid', 'FIRSTonline', 'SecondOnline'];
+const image = ['FirstimgAmman', 'SecondimgZarqa', 'ThirdimgIrbid', '2FirstimgAmman', '2SecondimgZarqa', '2ThirdimgIrbid', 'FIRSTimgonline', 'SecondimgOnline'];
+const price = [50, 150, 100, 120, 150, 200, 75, 250];
+const category = ['Men', 'Women', 'Men', 'Mix', 'Men', 'Mix', 'Mix', 'Mix'];
+
+///////////////end of the cities info array//////
 let locations = [];
 
-function Categories(name, description, image, price, category) {
-  this.name = name;
+function GymCategories(name, cities, description, image, price, category) {
+  this.names = name;
+  this.cities = cities;
   this.description = description;
   this.image = image;
   this.price = price;
@@ -24,9 +26,9 @@ function Categories(name, description, image, price, category) {
 }
 //////for loop to loop over the cities ifo arrays to insance the objects///////
 for (let i = 0; i < cities.length; i++) {
-  new Categories(cities[i], description[i], image[i], price[i], category[i]);
+  new GymCategories(names[i], cities[i], description[i], image[i], price[i], category[i]);
 }
-// console.log(locations);
+console.log(locations);
 /////////////the end of instaces/////////
 
 
@@ -64,22 +66,31 @@ function inject() {
 
     console.log(reserveBtn);
     price.textContent = 'Price: ' + locations[i].price;
-    heading.textContent = locations[i].name;
+    heading.textContent = locations[i].names;
     description.textContent = locations[i].description;
     locationImage.src = locations[i].image;
     reserveBtn.textContent = 'Book Now!'; //add link in array to book
-
     // -------------------- mohamad and nazmih -------------------------
     reserveBtn.addEventListener('click', goToCheckout);
 
     function goToCheckout(event) {
       event.preventDefault();
-      let stringOfLocations = JSON.stringify(locations[i]);
+      let count=0;
+      if(localStorage.getItem('cartCounter')){
+        localStorage.setItem('cartCounter',Number.parseInt(localStorage.getItem('cartCounter'))+1);
+      }
+      else
+      {
+        count++;
+        localStorage.setItem('cartCounter',count);
+      }
+      let stringOfLocations = JSON.stringify(locations);
       localStorage.setItem('gyms', stringOfLocations);
-
+      count++;
+      
       console.log(stringOfLocations);
 
-      window.location.href = 'checkout.html';
+
     }
   }
 }
@@ -95,38 +106,32 @@ form.addEventListener('submit', handleCustomerSubmit);
 function handleCustomerSubmit(event) {
   event.preventDefault();
 
-  // let from = event.target.from.value;
-
-  /*let NameReg=event.target.NameRegion.value;
-     console.log(NameReg);*/
-
-  let countPer = event.target.numberOfPer.value;
-  // console.log(countPer);
-
-  let budget = event.target.slider.value;
+  let place = event.target.categouryPlace.value;
   // console.log(budget);
 
-  let tripCategouries = event.target.categoury.value;
-  // console.log(tripCategouries);
+  let genderCategouries = event.target.categouryGender.value;
 
-  let hotelBooked = event.target.hotel.value;
+  let onlineCourse = '';
+  if (event.target.online.checked) {
+    onlineCourse = 'Online';
+    // console.log(onlineCourse);
+  }
+  else {
+    onlineCourse = '';
+  }
 
-  // console.log(hotelBooked);
-
+  //  console.log('onlinehere',onlineCourse);
+  console.log(place, genderCategouries);
   // ----------------------------for loop to loop over the user choices FADI&MOHAMMED--------------------
   for (let i = 0; i < locations.length; i++) {
-    if (tripCategouries !== 'NoCategoury') {
-      if (
-        locations[i].category == tripCategouries &&
-        locations[i].price <= budget
-      ) {
-        console.log('fadi', locations[i]);
-      }
-    } else {
-      if (locations[i].price <= budget) {
-        console.log('else', locations[i]);
-      }
+    if (locations[i].cities == onlineCourse) {
+      console.log('first', locations[i]);
+    }
+    if (((locations[i].category == genderCategouries) && (genderCategouries !== 'NoCategoury')) || ((locations[i].cities == place) && (place !== 'NoPlaceCategoury'))) {
+      console.log('secondelse', locations[i]);
+
     }
   }
 }
-// -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
+ //REMOVE EVENT LISTENER
+// // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------

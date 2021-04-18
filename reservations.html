@@ -27,6 +27,7 @@
                     <li> <a href="reservations.html">Book Now</a> </li>
                     <li> <a href="aboutus.html">About Us</a> </li>
                     <li> <a href="checkout.html">Checkout</a> </li>
+                    <li id='cart'></li>
                 </ul>
 
 
@@ -58,35 +59,53 @@
     <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
    
     
-    <label id="lable2"> how many person? </label>
-    <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20">
+    <!-- <label id="lable2"> how many person? </label>
+    <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20"> -->
 
-    <label for="slider">slide your budget</label>
-    <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required>
-<p id='sliderValue'></p>
+    <!-- <label for="slider">slide your budget</label>
+    <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required> -->
+<!-- <p id='sliderValue'></p> -->
+<input type="checkbox" name="online" id="online"> 
+<label for="online">Online Course Only </label> 
 
 
-     <label for="categoury"> choose one </label>
-        <select name="categoury" id="categoury">
-            <option value="NoCategoury">--Please choose an option--</option> 
-            <option value="Treatment"required>Treatment</option>
-            <option value="Religious"required>Religious</option>
-            <option value="Culture"required>Culture</option>
-            <option value="Entertainment"required>Entertainment</option>
+     <label for="categouryGender"> You Are Intrested In : </label>
+        <select name="categouryGender" id="categouryGender">
+            <option value="NoCategoury">--Please choose What Kind Of Gym--</option> 
+            <option value="Men" required>Men</option>
+            <option value="Women" required>Women</option>
+            <option value="Mix" required>Mix</option>
                   
             </select>
- 
-            <label for="hotel">Hotel Included?</label>
-           <input type="checkbox" name="hotel" id="hotel" >
-
+<!--  
+            <label for="categouryRemot"> choose one gym pt online </label>
+            <select name="categouryRemot" id="categouryRemot">
+                <option value="NoACategoury">--Please choose an option--</option> 
+                <option value=" Online"required>Online Courses</option>
+                <option value="OnlinePt"required>Online Personal Trainer</option>
+                <option value="goTO"required>Go To Gym</option>
+                <option value="Child"required>Child</option> -->
+                      
+                <!-- </select> -->
+     
+                <label for="categouryPlace"> You Are In : </label>
+        <select name="categouryPlace" id="categouryPlace">
+            <option value="NoPlaceCategoury">--Please choose Your City--</option> 
+            <option value="Amman"required>Amman</option>
+            <option value="Zarqa"required>Zarqa</option>
+            <option value="Irbid"required>Irbid</option>
+            <!-- <option value=""required>Child</option> -->
+                  
+            </select>
+         
             
-   <input id="submit" type="submit"> 
+   <input id="submit" value="Submit" type="submit"> 
 </fieldset>
 </form>
 
   
-    <!-- getting the submitter value ------------------------------------------------------------------>
-     <script>
+    <!-- getting the sliderr value ------------------------------------------------------------------>
+     <!-- <script>
         var slider = document.getElementById("slider");
         var output = document.getElementById("sliderValue");
         output.innerHTML = slider.value;
@@ -95,8 +114,9 @@
           output.innerHTML = this.value;
         }
         console.log(output.innerHTML);
-        </script> 
-  
+        </script>  -->
+      <!-- getting the sliderr value ------------------------------------------------------------------>
+
 <section id="result">
 
 
@@ -141,6 +161,7 @@
     &copy;Copyright2021 Reserved For freshy Crew&trade;
 </footer>
 <script src="JS/app.js"></script>
+<script src="JS/cart.js"></script>
 </body>
 
 </html>
