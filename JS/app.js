@@ -6,7 +6,7 @@
 
 const cities = ['amman', 'karak', 'ewe'];
 const description = ['loremAmman', 'loremKarak', 'urlImgkarak'];
-const image = ['urlImgAmman', 'urlImgkarak', 'wewdsa'];
+const image = ['../img/locations/2.jpg', 'urlImgkarak', 'wewdsa'];
 const price = [50, 150, 100];
 const category = ['Treatment', 'Religious', 'Treatment'];
 ///////////////end of the cities info array//////
@@ -14,7 +14,8 @@ const category = ['Treatment', 'Religious', 'Treatment'];
 let locations = [];
 
 function Categories(name, description, image, price, category) {
-  (this.name = name), (this.description = description);
+  this.name = name;
+  this.description = description;
   this.image = image;
   this.price = price;
   this.category = category;
@@ -32,7 +33,7 @@ for (let i = 0; i < cities.length; i++) {
 let result = document.getElementById('result');
 function inject() {
   for (let i = 0; i < locations.length; i++) {
-    
+
     let locationContainer = document.createElement('div');
     locationContainer.className = 'location';
     result.appendChild(locationContainer);
@@ -61,13 +62,28 @@ function inject() {
     let reserveBtn = document.createElement('button');
     textContainer.appendChild(reserveBtn);
 
+    console.log(reserveBtn);
     price.textContent = 'Price: ' + locations[i].price;
-    heading.textContent = locations[i].locationName;
+    heading.textContent = locations[i].name;
     description.textContent = locations[i].description;
-    locationImage.src = locations[i].locationImg;
+    locationImage.src = locations[i].image;
     reserveBtn.textContent = 'Book Now!'; //add link in array to book
+
+    // -------------------- mohamad and nazmih -------------------------
+    reserveBtn.addEventListener('click', goToCheckout);
+
+    function goToCheckout(event) {
+      event.preventDefault();
+      let stringOfLocations = JSON.stringify(locations[i]);
+      localStorage.setItem('gyms', stringOfLocations);
+
+      console.log(stringOfLocations);
+
+      window.location.href = 'checkout.html';
+    }
   }
 }
+
 
 inject();
 //--------------------------------------------------------------------------------------------
@@ -97,7 +113,7 @@ function handleCustomerSubmit(event) {
 
   // console.log(hotelBooked);
 
-// ----------------------------for loop to loop over the user choices FADI&MOHAMMED--------------------
+  // ----------------------------for loop to loop over the user choices FADI&MOHAMMED--------------------
   for (let i = 0; i < locations.length; i++) {
     if (tripCategouries !== 'NoCategoury') {
       if (
@@ -114,4 +130,3 @@ function handleCustomerSubmit(event) {
   }
 }
 // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
-
