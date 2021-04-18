@@ -71,7 +71,25 @@
 
             <!-- from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow  -->
         </section>
+        <!-- ------------------------------------the slideshoe code---------------- -->
+<script>
+let myIndex = 0;
+carousel();
 
+function carousel() {
+  let i;
+  let x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1;}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+</script>
+        <!-- ------------------------------------the End of slideshow code---------------- -->
 
 
 
