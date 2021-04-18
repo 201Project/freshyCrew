@@ -1,52 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reservations</title>
+    <title>freshyCrew</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/reservation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <img src="http://via.placeholder.com/100x100/sss" alt="Logo">
-    <header> 
-        <h1>Freshy Crew</h1> 
-    <nav>
-        <ul>
-            <li> <a href="index.html">Home</a>  </li>
-            <li> <a href="reservations.html">Book Now</a>  </li>
-            <li> <a href="aboutus.html">About Us</a>  </li>
-        </ul>
 
-        <!-- creating the social media logos and link  -->
-        <ul>
-            <!-- instagram logo -->
-            <li> <a href=""\> <i class="fa fa-instagram"> </i> </a> </li>
-            <!-- facebooklogo -->
-            <li><a href="facebook.com" ><i class="fa fa-facebook-square"></i></a></li>
-            <!-- githublogo -->
-            <li> <a href="github.com"><i class="fa fa-github"></i></a> </li>
-            
-        </ul>
-    </nav>
-<hr>
+<body>
+
+    <header>
+
+        <a href="index.html"><img src="http://via.placeholder.com/90x70/sss" alt="Logo" id="logo"></a>
+
+        <h1>Freshy Crew</h1>
+        <center>
+            <nav>
+                <ul>
+                    <li> <a href="index.html">Home</a> </li>
+                    <li> <a href="reservations.html">Book Now</a> </li>
+                    <li> <a href="aboutus.html">About Us</a> </li>
+                    <li> <a href="checkout.html">Checkout</a> </li>
+                </ul>
+
+
+            </nav>
+        </center>
+        <span id="DarkSwitch">
+            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle" for="switch-check">Toggle</label>
+
+        </span>
+
+        <!--------------------if we want to move it to app.js-------------------------------dark mode Function -->
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+
+            }
+        </script>
+
+        <!-- the end of the dark-mode Function--------------------------------------------------------------------- -->
     </header>
+    <hr>
+
   <main>
 
   <form action="reservations.html" id="customerData">
 <fieldset>
-    <label for="lable1"> Name Region </label>
-    <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required>
+    <!-- <label for="lable1"> Name Region </label> -->
+    <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
    
     
     <label id="lable2"> how many person? </label>
     <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20">
 
     <label for="slider">slide your budget</label>
-    <input type="range" min="15" max="250" value="50" name="slider"  id="slider"required>
-
+    <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required>
+<p id='sliderValue'></p>
 
 
      <label for="categoury"> choose one </label>
@@ -69,16 +86,16 @@
 
   
     <!-- getting the submitter value ------------------------------------------------------------------>
-    <!-- <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
+     <script>
+        var slider = document.getElementById("slider");
+        var output = document.getElementById("sliderValue");
         output.innerHTML = slider.value;
         
         slider.oninput = function() {
           output.innerHTML = this.value;
         }
         console.log(output.innerHTML);
-        </script> ---------------------------------------------------------------------------------------->
+        </script> 
   
 <section id="result">
 
@@ -91,11 +108,37 @@
 <hr>
 
 <footer>
+    <p> our vision we took it on us to show you all of the jordanian culture</p>
+    contact us
+    <ul id="contactUs">
+        <!-- instagram logo -->
+        <li> <a href="instagram.com"><i class="fa fa-instagram" style="font-size:36px "> </i> </a> </li>
+        <!-- facebooklogo -->
+        <li><a href="facebook.com"><i class="fa fa-facebook-square" style="font-size:36px"></i></a></li>
+        <!-- githublogo -->
+        <li> <a href="github.com"><i class="fa fa-github" style="font-size:36px"></i></a> </li>
+    </ul>
+    <ol>
+        <li>Amman-Jordan</li>
+        <li> phone:+9627999999 </li>
+    </ol>
+    <!-- creating the social media logos and link  -->
 
+    <ul>
+        <li> <i class="fa fa-cc-paypal" style="font-size:36px"></i></li>
+    </ul>
+    <ul id="ourInfo">
+        <li>About Us
+            <br>
+            ☎
+        </li>
+        <li>What We Do
+
+        </li>
+        <li>How It Work</li>
+    </ul>
+    Payment Methods
     &copy;Copyright2021 Reserved For freshy Crew&trade;
-    <p>Amman-Jordan</p>
-    <p> phone:+9627999999 </p>
-<p> our vision:- we took it on us to show you all of the jordanian culture</p>
 </footer>
 <script src="JS/app.js"></script>
 </body>

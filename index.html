@@ -26,13 +26,15 @@
                     <li> <a href="index.html">Home</a> </li>
                     <li> <a href="reservations.html">Book Now</a> </li>
                     <li> <a href="aboutus.html">About Us</a> </li>
+                    <li> <a href="checkout.html">Checkout</a> </li>
+                    <li> <a href="calculating.html">Calt</a> </li>
                 </ul>
 
 
             </nav>
         </center>
         <span id="DarkSwitch">
-            <input type="checkbox" id="switch" onclick="myFunction()" /><label for="switch">Toggle</label>
+            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle" for="switch-check">Toggle</label>
 
         </span>
 
@@ -45,7 +47,7 @@
             }
         </script>
 
-        <!-- the end of the dark-mode Function--------------------------------------------------------------------- -->
+        <!-------------------- the end of the dark-mode Function--------------------------------------------------------------------- -->
     </header>
     <hr>
 
@@ -56,21 +58,39 @@
 
 
             <div class="w3-content w3-section" style="max-width:500px">
-                <img class="mySlides" src="img/zwembad-met-op-de-achtergrond.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/wwwyes-jordancom.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/nebo.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/maen.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/Jordan_DeadSea2_tango7174.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/img_20170309_092827_769.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/deadsea2.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/240501796.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/241279892.jpg" style="width:1300px", height="450px">
-              </div>
+                <img class="mySlides" src="img/zwembad-met-op-de-achtergrond.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/wwwyes-jordancom.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/nebo.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/maen.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/Jordan_DeadSea2_tango7174.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/img_20170309_092827_769.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/deadsea2.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/240501796.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/241279892.jpg" style="width:1300px" , height="450px">
+            </div>
 
 
             <!-- from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow  -->
         </section>
+        <!-- ------------------------------------the slideshoe code---------------- -->
+<script>
+let myIndex = 0;
+carousel();
 
+function carousel() {
+  let i;
+  let x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1;}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+</script>
+        <!-- ------------------------------------the End of slideshow code---------------- -->
 
 
 
@@ -95,9 +115,11 @@
 
 
 
+        <!------------------------------Responsive Services Section Using  Html & Css-------------------------------->
         <section id="whyUs">
             <div class="containerOfboxes">
                 <div class="details">
+<<<<<<< HEAD
                   <h2>Services</h2>
                   <p>Our company offer web design and development</p>
                 </div>
@@ -135,14 +157,61 @@
                 </div>
           
               </div>
+=======
+                    <h2> Our Services</h2>
+                    <p>We offer the best trips in Jordan</p>
+                </div>
+                <div class="main-box">
+                    <div class="box box-grey">
+                        <div class="icon">
+                            <i class="fas fa-desktop"></i>
+
+                        </div>
+                        <h2>We are free </h2>
+                        <hr class="hr">
+                        <p>
+                            We spent thousands of hours creating on algorithm that does this for you in seconds. We
+                            collect a small fee from the trip team after they meet your
+                            We have an official team to guide you during the trips </p>
+
+                    </div>
+
+                    <div class="box box-red">
+                        <div class="icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h2>Guidence</h2>
+                        <hr class="hr">
+                        <p>We have an official team to guide you during the trips with a suitable prices </p>
+
+                    </div>
+
+                    <div class="box box-grey">
+                        <div class="icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h2>Lets Play </h2>
+                        <hr class="hr">
+                        <p>
+
+                            you can gain a free trip by playing our game </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+>>>>>>> 4dfb62673d04a008e41fdd121b1e596537028aa4
         </section>
+        <!----------------------------------------------------------------------------------------------------->
+
 
     </main>
     <hr>
 
 
 
-<!---->
+    <!---->
     <footer>
         <p> our vision we took it on us to show you all of the jordanian culture</p>
         contact us
@@ -163,6 +232,7 @@
         <ul>
             <li> <i class="fa fa-cc-paypal" style="font-size:36px"></i></li>
         </ul>
+<<<<<<< HEAD
 
 
 <ul id="ourInfo">
@@ -175,6 +245,18 @@
     </li>
     <li>How It Work</li>
 </ul>
+=======
+        <ul id="ourInfo">
+            <li>About Us
+                <br>
+                ☎
+            </li>
+            <li>What We Do
+
+            </li>
+            <li>How It Work</li>
+        </ul>
+>>>>>>> 4dfb62673d04a008e41fdd121b1e596537028aa4
         Payment Methods
         &copy;Copyright2021 Reserved For freshy Crew&trade;
     </footer>
