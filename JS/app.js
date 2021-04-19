@@ -4,7 +4,7 @@
 /////////////declare an array to add the cities/////
 
 
-const names = ['gym1', 'gym2', 'gym3', 'gym4', 'gym4', 'gym5', 'gym6', 'gym7', 'gym8'];
+const names = ['gym1', 'gym2', 'gym3', 'gym4', 'gym5', 'gym6', 'gym7', 'gym8'];
 const cities = ['Amman', 'Zarqa', 'Irbid', 'Amman', 'Zarqa', 'Irbid', 'Online', 'Online'];
 const description = ['FirstDesqAmman', 'SecondDesqZarqa', 'ThirdDesqIrbid', '2FirstDesqAmman', '2SecondDesqZarqa', '2ThirdDesqIrbid', 'FIRSTonline', 'SecondOnline'];
 const image = ['FirstimgAmman', 'SecondimgZarqa', 'ThirdimgIrbid', '2FirstimgAmman', '2SecondimgZarqa', '2ThirdimgIrbid', 'FIRSTimgonline', 'SecondimgOnline'];
@@ -83,24 +83,29 @@ function inject() {
         let parsedStorage = JSON.parse(localStorage.getItem('gyms'));
         clickedItem = parsedStorage;
       }
-
-      if (localStorage.getItem('cartCounter')) {
-        let paresedNumber = parseInt(localStorage.getItem('cartCounter'));
-        localStorage.setItem('cartCounter', paresedNumber + 1);
-      }
-      else {
-        count++;
-        localStorage.setItem('cartCounter', count);
-      }
-      clickedItem.push(locations[i]);
-      let stringOfLocations = JSON.stringify(clickedItem);
-      localStorage.setItem('gyms', stringOfLocations);
-      let counter = document.getElementById('cart');
-      counter.textContent = localStorage.getItem('cartCounter');
-
-
-
-
+        
+      if(!clickedItem.includes(clickedItem[i]))
+        {
+          console.log('fadi');
+          clickedItem.push(locations[i]);
+          let stringOfLocations = JSON.stringify(clickedItem);
+          localStorage.setItem('gyms', stringOfLocations);
+          if(localStorage.getItem('cartCounter')){
+            let paresedNumber=parseInt(localStorage.getItem('cartCounter'));
+            localStorage.setItem('cartCounter',paresedNumber+1);
+          }
+          else
+          {
+            count++;
+            localStorage.setItem('cartCounter',count);
+          }
+          let counter=document.getElementById('cart');
+          counter.textContent=localStorage.getItem('cartCounter'); 
+        }
+        else{
+          alert('already there'); 
+        }
+        
     }
   }
 }

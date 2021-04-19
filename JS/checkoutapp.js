@@ -58,18 +58,14 @@ function getFromStorage() {
 
 
   let data = localStorage.getItem('gyms');
-  console.log('getFromStorage' + data);
 
   stringToArrayData = JSON.parse(data);
 
-  for (let i = 0; i < stringToArrayData.length; i++) {
-    if (stringToArrayData.includes(stringToArrayData[i])) {
-      console.log(true);
-    }
 
-  }
+
 
   for (let i = 0; i < stringToArrayData.length; i++) {
+
     let tr = document.createElement('tr');
     table.appendChild(tr);
 
@@ -89,7 +85,7 @@ function getFromStorage() {
     let reserveNumber = document.createElement('input');
     reserveNumber.type = 'number';
     reserveNumber.value = 1;
-    reserveNumber.min = 1;
+    reserveNumber.min = 0;
     reserveNumber.max = 10;
     tr.appendChild(reserveNumberTd);
     reserveNumberTd.appendChild(reserveNumber);
@@ -105,18 +101,23 @@ function getFromStorage() {
     reserveNumber.addEventListener('change', calculateTotal);
     function calculateTotal() {
       totalTd.textContent = stringToArrayData[i].price * reserveNumber.value;
-
-
-
     }
+    // let cancelButton = document.createElement('button');
+    // cancelButton.textContent = 'cancel';
+
+    // let cancelTd = document.createElement('td');
+    // tr.appendChild(cancelTd);
+    // cancelTd.appendChild(cancelButton);
+
+    // cancelButton.addEventListener('click', cancelOrder);
+    // function cancelOrder() {
+    //   delete stringToArrayData[i];
+    //   console.log(stringToArrayData);
+    //   localStorage.setItem('gyms', JSON.stringify(stringToArrayData));
+    // }
 
   }
 
 }
 getFromStorage();
 
-let submitGym = document.getElementById('submitGym');
-submitGym.addEventListener('click', thankMsg);
-function thankMsg() {
-  alert('Thank you ');
-}
