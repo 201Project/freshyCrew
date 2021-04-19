@@ -43,7 +43,7 @@ let stringToArrayData;
 let reservedGym = document.getElementById('reservedGym');
 
 function getFromStorage() {
-  let headingsArr = ['Image', 'Name', 'Quantity', 'Price', 'Total'];
+  let headingsArr = ['Image', 'Name', 'Quantity', 'Price', 'Total', 'Cancel'];
   let table = document.createElement('table');
   reservedGym.appendChild(table);
   let trHeadings = document.createElement('tr');
@@ -105,6 +105,9 @@ function getFromStorage() {
     reserveNumber.addEventListener('change', calculateTotal);
     function calculateTotal() {
       totalTd.textContent = stringToArrayData[i].price * reserveNumber.value;
+
+
+
     }
 
   }

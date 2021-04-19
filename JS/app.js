@@ -69,6 +69,9 @@ function inject() {
     description.textContent = locations[i].description;
     locationImage.src = locations[i].image;
     reserveBtn.textContent = 'Book Now!'; //add link in array to book
+
+
+    
     // -------------------- mohamad and nazmih -------------------------
     reserveBtn.addEventListener('click', goToCheckout);
 
