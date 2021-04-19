@@ -31,11 +31,10 @@ for (let i = 0; i < cities.length; i++) {
 console.log(locations);
 /////////////the end of instaces/////////
 
-
+let clickedItem=[];
 let result = document.getElementById('result');
 function inject() {
   for (let i = 0; i < locations.length; i++) {
-
     let locationContainer = document.createElement('div');
     locationContainer.className = 'location';
     result.appendChild(locationContainer);
@@ -76,19 +75,28 @@ function inject() {
     function goToCheckout(event) {
       event.preventDefault();
       let count=0;
+
+      if(localStorage.getItem('gyms')!==null){
+        let parsedStorage= JSON.parse(localStorage.getItem('gyms'));
+        clickedItem=parsedStorage;
+      }
+
       if(localStorage.getItem('cartCounter')){
-        localStorage.setItem('cartCounter',Number.parseInt(localStorage.getItem('cartCounter'))+1);
+        let paresedNumber=parseInt(localStorage.getItem('cartCounter'));
+        localStorage.setItem('cartCounter',paresedNumber+1);
       }
       else
       {
         count++;
         localStorage.setItem('cartCounter',count);
       }
-      let stringOfLocations = JSON.stringify(locations);
+      clickedItem.push(locations[i]);
+      let stringOfLocations = JSON.stringify(clickedItem);
       localStorage.setItem('gyms', stringOfLocations);
-      count++;
-      
-      console.log(stringOfLocations);
+      let counter=document.getElementById('cart');
+      counter.textContent=localStorage.getItem('cartCounter');
+
+
 
 
     }
@@ -133,5 +141,5 @@ function handleCustomerSubmit(event) {
     }
   }
 }
- //REMOVE EVENT LISTENER
+//REMOVE EVENT LISTENER
 // // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------

@@ -4,6 +4,9 @@ let details = document.getElementById('detailsCheckout');
 let formCheckout = document.getElementById('formCheckout');
 formCheckout.addEventListener('submit', handleSaveCheckout);
 
+
+
+
 function handleSaveCheckout(e) {
   e.preventDefault();
   let userName = e.target.userName.value;
@@ -37,48 +40,68 @@ function handleSaveCheckout(e) {
 
 let stringToArrayData;
 let reservedGym = document.getElementById('reservedGym');
-let table= document.createElement('table');
-reservedGym.appendChild(table);
+
 function getFromStorage() {
-  
+  let headingsArr=['Image','Name','Quantity','Price'];
+  let table= document.createElement('table');
+  reservedGym.appendChild(table);
+  let trHeadings=document.createElement('tr');
+  table.appendChild(trHeadings);
+  for(let i=0;i<4;i++)
+  {
+   
+    let tHead=document.createElement('th');
+    trHeadings.appendChild(tHead);
+    tHead.textContent=headingsArr[i];
+  }
+
+
+
+
+
   let data = localStorage.getItem('gyms');
-  //console.log('getFromStorage' + data);
+  console.log('getFromStorage' + data);
   
   stringToArrayData = JSON.parse(data);
-  //console.log('stringToArrayData' + stringToArrayData);
+
   for(let i=0;i<stringToArrayData.length;i++)
   {
-
-    let tr=document.createElement('tr');
-    table.appendChild(tr);
-
-    let imageTd=document.createElement('td');
-    tr.appendChild(imageTd);
-    let locationImage = document.createElement('img');
-    // reservedGym.appendChild(locationImage);
-    locationImage.src = stringToArrayData[i].image;
-    imageTd.appendChild(locationImage);
- 
-   let reserveNumberTd= document.createElement('td');
-   tr.appendChild(reserveNumberTd);
+      let tr=document.createElement('tr');
+      table.appendChild(tr);
+  
+      let imageTd=document.createElement('td');
+      tr.appendChild(imageTd);
+      let locationImage = document.createElement('img');
+      // reservedGym.appendChild(locationImage);
+      locationImage.src = stringToArrayData[i].image;
+      imageTd.appendChild(locationImage);
    
     
   
+      let nameTd=document.createElement('td');
+      tr.appendChild(nameTd);
+      nameTd.textContent=stringToArrayData[i].names;
     
-
-    let nameTd=document.createElement('td');
-    tr.appendChild(nameTd);
-    nameTd.textContent=stringToArrayData[i].names;
+      
+      let reserveNumberTd= document.createElement('td');
+      let reserveNumber=document.createElement('input');
+      reserveNumber.type='number';
+      reserveNumber.value=1;
+      reserveNumber.min=1;
+      reserveNumber.max=10;
+      tr.appendChild(reserveNumberTd);
+      reserveNumberTd.appendChild(reserveNumber);
   
-    
-   
-
-
-    // let heading = document.createElement('h2');
-    // reservedGym.appendChild(heading);
-    let priceTd=document.createElement('td');
-    tr.appendChild(priceTd);
-    priceTd.textContent = stringToArrayData[i].price;
+  
+     
+  
+  
+      // let heading = document.createElement('h2');
+      // reservedGym.appendChild(heading);
+      let priceTd=document.createElement('td');
+      tr.appendChild(priceTd);
+      priceTd.textContent = stringToArrayData[i].price;
+  
    
     // let price = document.createElement('p');
     // reservedGym.appendChild(price);
