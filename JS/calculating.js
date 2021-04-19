@@ -42,7 +42,7 @@ function normal_weight() {
                 range1 = 41.6;
                 range2 = 56.3;
                 range1 += (0.6 * j);
-                range2 += (0.7 * j);
+                range2 += (0.7 * j)
                 /*   console.log("r1= " + range1);
                    console.log("r2= " + range2);*/
                 let resultRange = `${range1}-${range2} `;

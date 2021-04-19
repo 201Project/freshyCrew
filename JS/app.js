@@ -87,40 +87,164 @@ function inject() {
 
 inject();
 //--------------------------------------------------------------------------------------------
-
 let form = document.getElementById('customerData');
-
+let place;
+let genderCategouries;
+let onlineCourse;
 form.addEventListener('submit', handleCustomerSubmit);
 
 function handleCustomerSubmit(event) {
   event.preventDefault();
 
-  let place = event.target.categouryPlace.value;
-  // console.log(budget);
+   place = event.target.categouryPlace.value;
 
-  let genderCategouries = event.target.categouryGender.value;
+   genderCategouries = event.target.categouryGender.value;
 
-  let onlineCourse = '';
   if (event.target.online.checked) {
     onlineCourse = 'Online';
-    // console.log(onlineCourse);
   }
   else {
     onlineCourse = '';
   }
-
-  //  console.log('onlinehere',onlineCourse);
+  
   console.log(place, genderCategouries);
   // ----------------------------for loop to loop over the user choices FADI&MOHAMMED--------------------
-  for (let i = 0; i < locations.length; i++) {
+  // result.style.display = 'none';
+  
+  let locationContainer = document.createElement('div');
+  result.appendChild(locationContainer);
+  locationContainer.textContent='';
+
+  // result.textContent='';
+ for (let i = 0; i < locations.length; i++) {
+
     if (locations[i].cities == onlineCourse) {
+
       console.log('first', locations[i]);
+
+      let result=document.getElementById('result');
+      result.appendChild(locationContainer);
+  
+    let imgContainer = document.createElement('div');
+    imgContainer.className = 'divLeft';
+    locationContainer.appendChild(imgContainer);
+  
+    let locationImage = document.createElement('img');
+    imgContainer.appendChild(locationImage);
+  
+    let textContainer = document.createElement('div');
+    textContainer.className = 'divRight';
+    locationContainer.appendChild(textContainer);
+  
+    let heading = document.createElement('h2');
+    textContainer.appendChild(heading);
+  
+    let description = document.createElement('p');
+    description.className = 'description';
+    textContainer.appendChild(description);
+  
+    let price = document.createElement('p');
+    textContainer.appendChild(price);
+  
+    let reserveBtn = document.createElement('button');
+    textContainer.appendChild(reserveBtn);
+  
+
+    price.textContent = 'Price: ' + locations[i].price;
+    heading.textContent = locations[i].names;
+    description.textContent = locations[i].description;
+    locationImage.src = locations[i].locationImg;
+    reserveBtn.textContent = 'Book Now!'; //add link in array to book
+   
     }
+
     if (((locations[i].category == genderCategouries) && (genderCategouries !== 'NoCategoury')) || ((locations[i].cities == place) && (place !== 'NoPlaceCategoury'))) {
       console.log('secondelse', locations[i]);
+    
+  
+
+      let result=document.getElementById('result');
+      let locationContainer = document.createElement('div');
+      result.appendChild(locationContainer);
+  
+    let imgContainer = document.createElement('div');
+    imgContainer.className = 'divLeft';
+    locationContainer.appendChild(imgContainer);
+  
+    let locationImage = document.createElement('img');
+    imgContainer.appendChild(locationImage);
+  
+    let textContainer = document.createElement('div');
+    textContainer.className = 'divRight';
+    locationContainer.appendChild(textContainer);
+  
+    let heading = document.createElement('h2');
+    textContainer.appendChild(heading);
+  
+    let description = document.createElement('p');
+    description.className = 'description';
+    textContainer.appendChild(description);
+  
+    let price = document.createElement('p');
+    textContainer.appendChild(price);
+  
+    let reserveBtn = document.createElement('button');
+    textContainer.appendChild(reserveBtn);
+  
+
+
+    price.textContent = 'Price: ' + locations[i].price;
+    heading.textContent = locations[i].names;
+    description.textContent = locations[i].description;
+    locationImage.src = locations[i].locationImg;
+    reserveBtn.textContent = 'Book Now!'; //add link in array to book
+   
+
 
     }
   }
+  form.removeEventListener('submit', handleCustomerSubmit);
 }
- //REMOVE EVENT LISTENER
+
 // // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
+
+// function rendering(){
+  
+//   let resultSubmit=document.getElementById('resultSubmit');
+//       let locationContainer = document.createElement('div');
+//       resultSubmit.appendChild(locationContainer);
+
+//     let imgContainer = document.createElement('div');
+//     imgContainer.className = 'divLeft';
+//     locationContainer.appendChild(imgContainer);
+
+//     let locationImage = document.createElement('img');
+//     imgContainer.appendChild(locationImage);
+
+//     let textContainer = document.createElement('div');
+//     textContainer.className = 'divRight';
+//     locationContainer.appendChild(textContainer);
+
+//     let heading = document.createElement('h2');
+//     textContainer.appendChild(heading);
+
+//     let description = document.createElement('p');
+//     description.className = 'description';
+//     textContainer.appendChild(description);
+
+//     let price = document.createElement('p');
+//     textContainer.appendChild(price);
+
+//     let reserveBtn = document.createElement('button');
+//     textContainer.appendChild(reserveBtn);
+
+
+
+//     price.textContent = 'Price: ' + locations.price;
+//     heading.textContent = locations.names;
+//     description.textContent = locations.description;
+//     locationImage.src = locations.locationImg;
+//     reserveBtn.textContent = 'Book Now!'; //add link in array to book
+// }
+
+
