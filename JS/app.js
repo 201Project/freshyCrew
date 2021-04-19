@@ -91,6 +91,7 @@ let form = document.getElementById('customerData');
 let place;
 let genderCategouries;
 let onlineCourse;
+
 form.addEventListener('submit', handleCustomerSubmit);
 
 function handleCustomerSubmit(event) {
@@ -111,18 +112,17 @@ function handleCustomerSubmit(event) {
   // ----------------------------for loop to loop over the user choices FADI&MOHAMMED--------------------
   // result.style.display = 'none';
   
-  let locationContainer = document.createElement('div');
-  result.appendChild(locationContainer);
-  locationContainer.textContent='';
-
+  result.textContent='';
+  
   // result.textContent='';
- for (let i = 0; i < locations.length; i++) {
-
+  for (let i = 0; i < locations.length; i++) {
+    
     if (locations[i].cities == onlineCourse) {
-
+      
       console.log('first', locations[i]);
-
-      let result=document.getElementById('result');
+      
+      
+      let locationContainer = document.createElement('div');
       result.appendChild(locationContainer);
   
     let imgContainer = document.createElement('div');
@@ -202,49 +202,9 @@ function handleCustomerSubmit(event) {
 
 
     }
+    
   }
-  form.removeEventListener('submit', handleCustomerSubmit);
+  // form.removeEventListener('submit', handleCustomerSubmit);
 }
 
 // // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
-
-// function rendering(){
-  
-//   let resultSubmit=document.getElementById('resultSubmit');
-//       let locationContainer = document.createElement('div');
-//       resultSubmit.appendChild(locationContainer);
-
-//     let imgContainer = document.createElement('div');
-//     imgContainer.className = 'divLeft';
-//     locationContainer.appendChild(imgContainer);
-
-//     let locationImage = document.createElement('img');
-//     imgContainer.appendChild(locationImage);
-
-//     let textContainer = document.createElement('div');
-//     textContainer.className = 'divRight';
-//     locationContainer.appendChild(textContainer);
-
-//     let heading = document.createElement('h2');
-//     textContainer.appendChild(heading);
-
-//     let description = document.createElement('p');
-//     description.className = 'description';
-//     textContainer.appendChild(description);
-
-//     let price = document.createElement('p');
-//     textContainer.appendChild(price);
-
-//     let reserveBtn = document.createElement('button');
-//     textContainer.appendChild(reserveBtn);
-
-
-
-//     price.textContent = 'Price: ' + locations.price;
-//     heading.textContent = locations.names;
-//     description.textContent = locations.description;
-//     locationImage.src = locations.locationImg;
-//     reserveBtn.textContent = 'Book Now!'; //add link in array to book
-// }
-
-
