@@ -7,6 +7,7 @@ formCheckout.addEventListener('submit', handleSaveCheckout);
 
 
 
+
 function handleSaveCheckout(e) {
   e.preventDefault();
   let userName = e.target.userName.value;
@@ -42,78 +43,77 @@ let stringToArrayData;
 let reservedGym = document.getElementById('reservedGym');
 
 function getFromStorage() {
-  let headingsArr=['Image','Name','Quantity','Price'];
-  let table= document.createElement('table');
+  let headingsArr = ['Image', 'Name', 'Quantity', 'Price', 'Total'];
+  let table = document.createElement('table');
   reservedGym.appendChild(table);
-  let trHeadings=document.createElement('tr');
+  let trHeadings = document.createElement('tr');
   table.appendChild(trHeadings);
-  for(let i=0;i<4;i++)
-  {
-   
-    let tHead=document.createElement('th');
+  for (let i = 0; i < headingsArr.length; i++) {
+
+    let tHead = document.createElement('th');
     trHeadings.appendChild(tHead);
-    tHead.textContent=headingsArr[i];
+    tHead.textContent = headingsArr[i];
   }
-
-
 
 
 
   let data = localStorage.getItem('gyms');
   console.log('getFromStorage' + data);
-  
+
   stringToArrayData = JSON.parse(data);
 
-  for(let i=0;i<stringToArrayData.length;i++)
-  {
-      let tr=document.createElement('tr');
-      table.appendChild(tr);
-  
-      let imageTd=document.createElement('td');
-      tr.appendChild(imageTd);
-      let locationImage = document.createElement('img');
-      // reservedGym.appendChild(locationImage);
-      locationImage.src = stringToArrayData[i].image;
-      imageTd.appendChild(locationImage);
-   
-    
-  
-      let nameTd=document.createElement('td');
-      tr.appendChild(nameTd);
-      nameTd.textContent=stringToArrayData[i].names;
-    
-      
-      let reserveNumberTd= document.createElement('td');
-      let reserveNumber=document.createElement('input');
-      reserveNumber.type='number';
-      reserveNumber.value=1;
-      reserveNumber.min=1;
-      reserveNumber.max=10;
-      tr.appendChild(reserveNumberTd);
-      reserveNumberTd.appendChild(reserveNumber);
-  
-  
-     
-  
-  
-      // let heading = document.createElement('h2');
-      // reservedGym.appendChild(heading);
-      let priceTd=document.createElement('td');
-      tr.appendChild(priceTd);
-      priceTd.textContent = stringToArrayData[i].price;
-  
-   
-    // let price = document.createElement('p');
-    // reservedGym.appendChild(price);
-    // price.textContent = 'Price: ' + stringToArrayData[i].price;
-   
+  for (let i = 0; i < stringToArrayData.length; i++) {
+    if (stringToArrayData.includes(stringToArrayData[i])) {
+      console.log(true);
+    }
+
   }
-  
 
-  
+  for (let i = 0; i < stringToArrayData.length; i++) {
+    let tr = document.createElement('tr');
+    table.appendChild(tr);
+
+    let imageTd = document.createElement('td');
+    tr.appendChild(imageTd);
+    let locationImage = document.createElement('img');
+    // reservedGym.appendChild(locationImage);
+    locationImage.src = stringToArrayData[i].image;
+    imageTd.appendChild(locationImage);
+
+    let nameTd = document.createElement('td');
+    tr.appendChild(nameTd);
+    nameTd.textContent = stringToArrayData[i].names;
 
 
+    let reserveNumberTd = document.createElement('td');
+    let reserveNumber = document.createElement('input');
+    reserveNumber.type = 'number';
+    reserveNumber.value = 1;
+    reserveNumber.min = 1;
+    reserveNumber.max = 10;
+    tr.appendChild(reserveNumberTd);
+    reserveNumberTd.appendChild(reserveNumber);
 
+    let priceTd = document.createElement('td');
+    tr.appendChild(priceTd);
+    priceTd.textContent = stringToArrayData[i].price;
+
+    let totalTd = document.createElement('td');
+    tr.appendChild(totalTd);
+    totalTd.textContent = stringToArrayData[i].price;
+
+    reserveNumber.addEventListener('change', calculateTotal);
+    function calculateTotal() {
+      totalTd.textContent = stringToArrayData[i].price * reserveNumber.value;
+    }
+
+  }
 
 }
 getFromStorage();
+
+let submitGym = document.getElementById('submitGym');
+submitGym.addEventListener('click', thankMsg);
+function thankMsg() {
+  alert('Thank you ');
+}

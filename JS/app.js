@@ -31,7 +31,7 @@ for (let i = 0; i < cities.length; i++) {
 console.log(locations);
 /////////////the end of instaces/////////
 
-let clickedItem=[];
+let clickedItem = [];
 let result = document.getElementById('result');
 function inject() {
   for (let i = 0; i < locations.length; i++) {
@@ -74,27 +74,26 @@ function inject() {
 
     function goToCheckout(event) {
       event.preventDefault();
-      let count=0;
+      let count = 0;
 
-      if(localStorage.getItem('gyms')!==null){
-        let parsedStorage= JSON.parse(localStorage.getItem('gyms'));
-        clickedItem=parsedStorage;
+      if (localStorage.getItem('gyms') !== null) {
+        let parsedStorage = JSON.parse(localStorage.getItem('gyms'));
+        clickedItem = parsedStorage;
       }
 
-      if(localStorage.getItem('cartCounter')){
-        let paresedNumber=parseInt(localStorage.getItem('cartCounter'));
-        localStorage.setItem('cartCounter',paresedNumber+1);
+      if (localStorage.getItem('cartCounter')) {
+        let paresedNumber = parseInt(localStorage.getItem('cartCounter'));
+        localStorage.setItem('cartCounter', paresedNumber + 1);
       }
-      else
-      {
+      else {
         count++;
-        localStorage.setItem('cartCounter',count);
+        localStorage.setItem('cartCounter', count);
       }
       clickedItem.push(locations[i]);
       let stringOfLocations = JSON.stringify(clickedItem);
       localStorage.setItem('gyms', stringOfLocations);
-      let counter=document.getElementById('cart');
-      counter.textContent=localStorage.getItem('cartCounter');
+      let counter = document.getElementById('cart');
+      counter.textContent = localStorage.getItem('cartCounter');
 
 
 
