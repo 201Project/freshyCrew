@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // first of all add the codes of the images container sec from the html
 <<<<<<< HEAD
 var myIndex = 0;
@@ -17,121 +18,92 @@ function carousel() {
 =======
 // var myIndex = 0;
 // carousel();
+=======
+'use strict';
+>>>>>>> d7fdc367a21b703dac49f9ffa311543f12e718d3
 
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   myIndex++;
-//   if (myIndex > x.length) {myIndex = 1}    
-//   x[myIndex-1].style.display = "block";  
-//   setTimeout(carousel, 2000); // Change image every 2 seconds
 // }
+/////////////declare an array to add the cities/////
 
+const names = ['gym1', 'gym2', 'gym3', 'gym4', 'gym4', 'gym5', 'gym6', 'gym7', 'gym8'];
+const cities = ['Amman', 'Zarqa', 'Irbid', 'Amman', 'Zarqa', 'Irbid', 'Online', 'Online'];
+const description = ['FirstDesqAmman', 'SecondDesqZarqa', 'ThirdDesqIrbid', '2FirstDesqAmman', '2SecondDesqZarqa', '2ThirdDesqIrbid', 'FIRSTonline', 'SecondOnline'];
+const image = ['FirstimgAmman', 'SecondimgZarqa', 'ThirdimgIrbid', '2FirstimgAmman', '2SecondimgZarqa', '2ThirdimgIrbid', 'FIRSTimgonline', 'SecondimgOnline'];
+const price = [50, 150, 100, 120, 150, 200, 75, 250];
+const category = ['Men', 'Women', 'Men', 'Mix', 'Men', 'Mix', 'Mix', 'Mix'];
 
+///////////////end of the cities info array//////
 
-let locations = [
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex. ',
-    locationImg: './img/locations/2.jpg',
-    locationImg: './img/locations/2.jpg ',
-    price: 100,
-    category: 'city',
-    // visitors: localStorage
+let locations = [];
 
-  },
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 100,
-    category: 'city',
-    // visitors: localStorage
-  },
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 160,
-    category: 'city',
-    // visitors: localStorage
-  },
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 150,
-    category: 'city',
-    // visitors: localStorage
-  },
+function GymCategories(name, cities, description, image, price, category) {
+  this.names = name;
+  this.cities = cities;
+  this.description = description;
+  this.image = image;
+  this.price = price;
+  this.category = category;
 
-  {
-    locationName: 'Amman',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam molestias, iusto facilis cum quidem ad in maxime minima, eveniet esse hic. Sunt facere minus dolor ipsa fuga nisi ex.',
-    locationImg: 'img/locations/name',
-    price: 200,
-    category: 'city',
-    // visitors: localStorage
-  }
-
-
-
-
-];
-
-
+  locations.push(this);
+}
+//////for loop to loop over the cities ifo arrays to insance the objects///////
+for (let i = 0; i < cities.length; i++) {
+  new GymCategories(names[i], cities[i], description[i], image[i], price[i], category[i]);
+}
+console.log(locations);
+/////////////the end of instaces/////////
 
 
 let result = document.getElementById('result');
-
-
-
 function inject() {
-
   for (let i = 0; i < locations.length; i++) {
 
     let locationContainer = document.createElement('div');
-    let imgContainer = document.createElement('div');
-    let textContainer = document.createElement('div');
-
-    let description = document.createElement('p');
-    let price = document.createElement('p');
-    let heading = document.createElement('h2');
-    let locationImage = document.createElement('img');
-    let reserveBtn = document.createElement('button');
-
-
-    description.className = "description";
-    locationContainer.className = "card";
-    locationContainer.appendChild(imgContainer);
-    imgContainer.className = "divLeft";
-    locationContainer.appendChild(textContainer);
-    textContainer.className = "divRight";
-
-    imgContainer.appendChild(locationImage);
-    textContainer.appendChild(heading);
-    textContainer.appendChild(description);
-    // locationContainer.appendChild(locationImage);
-    textContainer.appendChild(price);
-    textContainer.appendChild(reserveBtn);
+    locationContainer.className = 'location';
     result.appendChild(locationContainer);
 
+    let imgContainer = document.createElement('div');
+    imgContainer.className = 'divLeft';
+    locationContainer.appendChild(imgContainer);
+
+    let locationImage = document.createElement('img');
+    imgContainer.appendChild(locationImage);
+
+    let textContainer = document.createElement('div');
+    textContainer.className = 'divRight';
+    locationContainer.appendChild(textContainer);
+
+    let heading = document.createElement('h2');
+    textContainer.appendChild(heading);
+
+    let description = document.createElement('p');
+    description.className = 'description';
+    textContainer.appendChild(description);
+
+    let price = document.createElement('p');
+    textContainer.appendChild(price);
+
+    let reserveBtn = document.createElement('button');
+    textContainer.appendChild(reserveBtn);
 
     price.textContent = 'Price: ' + locations[i].price;
-
-  
-
-    heading.textContent = locations[i].locationName;
+    heading.textContent = locations[i].names;
     description.textContent = locations[i].description;
     locationImage.src = locations[i].locationImg;
-    reserveBtn.textContent = 'Book Now!';//add link in array to book
+    reserveBtn.textContent = 'Book Now!'; //add link in array to book
+    // -------------------- mohamad and nazmih -------------------------
+    reserveBtn.addEventListener('click', goToCheckout);
 
+    function goToCheckout(event) {
+      event.preventDefault();
+      let stringOfLocations = JSON.stringify(locations[i]);
+      localStorage.setItem('gyms', stringOfLocations);
+
+      console.log(stringOfLocations);
+
+      window.location.href = 'checkout.html';
+    }
   }
-
-
 }
 
 
@@ -143,116 +115,35 @@ let form = document.getElementById('customerData');
 form.addEventListener('submit', handleCustomerSubmit);
 
 function handleCustomerSubmit(event) {
-
   event.preventDefault();
 
-
-  // let from = event.target.from.value;
-
-  /*let NameReg=event.target.NameRegion.value;
-     console.log(NameReg);*/
-
-
-
-  let countPer = event.target.numberOfPer.value;
-  console.log(countPer);
-
-
-  let budget = event.target.slider.value;
-  console.log(budget);
-
-
-  let tripCategouries = event.target.categoury.value;
-  console.log(tripCategouries);
-
-
-  let hotelBooked = event.target.hotel.value;
-
-  console.log(hotelBooked);
-
-  //to hide result
-
-  result.style.display ='none';
-
-
-  if (budget <= 50) {
-
-    if (tripCategouries === 'NoCategoury') {
-
-    
-
-
-    } else if (tripCategouries === 'Treatment') {
-
-
-
-    } else if (tripCategouries === 'Religious') {
-
-
-
-    } else if (tripCategouries === 'Culture') {
-
-
-    } else if (tripCategouries === 'Entertainment') {
-
-
-
-    }
-
-
-  }else if(budget>50&&budget<=150){
-
-
-    if (tripCategouries === 'NoCategoury') {
-
-      console.log()
-
-
-    } else if (tripCategouries === 'Treatment') {
-
-
-
-    } else if (tripCategouries === 'Religious') {
-
-
-
-    } else if (tripCategouries === 'Culture') {
-
-
-    } else if (tripCategouries === 'Entertainment') {
-
-
-
-    }
-
-
-  }else if(budget>150&&budget<=250){
-
-
-    if (tripCategouries === 'NoCategoury') {
-
-  
-
-
-    } else if (tripCategouries === 'Treatment') {
-
-
-
-    } else if (tripCategouries === 'Religious') {
-
-
-
-    } else if (tripCategouries === 'Culture') {
-
-
-    } else if (tripCategouries === 'Entertainment') {
-
-
-
-    }
-
-
+  let place = event.target.categouryPlace.value;
+  // console.log(budget);
+
+  let genderCategouries = event.target.categouryGender.value;
+
+  let onlineCourse = '';
+  if (event.target.online.checked) {
+    onlineCourse = 'Online';
+    // console.log(onlineCourse);
   }
+  else {
+    onlineCourse = '';
+  }
+
+  //  console.log('onlinehere',onlineCourse);
+  console.log(place, genderCategouries);
+  // ----------------------------for loop to loop over the user choices FADI&MOHAMMED--------------------
+  for (let i = 0; i < locations.length; i++) {
+    if (locations[i].cities == onlineCourse) {
+      console.log('first', locations[i]);
+    }
+    if (((locations[i].category == genderCategouries) && (genderCategouries !== 'NoCategoury')) || ((locations[i].cities == place) && (place !== 'NoPlaceCategoury'))) {
+      console.log('secondelse', locations[i]);
+
+    }
+  }
+<<<<<<< HEAD
 
 
 
@@ -276,3 +167,8 @@ function handleCustomerSubmit(event) {
 
 }//end function
 >>>>>>> cae89d4ef1623188b210310fa552fa9dc5e5e694
+=======
+}
+ //REMOVE EVENT LISTENER
+// // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
+>>>>>>> d7fdc367a21b703dac49f9ffa311543f12e718d3

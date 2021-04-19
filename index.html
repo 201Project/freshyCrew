@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,13 +27,16 @@
                     <li> <a href="index.html">Home</a> </li>
                     <li> <a href="reservations.html">Book Now</a> </li>
                     <li> <a href="aboutus.html">About Us</a> </li>
+                    <li> <a href="checkout.html">Checkout</a> </li>
+                    <li> <a href="calculating.html">Calt</a> </li>
                 </ul>
 
 
             </nav>
         </center>
         <span id="DarkSwitch">
-            <input type="checkbox" id="switch" onclick="myFunction()" /><label for="switch">Toggle</label>
+            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle"
+                for="switch-check">Toggle</label>
 
         </span>
 
@@ -45,49 +49,67 @@
             }
         </script>
 
-        <!-- the end of the dark-mode Function--------------------------------------------------------------------- -->
+        <!-------------------- the end of the dark-mode Function--------------------------------------------------------------------- -->
     </header>
     <hr>
 
     <main>
+        <h1>
+            Exercise and diet should absolutely be viewed and dealt with as one—it’s not a ‘one-sided’ coin.
+        </h1>
 
         <!-- slideshow-container -->
         <section id="hero">
 
 
             <div class="w3-content w3-section" style="max-width:500px">
-                <img class="mySlides" src="img/zwembad-met-op-de-achtergrond.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/wwwyes-jordancom.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/nebo.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/maen.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/Jordan_DeadSea2_tango7174.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/img_20170309_092827_769.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/deadsea2.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/240501796.jpg" style="width:1300px", height="450px">
-                <img class="mySlides" src="img/241279892.jpg" style="width:1300px", height="450px">
-              </div>
+                <img class="mySlides" src="img/0.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/1.webp" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/2.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/7.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/8.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/13.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/14.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/16.jpg" style="width:1300px" , height="450px">
+                <img class="mySlides" src="img/15.jpg" style="width:1300px" , height="450px">
+            </div>
 
 
             <!-- from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow  -->
         </section>
+        <!-- ------------------------------------the slideshoe code---------------- -->
+        <script>
+            let myIndex = 0;
+            carousel();
 
+            function carousel() {
+                let i;
+                let x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1; }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+
+        </script>
+        <!-- ------------------------------------the End of slideshow code---------------- -->
 
 
 
 
         <!-- this paragraph should be scrollable -->
         <div id="introPar">
-            Save on Travel with the Traveler
-            As one of the world's leading online travel agencies, The Traveler is here to help you plan the perfect
-            trip. Whether you're going on holiday, taking a business trip, or looking to set up a corporate travel
-            account, The Traveler is here to help you travel the world with cheap flights, discount hotels, and train
-            tickets. Looking to find great travel deals or enjoy the biggest savings on your next trip? The Traveler has
-            you covered. With our easy-to-use website and app, along with 24-hour customer service, booking your next
-            trip couldn't be simpler. With The Traveler, quality travel services in over a dozen languages including
-            English, Mandarin, Cantonese, Japanese, Korean, German, French, and Spanish are just a call—or click—away.
-            Easily Customize Your Trip with the Best Hotel and Flight Deals
-            It's easy to customize your travel experience with our robust flight and hotel search filter options and
-            Trip.com travel tools like flight fare alerts, deal-finder calendar, and early bir
+            Making the commitment to exercise regularly is a terrific start to getting fit. However, without sound
+            nutritional guidance, achieving your goals may be impossible. Tough workouts demand the right kind of fuel —
+            and that fuel comes from the foods and beverages you consume.
+
+            In a recent study of 90,000 people, researchers found that approximately 57.9% of participants’ daily
+            calories came from heavily refined and processed foods. These are the so-called “convenience foods” that
+            populate the shelves of the local
+            supermarket: canned soups, frozen meals, boxed side dishes, soda and snack foods, and so on.
 
         </div>
 
@@ -95,9 +117,11 @@
 
 
 
+        <!------------------------------Responsive Services Section Using  Html & Css-------------------------------->
         <section id="whyUs">
             <div class="containerOfboxes">
                 <div class="details">
+<<<<<<< HEAD
                   <h2>Services</h2>
                   <p>Our company offer web design and development</p>
                 </div>
@@ -136,13 +160,52 @@
           
               </div>
         </section>
+=======
+                </div>
+                <div class="main-box">
+                    <div class="box box-grey">
+                        
+                           
+                        <h2>WHAT DOES MY BODY NEED?</h2>
+                        <hr class="hr">
+                        <p>Your body needs three MACRONUTRIENTS - Carbohydrates, Proteins, and Healthy Fats for optimum
+                            health.</p>
+                       
+                    </div>
+
+                    <div class="box box-red">
+                        
+                        <h2>
+                            WHAT DOES A HEALTHY DIET LOOK LIKE?</h2>
+                        <hr class="hr">
+                        <p>Variety is the spice of life, and your diet should be full of it! Around the world, there are
+                            groups of people who live healthy, long lives. Although the people in these communities,
+                            known as Blue Zones, eat very varied diets. </p>
+                     
+                    </div>
+
+                <div class="box box-grey">
+                   
+                    <h2>Lets Play </h2>
+                    <hr class="hr">
+                    <p>
+                        You can gain a 50% discount by playing our game </p>
+                </div>
+            </div>
+
+            </div>
+        
+
+        <!----------------------------------------------------------------------------------------------------->
+
+>>>>>>> d7fdc367a21b703dac49f9ffa311543f12e718d3
 
     </main>
     <hr>
 
 
 
-<!---->
+    <!---->
     <footer>
         <p> our vision we took it on us to show you all of the jordanian culture</p>
         contact us
@@ -163,6 +226,7 @@
         <ul>
             <li> <i class="fa fa-cc-paypal" style="font-size:36px"></i></li>
         </ul>
+<<<<<<< HEAD
 
 
 <ul id="ourInfo">
@@ -177,6 +241,32 @@
 </ul>
         Payment Methods
         &copy;Copyright2021 Reserved For freshy Crew&trade;
+=======
+        <<<<<<< HEAD <ul id="ourInfo">
+            <li>About Us
+                <br>
+                ☎
+            </li>
+            <li>What We Do
+
+            </li>
+            <li>How It Work</li>
+            </ul>
+            =======
+            <ul id="ourInfo">
+                <li>About Us
+                    <br>
+                    ☎
+                </li>
+                <li>What We Do
+
+                </li>
+                <li>How It Work</li>
+            </ul>
+            >>>>>>> 4dfb62673d04a008e41fdd121b1e596537028aa4
+            Payment Methods
+            &copy;Copyright2021 Reserved For freshy Crew&trade;
+>>>>>>> d7fdc367a21b703dac49f9ffa311543f12e718d3
     </footer>
 
 
