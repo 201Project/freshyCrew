@@ -60,10 +60,10 @@ function getFromStorage() {
 
 
   let data = localStorage.getItem('gyms');
-  console.log('getFromStorage' + data);
   
   stringToArrayData = JSON.parse(data);
 
+  
   for(let i=0;i<stringToArrayData.length;i++)
   {
       let tr=document.createElement('tr');
