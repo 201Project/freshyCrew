@@ -1,19 +1,19 @@
 'use strict';
 
-var myIndex = 0;
-carousel();
+// let myIndex = 0;
+// carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+// function carousel() {
+//   let i;
+//   let x = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1};    
+//   x[myIndex-1].style.display = "block";  
+//   setTimeout(carousel, 2000); // Change image every 2 seconds
+// }
 
 /////////////declare an array to add the cities/////
 
@@ -216,11 +216,51 @@ function handleCustomerSubmit(event) {
 
     // form.removeEventListener('submit', handleCustomerSubmit);
 
-    }
+  //   }{
+  //     if (((locations[i].category == genderCategouries) && (genderCategouries !== 'NoCategoury')) && ((locations[i].cities == place) && (place !== 'NoPlaceCategoury'))) {
+  //     console.log('secondelse', locations[i]);
     
-  }
+  
+
+  //     let result=document.getElementById('result');
+  //     let locationContainer = document.createElement('div');
+  //     result.appendChild(locationContainer);
+  
+  //   let imgContainer = document.createElement('div');
+  //   imgContainer.className = 'divLeft';
+  //   locationContainer.appendChild(imgContainer);
+  
+  //   let locationImage = document.createElement('img');
+  //   imgContainer.appendChild(locationImage);
+  
+  //   let textContainer = document.createElement('div');
+  //   textContainer.className = 'divRight';
+  //   locationContainer.appendChild(textContainer);
+  
+  //   let heading = document.createElement('h2');
+  //   textContainer.appendChild(heading);
+  
+  //   let description = document.createElement('p');
+  //   description.className = 'description';
+  //   textContainer.appendChild(description);
+  
+  //   let price = document.createElement('p');
+  //   textContainer.appendChild(price);
+  
+  //   let reserveBtn = document.createElement('button');
+  //   textContainer.appendChild(reserveBtn);
+  
+
+
+  //   price.textContent = 'Price: ' + locations[i].price;
+  //   heading.textContent = locations[i].names;
+  //   description.textContent = locations[i].description;
+  //   locationImage.src = locations[i].locationImg;
+  //   reserveBtn.textContent = 'Book Now!'; //add link in array to book
+    
+  // }
 
 }//end function
-
+  }}
 
 // // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
