@@ -139,9 +139,9 @@ window.addEventListener("load", start);
 
 //------------------------------ start render data for div---------------------
 let arrTips = [];
-function advice(defintion,  source) {
+function advice(defintion, source) {
     this.defintion = defintion;
-    
+
     this.source = source;
 
     arrTips.push(this);
@@ -152,7 +152,7 @@ function advice(defintion,  source) {
 
 let underWeight = new advice('lorem underWeight', '//players.brightcove.net/293884104/gh5LeNtQaQ_default/index.html?videoId=5443859718001');
 let normalWeight = new advice('lorem normalWeight', '//players.brightcove.net/293884104/gh5LeNtQaQ_default/index.html?videoId=5443859718001');
-let overWeight = new advice('lorem overWeight',  '//players.brightcove.net/293884104/gh5LeNtQaQ_default/index.html?videoId=5443859718001');
+let overWeight = new advice('lorem overWeight', '//players.brightcove.net/293884104/gh5LeNtQaQ_default/index.html?videoId=5443859718001');
 
 let tipsUnderWeight = ['A', 'B', 'C'];
 let tipsNormalWeight = ['1', '2', '3'];
@@ -167,11 +167,11 @@ advice.prototype.renderObjects = function () {
 
 
 
-    console.log("22222" + def);
+    // console.log("22222" + def);
 
-    
 
- 
+
+
 
 
     let apperVideo = document.createElement('IFRAME')
@@ -183,26 +183,21 @@ advice.prototype.renderObjects = function () {
 
 
 
-
-
-
-
-
-   /*var videoEl = document.createElement("VIDEO");
-
-    if (videoEl.canPlayType("video/mp4")) {
-        videoEl.setAttribute("src",this.source);
-    } else {
-        videoEl.setAttribute("src",this.source);
-    }
-
-    videoEl.setAttribute("width", "520");
-    videoEl.setAttribute("height", "540");
-    videoEl.setAttribute("controls", "controls");
-    parent.appendChild(videoEl);
-    */
-
+    /*var videoEl = document.createElement("VIDEO");
  
+     if (videoEl.canPlayType("video/mp4")) {
+         videoEl.setAttribute("src",this.source);
+     } else {
+         videoEl.setAttribute("src",this.source);
+     }
+ 
+     videoEl.setAttribute("width", "520");
+     videoEl.setAttribute("height", "540");
+     videoEl.setAttribute("controls", "controls");
+     parent.appendChild(videoEl);
+     */
+
+
 
 
 
