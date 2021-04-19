@@ -124,3 +124,4 @@ function handleCustomerSubmit(event) {
 }
  //REMOVE EVENT LISTENER
 // // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
+
