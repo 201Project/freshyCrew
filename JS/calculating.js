@@ -66,7 +66,7 @@ function normal_weight() {
 
 
 //----------------------------------------------------- To calculate BMI ----------------------------------------------
-let parent = document.getElementById('addData');
+let parent = document.getElementById('addData') ;
 
 
 
@@ -86,11 +86,12 @@ function calBmi() {
     weight1 = document.getElementById("weightRange");
     weight = parseInt(document.getElementById("Weight").value);
     Height = parseInt(document.getElementById("Height").value);
-    if (Height < 110 || Height > 300) {
-
-        alert('hint : maximum height is 300 cm and minimum and minimum height is 110 cm');
-    }
-else{
+//     if (Height < 110 || Height > 300) {
+//       //alert('hint : maximum height is 300 cm and minimum and minimum height is 110 cm');
+//      //let parent2 = document.getElementById("addData").style.visibility = "hidden";
+      
+      
+//    }else{
     let heightArray = [];
     for (let i = 110; i <= 300; i++) {
         heightArray.push(i);
@@ -101,7 +102,7 @@ else{
     let range2;
     for (let j = 0; j < heightArray.length; j++) {
 
-
+   
         if (heightArray[j] === Height) {
             if (j === 0) {
                 range1 = 17.6;
@@ -110,7 +111,7 @@ else{
                   console.log("r2= " + range2);*/
                 let resultRange = `${range1}-${range2} `;
                 weight1.setAttribute("value", resultRange);
-
+                
             } else {
                 range1 = 35.6;
                 range2 = 49.3;
@@ -120,12 +121,16 @@ else{
                    console.log("r2= " + range2);*/
                 let resultRange = `${range1}-${range2} `;
                 weight1.setAttribute("value", resultRange);
-
-            }
-
+                
+            } break;
+        }else{
+        // alert('hint : maximum height is 300 cm and minimum and minimum height is 110 cm');
+             weight1.setAttribute("value", 'doesnt make sense');
+            
+            // parent = document.getElementById("addData").style.display = "none";
         }
     }
-}
+
 
     let result1 = document.getElementById("result");
     let result2 = document.getElementById("result2");
@@ -181,8 +186,9 @@ else{
         result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
     }
-
-}//end function
+  
+}
+//end function
 window.addEventListener("load", start);
 
 
@@ -210,11 +216,13 @@ let overWeight = new advice('lorem overWeight', 'lorem overWeight tips', './img/
 
 
 advice.prototype.renderObjects = function () {
-
+   // let parent = document.getElementById('addData') ;
+   // parent = document.getElementById("addData").style.visibility = "visible";
     let def = document.createElement('p');
     parent.appendChild(def);
     def.textContent = this.defintion;
 
+   
 
     console.log("22222" + def);
 
