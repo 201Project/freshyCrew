@@ -1,6 +1,20 @@
 'use strict';
 
-// }
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
 /////////////declare an array to add the cities/////
 
 const names = ['gym1', 'gym2', 'gym3', 'gym4', 'gym5', 'gym6', 'gym7', 'gym8'];
@@ -200,11 +214,13 @@ function handleCustomerSubmit(event) {
     reserveBtn.textContent = 'Book Now!'; //add link in array to book
    
 
+    // form.removeEventListener('submit', handleCustomerSubmit);
 
     }
     
   }
-  // form.removeEventListener('submit', handleCustomerSubmit);
-}
+
+}//end function
+
 
 // // -------------------------------------------------------------THE END OF for loop to loop over the user choices FADI&MOHAMMED------------
