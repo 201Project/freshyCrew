@@ -17,6 +17,8 @@
    <h1>Calculate</h1>
 
     <main>
+
+        
          <!---------------------------------------------------- Form to calculate  BMI--------------------------------------------------->
          <center>
             <div class="bmi-text">
@@ -26,7 +28,11 @@
                     <br><br>
 
 
-                    <label> Height : <input type="number" id="Height" placeholder="in cm" min="110" max='300'></label> <br><br>
+                    <label> 
+                        <span><br>hint : maximum height is 300 cm and minimum and minimum height is 110 cm</span>
+                        
+                        
+                        Height : <input type="number" id="Height" placeholder="in cm" min="110" max='300'></label> <br><br>
 
 
                     <label> Your bmi is : <input type="number" id="result" size="20" readonly></label> <br><br>
@@ -34,14 +40,18 @@
 
                     <label><input type="text" id="result2" size="20" readonly></label> <br><br>
 
+                    <label style=" margin-left: 10px ; margin-right: 10px ; text-align: center ; color: #008000">
+
+                       Range weight <input type="text" id="weightRange" size="20" readonly></label>
+                    <br><br>
+
+
+
                     <input class="template-btn" type="button" value="What is bmi" id="button">
                     <br>
                     <br>
 
-                    <label style=" margin-left: 10px ; margin-right: 10px ; text-align: center ; color: #008000">
-
-                        weight <input type="text" id="weightRange" size="20" readonly></label>
-                    <br><br>
+                  
                 </form>
             </div>
 
