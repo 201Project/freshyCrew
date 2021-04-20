@@ -27,13 +27,15 @@
                     <li> <a href="reservations.html">Book Now</a> </li>
                     <li> <a href="aboutus.html">About Us</a> </li>
                     <li> <a href="checkout.html">Checkout</a> </li>
+                    <li id="cart"></li>
                 </ul>
 
 
             </nav>
         </center>
         <span id="DarkSwitch">
-            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle" for="switch-check">Toggle</label>
+            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle"
+                for="switch-check">Toggle</label>
 
         </span>
 
@@ -61,35 +63,30 @@
         <!-----------------------Section for add Form By Alaa & Zainb-------------------------->
         <section id="userInfo">
 
-            <form  id="formCheckout">
-               <fieldset>
-                <label for="userName">Name:</label>
-                <input type="text" name="userName" id="userName" required autocomplete="off">
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" placeholder="example@gmail.com" name="email" id="email" required autocomplete="off">
-                <br>
-                <label for="phone">Phone:</label>
-                <input type="tel" placeholder="962-792955860" name="phone" id="phone" required autocomplete="off" >
-                <br>
-                <label for="address">Address:</label>
-                <input type="text" name="address" id="address" required autocomplete="off">
-                <br>
-                <label for="submit">Submit:</label>
-                <input type="submit" name="submit" id="submit">
-               </fieldset>
-              </form> 
+            <form id="formCheckout">
+                <fieldset>
+                    <label for="userName">Name:</label>
+                    <input type="text" name="userName" id="userName" required autocomplete="off">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="example@gmail.com" name="email" id="email" required
+                        autocomplete="off">
+                    <br>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" placeholder="962-792955860" name="phone" id="phone" required autocomplete="off">
+                    <br>
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" required autocomplete="off">
+                    <br>
+                    <label for="submit">Submit:</label>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
+            </form>
         </section>
         <!-----------------This div for render the form data By Alaa & Zainb----------------------->
+        <div id="detailsCheckout"></div>
 <!-------------------------------------STARTnazmih and mohamad-------------------------------------------->
-<section>
-    <button>
-        Submit
-    </button>
-    <button>
-        Cancel
-    </button>
-</section>
+
 <!-------------------------------------ENDnazmih and mohamad-------------------------------------------->
 
     </main>
@@ -128,7 +125,7 @@
         &copy;Copyright2021 Reserved For freshy Crew&trade;
     </footer>
     <script src="JS/checkoutapp.js"></script>
-
+    <script src="JS/cart.js"></script>
 </body>
 
 </html>
