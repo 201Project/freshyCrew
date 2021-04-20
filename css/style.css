@@ -351,11 +351,61 @@ hr{
 
 /**************************************Reservations Style****************************/
 /**************************************nazmia***************************************************/
+#questions{
+  display: block;
+  margin: 0px 60px;
+  height: 500px;
+  /* border: #243238 solid 1px; */
+}
+.questionCard{
+  border-radius: 15px 0px 30px;
+  border: #810000 solid 6px;
+  border-style: inset;
+  color: #460000;
+  width: 250px;
+  display: inline-block;
+  height: 450px;
+  margin: 1%;
+  padding: 10px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  /* font-weight: bold; */
+  line-height: 23px;
+  /* text-transform: capitalize; */
+  text-align: justify;
+  
+}
+.questionCard:hover{
+  border-radius: 15px 50px 30px;
+  transform: scale(1.1);
+  font-weight: bolder;
+  color: #810000;
+}
+.questionCard div h2{
+  font-size: 25px;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 30px;
+  font-weight: bold;
+}
+.questionCard div p{
+  margin-top: 10px;
+}
+#firstQ{
+  float: left;
+}
+#secondQ{
+  float: left;
+}
+#thirdQ{
+  float: right;
+}
+#forthQ{
+  float: right;
+}
+
 #result {
   margin: 0px 100px;
   font-family: 'RocknRoll One', sans-serif;
-
- /* border: 1px solid #810000;*/
 }
 
 #customerData {
@@ -363,7 +413,8 @@ hr{
   margin: 0px 120px;
   margin-bottom: 20px;
   margin-top: 60px;
-  border: #810000 solid 1px;
+  border: #810000 solid 3px;
+  border-style: groove;
   color: #630000;
   font-family: 'RocknRoll One', sans-serif;
   font-size: 15px;
@@ -385,6 +436,12 @@ hr{
   background-color: #810000;
   color: #FFFFE3;
   font-size: 18px;
+  border-style: outset;
+}
+#submit:hover{
+  transform:scale(1.1) ;
+  height: 35px;
+  border-radius: 10px ;
 }
 #onlineLabel{
   margin-right: 20px;
@@ -399,14 +456,15 @@ hr{
   margin: 20px;
   margin-bottom: 15px;
   height: 300px;
-  border: 1px solid #810000;
+  border: 3px double #810000;
  
 }
 .location:hover{
   background-color: #FFE8C7;
   transform: scale(1.05);
-  border: 2px solid #810000;
-
+  border: 5px solid #810000 ;
+  border-style: double;
+  border-radius: 10px ;
 }
 
 .divLeft {
@@ -447,6 +505,12 @@ hr{
   background-color: #810000;
   color: #FFFFE3;
   font-size: 20px;
+  border-style: outset;
+}
+#booknow:hover{
+  transform: scale(1.1) ;
+  height: 45px;
+  border-radius: 10px ;
 }
 
 /**************************************Reservations Style End****************************/
@@ -456,8 +520,8 @@ hr{
 .row {
   margin: 5px;
   display: block;
-  margin-left: 170px;
-  margin-bottom: 50px;
+  /* margin-left: 170px; */
+  /* margin-bottom: 50px; */
   color: #810000;
 }
 
@@ -474,10 +538,18 @@ hr{
 #ourImagesTitle{
   font-family: 'Philosopher', sans-serif;
   margin-top: 7%;
-  margin-bottom: 5%;
+  margin-bottom: 0.05%;
   font-size: 60px;
   text-align: center;
   color: #810000;
+  border: double 2px #810000;
+  border-radius: 15px 50px ;
+  width: 80%;
+  padding: 5px;
+  background-color: #FFE8C7;
+}
+#ourImagesTitle:hover{
+  border: 5px double #810000;
 }
 
 .title {
@@ -498,16 +570,23 @@ hr{
 .card {
   width: 300px;
   display: inline-block;
-  border: solid 1px #810000;
+  border: groove 2px #810000;
   text-transform: capitalize;
-  margin-right: 60px;
+  margin: 30px;
+  /* margin-right: 60px; */
+  border-radius: 15px 50px ;
+
 }
 
 .card img {
   height: 250px;
   width: 250px;
-  margin-left: 25px;
-  margin-top: 10px;
+  /* margin-left: 25px; */
+  margin: 10px;
+  margin-top: 20px;
+  border-radius: 15px 50px ;
+  border: solid #810000 1px;
+
 }
 
 
@@ -530,9 +609,5 @@ hr{
   transform: rotate(180deg)
 }
 
-.container ul {
-  width: 80%;
-  margin-left: 70px;
-}
 
 /**************************************About US Style End***********************************/
