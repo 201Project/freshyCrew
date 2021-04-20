@@ -5,6 +5,7 @@ let parent = document.getElementById('addData');
 
 
 
+
 let weight;
 let Height;
 let resultBMI;
@@ -14,9 +15,10 @@ function start() {
     let button = document.getElementById("button");
     button.addEventListener("click", calBmi);
     let result1 = document.getElementById("result");
-    result1.setAttribute("value", 0);
+    //result1.setAttribute("value", 0);
 }
 let bmi;
+let resultRange;
 function calBmi() {
     weight1 = document.getElementById("weightRange");
     weight = parseInt(document.getElementById("Weight").value);
@@ -44,8 +46,8 @@ function calBmi() {
                 range2 = 28.3;
                 /*  console.log("r1= " + range1);
                   console.log("r2= " + range2);*/
-                let resultRange = `${range1}-${range2} `;
-                weight1.setAttribute("value", resultRange);
+                resultRange = `${range1}-${range2} `;
+             //   weight1.setAttribute("value", resultRange);
 
             } else {
                 range1 = 35.6;
@@ -54,37 +56,38 @@ function calBmi() {
                 range2 += (0.7 * j)
                 /*   console.log("r1= " + range1);
                    console.log("r2= " + range2);*/
-                let resultRange = `${range1}-${range2} `;
-                weight1.setAttribute("value", resultRange);
+                 resultRange = `${range1}-${range2} `;
+                //weight1.setAttribute("value", resultRange);
 
             } break;
         } else {
             // alert('hint : maximum height is 300 cm and minimum and minimum height is 110 cm');
-            weight1.setAttribute("value", 'doesnt make sense');
+           // weight1.setAttribute("value", 'doesnt make sense');
+           resultRange='doesnt make sense';
 
             // parent = document.getElementById("addData").style.display = "none";
         }
     }
 
 
-    let result1 = document.getElementById("result");
-    let result2 = document.getElementById("result2");
+    // let result1 = document.getElementById("result");
+    // let result2 = document.getElementById("result2");
     bmi = weight / ((Height / 100) * (Height / 100));
-    result1.setAttribute("value", bmi);
+    // result1.setAttribute("value", bmi);
     //---------------- the souce of these numbers is -----> https:// m.marefa.org 
 
 
     if (bmi < 16.5) {
         resultBMI = "you are severely underweight";
         parent.textContent = '';
-        result2.setAttribute("value", resultBMI);
+       // result2.setAttribute("value", resultBMI);
         underWeight.renderObjects();
         listTips(tipsUnderWeight);
 
     } else if (bmi >= 16.5 && bmi <= 18.4) {
         resultBMI = "you are underweight";
         parent.textContent = '';
-        result2.setAttribute("value", resultBMI);
+      //  result2.setAttribute("value", resultBMI);
         underWeight.renderObjects();
         listTips(tipsUnderWeight);
 
@@ -93,7 +96,7 @@ function calBmi() {
     else if (bmi >= 18.5 && bmi <= 24.9) {
         resultBMI = "you weight is normal";
         parent.textContent = '';
-        result2.setAttribute("value", resultBMI);
+      //  result2.setAttribute("value", resultBMI);
         normalWeight.renderObjects();
         listTips(tipsNormalWeight);
     }
@@ -101,7 +104,7 @@ function calBmi() {
     else if (bmi >= 25 && bmi <= 30) {
         resultBMI = "you are overweight"
         parent.textContent = '';
-        result2.setAttribute("value", resultBMI);
+      //  result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
         listTips(tipsOverWeight);
     }
@@ -109,7 +112,7 @@ function calBmi() {
     else if (bmi >= 30.1 && bmi <= 34.9) {
         resultBMI = "First-class obesity";
         parent.textContent = '';
-        result2.setAttribute("value", resultBMI);
+       // result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
         listTips(tipsOverWeight);
     }
@@ -117,7 +120,7 @@ function calBmi() {
     else if (bmi >= 35 && bmi <= 40) {
         resultBMI = "Second-class obesity";
         parent.textContent = '';
-        result2.setAttribute("value", resultBMI);
+        //result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
         listTips(tipsOverWeight);
     }
@@ -125,7 +128,7 @@ function calBmi() {
     else if (bmi > 40) {
         resultBMI = "Third-class obesity";
         parent.textContent = '';
-        result2.setAttribute("value", resultBMI);
+      //  result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
         listTips(tipsOverWeight);
     }
@@ -165,8 +168,19 @@ advice.prototype.renderObjects = function () {
     parent.appendChild(def);
     def.textContent = this.defintion;
 
+    let parent2 = document.getElementById('addData2');
+    let par1 = document.createElement('p');
+    parent2.appendChild(par1);
+    par1.textContent ='This your '+ bmi;
+
+    let par2 = document.createElement('p');
+    parent2.appendChild(par2);
+    par2.textContent = 'This case categorized as '+resultBMI;
 
 
+    let par3 = document.createElement('p');
+    parent2.appendChild(par3);
+    par3.textContent = 'This your range' + resultRange;
     // console.log("22222" + def);
 
 
