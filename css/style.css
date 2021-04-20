@@ -4,7 +4,7 @@
 
 body {
   padding: 25px;
-  background-color:#FFFFE3;
+  background-color:white;
   color: black;
   max-width: 100%;
   overflow-x: hidden;
@@ -21,6 +21,7 @@ header {
   margin-left: -25px;
   position: fixed;
   z-index: 22;
+  opacity: 95%;
 }
 
 header nav{
@@ -67,7 +68,8 @@ header nav ul li a:hover{
 
 #title{
   margin-top: 60px;
-  font-family:Georgia, 'Times New Roman', Times, serif
+  font-family: 'Black Ops One', cursive;
+  font-size: 33px;
 }
 
 /************************* Dark Mode Style *****************************/
@@ -136,10 +138,16 @@ header nav ul li a:hover{
 
 #hero {
   margin-top: 8px;
+  border: 1px solid white;
+  
+  box-shadow: 5px 10px #aca8a8;
 }
+
+
 
 .mySlides {
   display: none;
+  box-shadow: navy 9px;
 }
 
 /*********************************Footer Area Style****************************************/
@@ -163,11 +171,13 @@ footer h2{
  float: left;
 }
 #footerLeft h2 {
-  margin-top: -90px;
+  margin-top: -120px;
   font-weight: bold;
+ 
  }
  #footerLeft ol li a {
   text-decoration: none;
+  color: #ffffff;
  }
 footer ul li {
   display: inline;
@@ -177,6 +187,13 @@ footer ul li {
 #footerRight{
   float: right;
   padding-right: 10px;
+  
+}
+#footerRight iframe{
+  margin-top: 7px;
+}
+#footerRight ol li{font-weight: bold;
+
 }
 #footerLeft ol li{
 padding:3px;
@@ -184,6 +201,11 @@ padding:3px;
 #mid{
   position: relative;
   left:30%;
+
+}
+#mid p{
+  
+  color: #FFFFE3;
 }
 #mid h6{
   
@@ -198,7 +220,8 @@ padding:3px;
  padding-right: 10px;
 }
 #mid ul li{
-  padding-right: 70px;}
+  padding-right: 95px;
+}
   #mid ul{
     margin-top: 30px;
   } 
@@ -291,8 +314,10 @@ hr{
   display: block;
   width: 70%;
   border: 1px solid rgba(255,255,255, 0.1);
+  
 
 }
+
 
 .box a{
   text-decoration: none;
@@ -316,13 +341,14 @@ hr{
 
 .box-grey{
 
-  background-image: linear-gradient(to right,#810000,  #7a7a74);
+  background-image: linear-gradient(to right,#810000,  #0a0a0a);
 }
 
 .box-red{
   
 
-  background-image: linear-gradient(to bottom right, #7a7a74 ,#810000, #7a7a74);
+  background-image: linear-gradient(to bottom right, #000000 ,#810000, #000000);
+  
 
 }
 /*********************************Responsive Services Section Using  Html & Css END****************************************/
@@ -337,6 +363,7 @@ hr{
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   font-size: 20px;
+  line-height: 29px;
 }
 
 #ourInfo {
@@ -476,5 +503,6 @@ main h1 {
   width: 80%;
   margin-left: 70px;
 }
+
 
 /**************************************About US Style End***********************************/
