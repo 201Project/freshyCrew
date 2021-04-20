@@ -10,11 +10,12 @@ body {
   overflow-x: hidden;
 }
 
+
 /*************************** Header Area Style **********************************/
 
 header {
   background-color: #717171;
-  height: 75px;
+  height: 100px;
   top: 0;
   width: 100%;
   margin-left: -25px;
@@ -22,16 +23,9 @@ header {
   z-index: 22;
 }
 
-header h1 {
-  padding-top: 2%;
+header nav{
+  margin-top: -30px;
 }
-
-#logo {
-  float: left;
-  margin-left: 1%;
-  margin-top: 0%;
-}
-
 header nav ul {
   padding-right: 150px;
 }
@@ -43,7 +37,8 @@ header nav ul li {
 header nav ul li a {
   color: #afacac;
   text-decoration: none;
-  padding: 5px;
+  padding-left: 30px;
+  
   ;
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;
@@ -54,7 +49,21 @@ header button {
   float: right;
   margin-right: 10px;
 }
+header nav ul li a:hover{
+  font-size: 200%;
+}
 
+#logo{
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  font-weight: bolder;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+#logo span{
+  font-size: 70px;
+  color: #D50000;
+}
 /************************* Dark Mode Style *****************************/
 
 #switch-check{
@@ -133,16 +142,60 @@ footer {
   position: relative;
   bottom: -25px;
   clear: both;
-  width: 1518px;
+  width: 105%;
   background-color: rgb(113, 113, 113);
-  height: 100px;
+  height: 200px;
   margin-left: -25px;
+  padding: 15px;
+}
+footer h2{
+  font-size: 30px;
+  margin-bottom:10px ;
 }
 
+#footerLeft {
+ float: left;
+}
+#footerLeft h2 {
+  margin-top: -90px;
+  font-weight: bold;
+ }
+ #footerLeft ol li a {
+  text-decoration: none;
+ }
 footer ul li {
   display: inline;
   float: right;
+  
 }
+#footerRight{
+  float: right;
+  padding-right: 10px;
+}
+#footerLeft ol li{
+padding:3px;
+}
+#mid{
+  position: relative;
+  left:30%;
+}
+#mid h6{
+  
+  position: relative;
+  top: 100px;
+}
+#mid h2{
+  font-weight: bold;
+}
+#mid i {
+ margin-left: -740px;
+ padding-right: 10px;
+}
+#mid ul li{
+  padding-right: 70px;}
+  #mid ul{
+    margin-top: 30px;
+  } 
 
 /*********************************Footer Area Style End****************************************/
 
