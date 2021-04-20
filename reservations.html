@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -53,55 +55,52 @@
 
   <main>
 
-  <form action="reservations.html" id="customerData">
-<fieldset>
-    <!-- <label for="lable1"> Name Region </label> -->
-    <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
-   
-    
-    <!-- <label id="lable2"> how many person? </label>
-    <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20"> -->
-
-    <!-- <label for="slider">slide your budget</label>
-    <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required> -->
-<!-- <p id='sliderValue'></p> -->
-<input type="checkbox" name="Online" id="Online"> 
-<label for="Online">Online Course Only </label> 
-
-
-     <label for="categouryGender"> You Are Intrested In : </label>
-        <select name="categouryGender" id="categouryGender">
-            <option value="NoCategoury">--Please choose What Kind Of Gym--</option> 
-            <option value="Men" required>Men</option>
-            <option value="Women" required>Women</option>
-            <option value="Mix" required>Mix</option>
-                  
-            </select>
-<!--  
-            <label for="categouryRemot"> choose one gym pt online </label>
-            <select name="categouryRemot" id="categouryRemot">
-                <option value="NoACategoury">--Please choose an option--</option> 
-                <option value=" Online"required>Online Courses</option>
-                <option value="OnlinePt"required>Online Personal Trainer</option>
-                <option value="goTO"required>Go To Gym</option>
-                <option value="Child"required>Child</option> -->
-                      
-                <!-- </select> -->
-     
-                <label for="categouryPlace"> You Are In : </label>
-        <select name="categouryPlace" id="categouryPlace">
-            <option value="NoPlaceCategoury">--Please choose Your City--</option> 
-            <option value="Amman"required>Amman</option>
-            <option value="Zarqa"required>Zarqa</option>
-            <option value="Irbid"required>Irbid</option>
-            <!-- <option value=""required>Child</option> -->
-                  
-            </select>
-         
+    <form action="reservations.html" id="customerData">
+        <fieldset>
+            <!-- <label for="lable1"> Name Region </label> -->
+            <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
+        
             
-   <input id="submit" value="Submit" type="submit"> 
-</fieldset>
-</form>
+            <!-- <label id="lable2"> how many person? </label>
+            <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20"> -->
+
+            <!-- <label for="slider">slide your budget</label>
+            <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required> -->
+            <!-- <p id='sliderValue'></p> -->
+            <input type="checkbox" name="Online" id="Online" > 
+            <label for="Online" id="onlineLabel">Online Course Only </label> 
+
+
+            <label for="categouryGender"> You Are Intrested In : </label>
+                    <select name="categouryGender" id="categouryGender">
+                        <option value="NoCategoury">--Please choose What Kind Of Gym--</option> 
+                        <option value="Men" required>Men</option>
+                        <option value="Women" required>Women</option>
+                        <option value="Mix" required>Mix</option>
+                        
+                    </select>
+    <!--  
+                <label for="categouryRemot"> choose one gym pt online </label>
+                <select name="categouryRemot" id="categouryRemot">
+                    <option value="NoACategoury">--Please choose an option--</option> 
+                    <option value=" Online"required>Online Courses</option>
+                    <option value="OnlinePt"required>Online Personal Trainer</option>
+                    <option value="goTO"required>Go To Gym</option>
+                    <option value="Child"required>Child</option> -->
+                        
+                    <!-- </select> -->
+        
+            <label for="categouryPlace"> You Are In : </label>
+                <select name="categouryPlace" id="categouryPlace">
+                    <option value="NoPlaceCategoury">--Please choose Your City--</option> 
+                    <option value="Amman"required>Amman</option>
+                    <option value="Zarqa"required>Zarqa</option>
+                    <option value="Irbid"required>Irbid</option>
+                    <!-- <option value=""required>Child</option> -->
+                </select>
+            <input id="submit" value="Filter Gyms" type="submit"> 
+        </fieldset>
+    </form>
 
   
     <!-- getting the sliderr value ------------------------------------------------------------------>

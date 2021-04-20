@@ -60,7 +60,7 @@ GymCategories.prototype.inject =function(gym){
     
     let reserveBtn = document.createElement('button');
     textContainer.appendChild(reserveBtn);
-
+    reserveBtn.id='booknow';
     // console.log(reserveBtn);
     reserveBtn.textContent = 'Book Now!'; //add link in array to book
 // console.log(this);

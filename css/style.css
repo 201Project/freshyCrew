@@ -4,7 +4,7 @@
 
 body {
   padding: 25px;
-  background-color: rgb(187, 176, 176);
+  background-color: #FFFFE3;
   color: black;
   max-width: 100%;
   overflow-x: hidden;
@@ -350,27 +350,63 @@ hr{
 }
 
 /**************************************Reservations Style****************************/
-
+/**************************************nazmia***************************************************/
 #result {
   margin: 0px 100px;
-  border: 1px solid black;
+  font-family: 'RocknRoll One', sans-serif;
+
+ /* border: 1px solid #810000;*/
 }
 
 #customerData {
-  margin-left: 100px;
+  padding: 10px;
+  margin: 0px 120px;
   margin-bottom: 20px;
   margin-top: 60px;
+  border: #810000 solid 1px;
+  color: #630000;
+  font-family: 'RocknRoll One', sans-serif;
+  font-size: 15px;
+}
+#customerData select{
+  margin-right: 15px;
+  color: #810000;
+  background-color: #FFE8C7;
+  font-family: 'RocknRoll One', sans-serif;
+
+}
+#Online{
+  background-color: #810000;
+}
+#submit{
+  margin-top: 10px;
+  width: 150px;
+  height: 30px;
+  background-color: #810000;
+  color: #FFFFE3;
+  font-size: 18px;
+}
+#onlineLabel{
+  margin-right: 20px;
 }
 
 #result div img {
-  width: 250px;
+  width: 300px;
   height: 250px;
 }
 
 .location {
-  margin: 10px;
+  margin: 20px;
+  margin-bottom: 15px;
   height: 300px;
-  border: 1px solid black;
+  border: 1px solid #810000;
+ 
+}
+.location:hover{
+  background-color: #FFE8C7;
+  transform: scale(1.05);
+  border: 2px solid #810000;
+
 }
 
 .divLeft {
@@ -384,13 +420,15 @@ hr{
   margin-top: 20px;
   width: 75%;
   float: right;
-  margin-right: 10px;
+  margin-right: -65px;
+  color: #630000;
 }
 
 .divRight h2 {
   font-size: 30px;
   font-weight: 800;
   padding-bottom: 10px;
+  
 }
 
 .divRight p {
@@ -403,40 +441,64 @@ hr{
   scroll-behavior: smooth;
   margin-bottom: 10px;
 }
+#booknow{
+  width: 150px;
+  height: 40px;
+  background-color: #810000;
+  color: #FFFFE3;
+  font-size: 20px;
+}
 
 /**************************************Reservations Style End****************************/
 
 /**************************************About US Style***********************************/
-
+/*******************************************nazmia*************/
 .row {
   margin: 5px;
   display: block;
   margin-left: 170px;
   margin-bottom: 50px;
+  color: #810000;
 }
 
 .container h2 {
   padding: 5px;
-  font-weight: 900;
-  font-size: larger;
+  font-stretch: wider;
+  font-size: 28px;
   text-align: center;
+  color: #810000;
+  font-family: 'Philosopher', sans-serif;
+  
+
+}
+#ourImagesTitle{
+  font-family: 'Philosopher', sans-serif;
+  margin-top: 7%;
+  margin-bottom: 5%;
+  font-size: 60px;
+  text-align: center;
+  color: #810000;
 }
 
 .title {
   text-align: center;
   font-weight: 800;
   font-size: large;
+  font-family: 'Merienda', cursive;
+
 }
 
 .container p {
   padding: 5px 10px;
   text-align: center;
+  font-family: 'Philosopher', sans-serif;
+
 }
 
 .card {
   width: 300px;
   display: inline-block;
-  border: solid 1px black;
+  border: solid 1px #810000;
   text-transform: capitalize;
   margin-right: 60px;
 }
@@ -448,21 +510,24 @@ hr{
   margin-top: 10px;
 }
 
-main h1 {
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  margin: 30px;
-}
 
 .card:hover {
   transform: scale(1.1);
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #810000;
+  background-color: #FFE8C7;
 }
 
 .container ul li {
   display: inline-block;
   padding: 10px;
+}
+
+.container ul li i{
+  color: #810000;
+  transition: width 1s, height 1s, transform 1s;
+}
+.container ul li i:hover{
+  transform: rotate(180deg)
 }
 
 .container ul {
