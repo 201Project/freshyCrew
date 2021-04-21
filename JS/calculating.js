@@ -182,6 +182,12 @@ advice.prototype.renderObjects = function () {
 
 
 
+    let apperVideo = document.createElement('IFRAME')
+    apperVideo.setAttribute('src', this.source);
+    apperVideo.setAttribute("height", "340");
+    apperVideo.setAttribute("width", "340");
+    parent.appendChild(apperVideo);
+
 
 
     let titlCaseEl = document.createElement('h1');
@@ -203,7 +209,7 @@ advice.prototype.renderObjects = function () {
     parent2.appendChild(par1);
 
 
-    par1.textContent = `This your BMI :${bmi}`;
+    par1.textContent = `Your BMI :${bmi}`;
 
     let par2 = document.createElement('p');
     parent2.appendChild(par2);
@@ -211,15 +217,11 @@ advice.prototype.renderObjects = function () {
 
     let par3 = document.createElement('p');
     parent2.appendChild(par3);
-    par3.textContent = `This is your range: ${resultRange}`;
+    par3.textContent = `Normal Weight: ${resultRange}`;
 
 
 
-    let apperVideo = document.createElement('IFRAME')
-    apperVideo.setAttribute('src', this.source);
-    apperVideo.setAttribute("height", "540");
-    apperVideo.setAttribute("width", "1020");
-    parent.appendChild(apperVideo);
+  
 
 
 
@@ -272,13 +274,14 @@ function listTips(arrList) {
 //-------------------------------------------Chart-------------------------------------
 let arrName = [' severely underweight', ' underweight', 'weight is normal', "overweight", 'First-class obesity', 'Second-class obesity', 'Third-class obesity']
 
+
 let arrBMI = ['bmi < 16.5', 'bmi >= 16.5 && bmi <= 18.4', 'bmi >= 18.5 && bmi <= 24.9', 'bmi >= 25 && bmi <= 30', 'bmi >= 30.1 && bmi <= 34.9', 'bmi >= 35 && bmi <= 40', 'bmi > 40']
 function chart() {
-    let ctx = document.getElementById('myChart').getContext('2d');
+  let ctx = document.getElementById('myChart').getContext('2d');
 
     let chart = new Chart(ctx, {
         // what type is the chart
-        type: 'bar',
+        type: 'doughnut',
 
         //  the data for showing
         data: {
@@ -290,7 +293,7 @@ function chart() {
                     label: 'bmi',
                     data: [16.5, 18.4, 24.9, 25, 30.1, 34.9, 40],
                     backgroundColor: [
-                        '#810000',
+                        'red','pink','green','blue','yellow','#ad709b','#46daba',
                     ],
 
                     borderWidth: 1
@@ -311,6 +314,10 @@ function chart() {
         }
     });
 
+    const config = {
+       
+        data: "hi",
+      };
 
 
 }
