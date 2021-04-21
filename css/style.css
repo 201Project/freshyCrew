@@ -415,66 +415,43 @@ hr{
 
 /**************************************Reservations Style****************************/
 /**************************************nazmia***************************************************/
-/* #questions{
-  display: block;
-  margin: 0px 60px;
-  height: 500px; */
-  /* border: #243238 solid 1px; */
-/* } */
-/* .questionCard{
-  border-radius: 15px 0px 30px;
-  border: #810000 solid 6px;
-  border-style: inset; */
-  /* color: #460000; */
-  /* width: 250px;
-  display: inline-block;
-  height: 450px;
-  margin: 1%;
-  padding: 10px;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 17px;
-  /* font-weight: bold; */
-  /* line-height: 23px; */
-  /* text-transform: capitalize; */
-  /* text-align: justify; */ 
-  
-/* }
-.questionCard:hover{
-  border-radius: 15px 50px 30px;
-  transform: scale(1.1);
-  font-weight: bolder; */
-  /* color: #810000; */
-/* } */
-/* .questionCard div h2{
-  font-size: 25px;
-  font-family: 'PT Sans', sans-serif;
-  line-height: 30px;
-  font-weight: bold;
-}
-.questionCard div p{
-  margin-top: 10px;
-}
 
-#secondQ{
-  float: left;
-}
-#thirdQ{
-  float: right;
-}
-#forthQ{
-  float: right;
-} */
 #firstQ p{
   line-height: 25px;
   text-align: justify;
+  font-family: 'PT Sans', sans-serif;
 }
 #secondQ p{
   line-height: 25px;
   text-align: justify;
+  font-family: 'PT Sans', sans-serif;
 }
 #thirdQ p{
   line-height: 25px;
   text-align: justify;
+  font-family: 'PT Sans', sans-serif;
+}
+#firstQ h2{
+  line-height: 25px;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: justify;
+  
+  font-family: 'PT Sans', sans-serif;
+}
+#secondQ h2{
+  line-height: 25px;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'PT Sans', sans-serif;
+}
+#thirdQ h2{
+  line-height: 25px;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'PT Sans', sans-serif;
 }
 #result {
   margin: 0px 100px;
@@ -495,7 +472,7 @@ hr{
 #customerData select{
   margin-right: 15px;
   color: #e40017;
-  background-color: #FFE8C7;
+  background-color: #a5a59d70;
   font-family: 'RocknRoll One', sans-serif;
 
 }
@@ -503,7 +480,7 @@ hr{
   background-color: #e40017;
 }
 #submit{
-  margin-top: 10px;
+  margin-top: 15px;
   width: 150px;
   height: 30px;
   background-color: #e40017;
@@ -512,7 +489,7 @@ hr{
   border-style: outset;
 }
 #submit:hover{
-  transform:scale(1.1) ;
+  transform:scale(1.05) ;
   height: 35px;
   border-radius: 10px ;
 }
@@ -593,13 +570,16 @@ hr{
 
 /**************************************About US Style***********************************/
 /*******************************************nazmia*************/
+#aboutUsPage{
+  margin-top: 7%;
+}
 .row {
   margin: 5px;
   display: block;
   /* margin-left: 170px; */
   /* margin-bottom: 50px; */
   
-  margin-top: 6%;
+  /* margin-top: 6%; */
 }
 
 .container h2 {
@@ -649,7 +629,7 @@ hr{
   display: inline-block;
   border: groove 2px rgba(121, 119, 119);
   text-transform: capitalize;
-  margin:1%;
+  margin:30px;
   /* margin-right: 60px; */
   border-radius: 15px 50px ;
 
