@@ -4,7 +4,7 @@
 
 body {
   padding: 25px;
-  background-color: #FFFFE3;
+  background-color:#FFFFE3;
   color: black;
   max-width: 100%;
   overflow-x: hidden;
@@ -14,7 +14,7 @@ body {
 /*************************** Header Area Style **********************************/
 
 header {
-  background-color: #717171;
+  background-color:#810000;
   height: 100px;
   top: 0;
   width: 100%;
@@ -35,7 +35,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #afacac;
+  color: #FFFFE3;
   text-decoration: none;
   padding-left: 30px;
   
@@ -62,8 +62,14 @@ header nav ul li a:hover{
 }
 #logo span{
   font-size: 70px;
-  color: #D50000;
+  color: #FFFFE3;
 }
+
+#title{
+  margin-top: 60px;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
 /************************* Dark Mode Style *****************************/
 
 #switch-check{
@@ -77,7 +83,7 @@ header nav ul li a:hover{
   text-indent: -9999px;
   width: 80px;
   height: 40px;
-  background: grey;
+  background: #FFFFE3;;
   display: block;
   border-radius: 100px;
   position: relative;
@@ -90,13 +96,13 @@ header nav ul li a:hover{
   left: 5px;
   width: 30px;
   height: 30px;
-  background: #fff;
+  background: rgb(12, 11, 11);
   border-radius: 90px;
   transition: 0.3s;
 }
 
 #switch-check:checked+#toggle {
-  background: #bada55;
+  background: #FFFFE3;
 }
 
 #switch-check:checked+#toggle:after {
@@ -117,7 +123,7 @@ header nav ul li a:hover{
 }
 .dark-mode {
   background-color: black;
-  color: white;
+  color:#FFFFE3;
 }
 /************************* Dark Mode Style End ***********************************/
 
@@ -129,7 +135,7 @@ header nav ul li a:hover{
 /* first of all add the images container sec from the html */
 
 #hero {
-  margin-top: 100px;
+  margin-top: 8px;
 }
 
 .mySlides {
@@ -143,7 +149,7 @@ footer {
   bottom: -25px;
   clear: both;
   width: 105%;
-  background-color: rgb(113, 113, 113);
+  background-color:#810000;
   height: 200px;
   margin-left: -25px;
   padding: 15px;
@@ -310,13 +316,13 @@ hr{
 
 .box-grey{
 
-  background-image: linear-gradient(to right, #c28dd6,  #524d92);
+  background-image: linear-gradient(to right,#810000,  #7a7a74);
 }
 
 .box-red{
   
 
-  background-image: linear-gradient(to bottom right, #c28dd6 ,#88f891, #3d3790);
+  background-image: linear-gradient(to bottom right, #7a7a74 ,#810000, #7a7a74);
 
 }
 /*********************************Responsive Services Section Using  Html & Css END****************************************/
@@ -328,8 +334,9 @@ hr{
 #introPar {
   margin-top: 10px;
   text-align: justify;
-  font-family: 'Times New Roman', Times, serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
+  font-size: 20px;
 }
 
 #ourInfo {
