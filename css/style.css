@@ -152,7 +152,7 @@ color: #FFFFE3;
 #hero {
   margin-top: 80px;
   padding-top: 20px;
- 
+  
   
  
 }
@@ -161,7 +161,7 @@ color: #FFFFE3;
 
 .mySlides {
   display: none;
- 
+  box-shadow: 0 8px 8px 0 rgb(0 0 0 / 40%);
 }
 
 /*********************************Footer Area Style****************************************/
@@ -309,6 +309,7 @@ padding:3px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  box-shadow: 0 8px 8px 0 rgb(0 0 0 / 40%);
 }
 
 .box:hover::before{
@@ -387,12 +388,13 @@ hr{
 
 #introPar {
   margin-top: 35px;
-  text-align: justify;
+  
   font-family: 'Oswald', sans-serif;
  font-weight: bold;
   font-size: 20px;
   line-height: 34px;
   margin-bottom: 50px;
+  text-align: center;
   
 }
 
