@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,55 +6,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculate</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        input[type=number]:focus {
+            background-color: #ffb4b4;
+            border-radius: 4px;
+
+        }
+
+        input[type=button] {
+            background-color: #ffb4b4;
+            border-radius: 4px;
+            width: 150px;
+            color: #810000;
+            font-size: 20px;
+            font-weight: bolder;
+
+        }
+
+        #Cal:hover {
+            transform: scale(1.25);
+            font-weight: bolder;
+        }
+
+        #addData2 p {
+
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        #addData {
+
+            font-size: 30px;
+            font-weight: bolder;
+
+
+        }
+
+        #addData h3 {
+            text-align: left;
+        }
+
+        #addData ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+
+        }
 
 
 
+        #divBMI {
+
+            line-height: 50px;
+
+        }
+
+        #Bmi-logo:hover {
+            transform: scale(1.25);
+
+
+        }
+
+        #divBMI h1:hover {
+            transform: scale(1.25);
+
+        }
+    </style>
 
 </head>
 
 <body>
-   <h1>Calculate</h1>
-
     <main>
-         <!---------------------------------------------------- Form to calculate  BMI--------------------------------------------------->
-         <center>
-            <div class="bmi-text">
-                <h3>Calculate your bmi</h3>
-                <form action="#"> <br>
-                    <label> Weight : <input type="number" id="Weight" placeholder="in kg " size="10" min="0"></label>
+        <center>
+
+
+
+
+            <div id="divBMI" style="  border: 5px dotted #FFFFE3;  border-radius: 30px;
+        background-image: linear-gradient(#a5a59d,rgb(190, 109, 109) ,#810000);padding-bottom:50px;padding-top:50px;
+        ">
+                <h1> Body Mass Index</h1>
+                <img id="Bmi-logo" src="./img/BMI-logo.png" width="200" height="200" alt="BMI"
+                    style="border-radius: 80px;">
+                <p>
+                    Body Mass Index is a simple calculation using a person's height and weight. The formula is BMI =
+                    kg/m2
+                    where kg is a person's weight in kilograms and m2 is their height in metres squared. A BMI of 25.0
+                    or
+                    more is overweight, while the healthy range is 18.5 to 24.9. BMI applies to most adults 18-65 years.
+                    <br>
+                    After calculating you BMI you will be given the perfect weight that fits you, the category that you
+                    are
+                    in and what to do to achieve the perfect weight .
+
+                </p>
+                <img src="./img/BMI.jpg" width="1000" height="400" alt="BMI" style="border-radius: 80px;">
+            </div>
+
+
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </center>
+        <!---------------------------------------------------- Form to calculate  BMI--------------------------------------------------->
+        <center>
+            <div class="bmi-text" style="  border: 5px dotted #FFFFE3;  border-radius: 30px;
+          ;padding-bottom:50px;padding-top:50px;">
+                <h3 id="Cal" style="font-weight: bolder"> Calculate your bmi</h3><br>
+
+
+                <img src="./img/DO you Know.jpg" width="400" height="200" alt="BMI" style="border-radius: 80px;">
+                <form action="#">
+
+                    <span style="font-weight: bolder">
+                        <br>hint : maximum height is 300 cm and minimum and minimum height is 110 cm</span>
+                    <label style="font-weight: bolder;">
+
+
+
+                        <br> Height : <br>
+                        <input type="number" id="Height" placeholder="in cm" min="110" max='300'
+                            style=" width: 10%;"></label>
                     <br><br>
 
 
-                    <label> Height : <input type="number" id="Height" placeholder="in cm" min="110" max='300'></label> <br><br>
-
-
-                    <label> Your bmi is : <input type="number" id="result" size="20" readonly></label> <br><br>
-
-
-                    <label><input type="text" id="result2" size="20" readonly></label> <br><br>
-
-                    <input class="template-btn" type="button" value="What is bmi" id="button">
                     <br>
-                    <br>
-
-                    <label style=" margin-left: 10px ; margin-right: 10px ; text-align: center ; color: #008000">
-
-                        weight <input type="text" id="weightRange" size="20" readonly></label>
+                    <label style="font-weight: bolder;"> Weight : <br><input type="number" id="Weight"
+                            placeholder="in kg " size="10" min="0" style=" width: 30%;"></label>
                     <br><br>
+
+                    <input class="template-btn" type="button" value="What is BMI" id="button">
+                    <br>
+                    <br>
+
+
                 </form>
+                <div id="addData2">
+
+                </div> <br><br>
             </div>
 
         </center>
         <!---------------------------------------------------- End form to calculate  BMI--------------------------------------------------->
 
 
-       
-       <!-- Add Div for render Data  -->
-        <div id="addData">
-           
-        </div>
+        <center>
+            <!-- Add Div for render Data  -->
+            <div id="addData">
+
+            </div>
+
+        </center>
     </main>
     <footer>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
         <script src="JS/calculating.js"></script>
         <script src="JS/cart.js"></script>
     </footer>
