@@ -413,18 +413,18 @@ hr{
 
 /**************************************Reservations Style****************************/
 /**************************************nazmia***************************************************/
-#questions{
+/* #questions{
   display: block;
   margin: 0px 60px;
-  height: 500px;
+  height: 500px; */
   /* border: #243238 solid 1px; */
-}
-.questionCard{
+/* } */
+/* .questionCard{
   border-radius: 15px 0px 30px;
   border: #810000 solid 6px;
-  border-style: inset;
+  border-style: inset; */
   /* color: #460000; */
-  width: 250px;
+  /* width: 250px;
   display: inline-block;
   height: 450px;
   margin: 1%;
@@ -432,18 +432,18 @@ hr{
   font-family: 'PT Sans', sans-serif;
   font-size: 17px;
   /* font-weight: bold; */
-  line-height: 23px;
+  /* line-height: 23px; */
   /* text-transform: capitalize; */
-  text-align: justify;
+  /* text-align: justify; */ 
   
-}
+/* }
 .questionCard:hover{
   border-radius: 15px 50px 30px;
   transform: scale(1.1);
-  font-weight: bolder;
+  font-weight: bolder; */
   /* color: #810000; */
-}
-.questionCard div h2{
+/* } */
+/* .questionCard div h2{
   font-size: 25px;
   font-family: 'PT Sans', sans-serif;
   line-height: 30px;
@@ -452,9 +452,7 @@ hr{
 .questionCard div p{
   margin-top: 10px;
 }
-#firstQ{
-  float: left;
-}
+
 #secondQ{
   float: left;
 }
@@ -463,8 +461,19 @@ hr{
 }
 #forthQ{
   float: right;
+} */
+#firstQ p{
+  line-height: 25px;
+  text-align: justify;
 }
-
+#secondQ p{
+  line-height: 25px;
+  text-align: justify;
+}
+#thirdQ p{
+  line-height: 25px;
+  text-align: justify;
+}
 #result {
   margin: 0px 100px;
   font-family: 'RocknRoll One', sans-serif;
@@ -521,13 +530,13 @@ hr{
   border: 3px double #810000;
  
 }
-.location:hover{
+/* .location:hover{ */
   /* background-color: #FFE8C7; */
-  transform: scale(1.05);
+  /* transform: scale(1.05);
   border: 5px solid #810000 ;
   border-style: double;
   border-radius: 10px ;
-}
+} */
 
 .divLeft {
   width: 15%;
