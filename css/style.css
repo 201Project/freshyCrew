@@ -4,7 +4,7 @@
 
 body {
   padding: 25px;
-  background-color:white;
+  background-color:whitesmoke;
   color: black;
   max-width: 100%;
   overflow-x: hidden;
@@ -21,14 +21,25 @@ header {
   margin-left: -25px;
   position: fixed;
   z-index: 22;
-  opacity: 95%;
+  background-image: linear-gradient(480deg
+,hsla(0,0%,100%,.01),hsla(0,0%,100%,.01) 16.667%,rgba(46,46,46,.01) 0,rgba(46,46,46,.01) 33.334%,hsla(0,0%,88.6%,.01) 0,hsla(0,0%,88.6%,.01) 50.001000000000005%,hsla(0,0%,62.4%,.01) 0,hsla(0,0%,62.4%,.01) 66.668%,hsla(0,0%,58.4%,.01) 0,hsla(0,0%,58.4%,.01) 83.33500000000001%,rgba(43,43,43,.01) 0,rgba(43,43,43,.01) 100.002%),linear-gradient(503deg
+,hsla(0,0%,65.1%,.03),hsla(0,0%,65.1%,.03) 25%,hsla(0,0%,94.1%,.03) 0,hsla(0,0%,94.1%,.03) 50%,hsla(0,0%,47.5%,.03) 0,hsla(0,0%,47.5%,.03) 75%,rgba(40,40,40,.03) 0,rgba(40,40,40,.03)),linear-gradient(504deg
+,hsla(0,0%,82%,.01),hsla(0,0%,82%,.01) 25%,rgba(22,22,22,.01) 0,rgba(22,22,22,.01) 50%,hsla(0,0%,49%,.01) 0,hsla(0,0%,49%,.01) 75%,hsla(0,0%,80.4%,.01) 0,hsla(0,0%,80.4%,.01)),linear-gradient(247deg
+,hsla(0,0%,76.5%,.01),hsla(0,0%,76.5%,.01) 14.286%,rgba(64,64,64,.01) 0,rgba(64,64,64,.01) 28.572%,rgba(67,67,67,.01) 0,rgba(67,67,67,.01) 42.858%,hsla(0,0%,83.9%,.01) 0,hsla(0,0%,83.9%,.01) 57.144%,rgba(45,45,45,.01) 0,rgba(45,45,45,.01) 71.42999999999999%,rgba(47,47,47,.01) 71.43%,rgba(47,47,47,.01) 85.71600000000001%,hsla(0,0%,67.5%,.01) 0,hsla(0,0%,67.5%,.01) 100.002%),linear-gradient(230deg
+,hsla(0,0%,43.5%,.03),hsla(0,0%,43.5%,.03) 16.667%,hsla(0,0%,79.2%,.03) 0,hsla(0,0%,79.2%,.03) 33.334%,rgba(57,57,57,.03) 0,rgba(57,57,57,.03) 50.001000000000005%,hsla(0,0%,77.3%,.03) 0,hsla(0,0%,77.3%,.03) 66.668%,rgba(97,97,97,.03) 0,rgba(97,97,97,.03) 83.33500000000001%,rgba(56,56,56,.03) 0,rgba(56,56,56,.03) 100.002%),linear-gradient(289deg
+,rgba(88,88,88,.03),rgba(88,88,88,.03) 20%,hsla(0,0%,97.6%,.03) 0,hsla(0,0%,97.6%,.03) 40%,rgba(2,2,2,.03) 0,rgba(2,2,2,.03) 60%,hsla(0,0%,72.5%,.03) 0,hsla(0,0%,72.5%,.03) 80%,hsla(0,0%,76.9%,.03) 0,hsla(0,0%,76.9%,.03)),linear-gradient(299deg
+,hsla(0,0%,62.7%,.03),hsla(0,0%,62.7%,.03) 12.5%,hsla(0,0%,80%,.03) 0,hsla(0,0%,80%,.03) 25%,hsla(0,0%,42.4%,.03) 0,hsla(0,0%,42.4%,.03) 37.5%,hsla(0,0%,74.9%,.03) 0,hsla(0,0%,74.9%,.03) 50%,hsla(0,0%,90.6%,.03) 0,hsla(0,0%,90.6%,.03) 62.5%,rgba(70,70,70,.03) 0,rgba(70,70,70,.03) 75%,hsla(0,0%,65.1%,.03) 0,hsla(0,0%,65.1%,.03) 87.5%,hsla(0,0%,78%,.03) 0,hsla(0,0%,78%,.03)),linear-gradient(395deg
+,hsla(0,0%,45.5%,.02),hsla(0,0%,45.5%,.02) 20%,hsla(0,0%,55.3%,.02) 0,hsla(0,0%,55.3%,.02) 40%,hsla(0,0%,59.6%,.02) 0,hsla(0,0%,59.6%,.02) 60%,rgba(61,61,61,.02) 0,rgba(61,61,61,.02) 80%,hsla(0,0%,54.5%,.02) 0,hsla(0,0%,54.5%,.02)),linear-gradient(345deg
+,hsla(0,0%,89%,.01),hsla(0,0%,89%,.01) 20%,hsla(0,0%,41.2%,.01) 0,hsla(0,0%,41.2%,.01) 40%,rgba(72,72,72,.01) 0,rgba(72,72,72,.01) 60%,rgba(33,33,33,.01) 0,rgba(33,33,33,.01) 80%,rgba(57,57,57,.01) 0,rgba(57,57,57,.01)),linear-gradient(241deg
+ ,#111, rgb(165, 161, 161));
 }
 
 header nav{
-  margin-top: -30px;
+ margin-top: -60px;
+ float: right;
 }
 header nav ul {
-  padding-right: 150px;
+  padding-right: 15px;
 }
 
 header nav ul li {
@@ -40,22 +51,20 @@ header nav ul li a {
   text-decoration: none;
   padding-left: 30px;
   
-  ;
-  font-weight: bolder;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 25px;
+  
+  
+  font-size: 22px;
 }
 
 header button {
   float: right;
   margin-right: 10px;
 }
-header nav ul li a:hover{
-  font-size: 200%;
-}
+
+
 
 #logo{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Permanent Marker', cursive;
   font-size: 50px;
   font-weight: bolder;
   padding-left: 30px;
@@ -63,13 +72,14 @@ header nav ul li a:hover{
 }
 #logo span{
   font-size: 70px;
-  color: #FFFFE3;
+  color:#e40017;
 }
 
 #title{
-  margin-top: 60px;
-  font-family: 'Black Ops One', cursive;
+  margin-top: 30px;
+  font-family: 'Oswald', sans-serif;
   font-size: 33px;
+  font-weight: bold;
 }
 
 /************************* Dark Mode Style *****************************/
@@ -79,30 +89,31 @@ header nav ul li a:hover{
   width: 0;
   visibility: hidden;
 }
-
+/** out side**/
 #toggle{
   cursor: pointer;
   text-indent: -9999px;
-  width: 80px;
-  height: 40px;
+  width: 32px;
+  height: 15px;
   background: #FFFFE3;;
   display: block;
   border-radius: 100px;
   position: relative;
 }
+/** inside**/
 
 #toggle:after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 30px;
-  height: 30px;
-  background: rgb(12, 11, 11);
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background: #e40017;
 
 color: #FFFFE3;
   border-radius: 90px;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 #switch-check:checked+#toggle {
@@ -115,12 +126,12 @@ color: #FFFFE3;
 }
 
 #toggle:active:after {
-  width: 130px;
+  width: 13px;
 }
 
 #DarkSwitch {
   float: right;
-  margin-top: -13px;
+  margin-top: 32px;
   position: relative;
   top: -52px;
   right: 30px;
@@ -139,30 +150,44 @@ color: #FFFFE3;
 /* first of all add the images container sec from the html */
 
 #hero {
-  margin-top: 8px;
-  border: 1px solid white;
+  margin-top: 80px;
+  padding-top: 20px;
+ 
   
-  box-shadow: 5px 10px #aca8a8;
+ 
 }
 
 
 
 .mySlides {
   display: none;
-  box-shadow: navy 9px;
+ 
 }
 
 /*********************************Footer Area Style****************************************/
-
+h6{
+  margin-top: -15px;
+}
 footer {
   position: relative;
   bottom: -25px;
   clear: both;
   width: 105%;
-  background-color:#810000;
+ 
   height: 200px;
   margin-left: -25px;
   padding: 15px;
+  background-image: linear-gradient(480deg
+  ,hsla(0,0%,100%,.01),hsla(0,0%,100%,.01) 16.667%,rgba(46,46,46,.01) 0,rgba(46,46,46,.01) 33.334%,hsla(0,0%,88.6%,.01) 0,hsla(0,0%,88.6%,.01) 50.001000000000005%,hsla(0,0%,62.4%,.01) 0,hsla(0,0%,62.4%,.01) 66.668%,hsla(0,0%,58.4%,.01) 0,hsla(0,0%,58.4%,.01) 83.33500000000001%,rgba(43,43,43,.01) 0,rgba(43,43,43,.01) 100.002%),linear-gradient(503deg
+  ,hsla(0,0%,65.1%,.03),hsla(0,0%,65.1%,.03) 25%,hsla(0,0%,94.1%,.03) 0,hsla(0,0%,94.1%,.03) 50%,hsla(0,0%,47.5%,.03) 0,hsla(0,0%,47.5%,.03) 75%,rgba(40,40,40,.03) 0,rgba(40,40,40,.03)),linear-gradient(504deg
+  ,hsla(0,0%,82%,.01),hsla(0,0%,82%,.01) 25%,rgba(22,22,22,.01) 0,rgba(22,22,22,.01) 50%,hsla(0,0%,49%,.01) 0,hsla(0,0%,49%,.01) 75%,hsla(0,0%,80.4%,.01) 0,hsla(0,0%,80.4%,.01)),linear-gradient(247deg
+  ,hsla(0,0%,76.5%,.01),hsla(0,0%,76.5%,.01) 14.286%,rgba(64,64,64,.01) 0,rgba(64,64,64,.01) 28.572%,rgba(67,67,67,.01) 0,rgba(67,67,67,.01) 42.858%,hsla(0,0%,83.9%,.01) 0,hsla(0,0%,83.9%,.01) 57.144%,rgba(45,45,45,.01) 0,rgba(45,45,45,.01) 71.42999999999999%,rgba(47,47,47,.01) 71.43%,rgba(47,47,47,.01) 85.71600000000001%,hsla(0,0%,67.5%,.01) 0,hsla(0,0%,67.5%,.01) 100.002%),linear-gradient(230deg
+  ,hsla(0,0%,43.5%,.03),hsla(0,0%,43.5%,.03) 16.667%,hsla(0,0%,79.2%,.03) 0,hsla(0,0%,79.2%,.03) 33.334%,rgba(57,57,57,.03) 0,rgba(57,57,57,.03) 50.001000000000005%,hsla(0,0%,77.3%,.03) 0,hsla(0,0%,77.3%,.03) 66.668%,rgba(97,97,97,.03) 0,rgba(97,97,97,.03) 83.33500000000001%,rgba(56,56,56,.03) 0,rgba(56,56,56,.03) 100.002%),linear-gradient(289deg
+  ,rgba(88,88,88,.03),rgba(88,88,88,.03) 20%,hsla(0,0%,97.6%,.03) 0,hsla(0,0%,97.6%,.03) 40%,rgba(2,2,2,.03) 0,rgba(2,2,2,.03) 60%,hsla(0,0%,72.5%,.03) 0,hsla(0,0%,72.5%,.03) 80%,hsla(0,0%,76.9%,.03) 0,hsla(0,0%,76.9%,.03)),linear-gradient(299deg
+  ,hsla(0,0%,62.7%,.03),hsla(0,0%,62.7%,.03) 12.5%,hsla(0,0%,80%,.03) 0,hsla(0,0%,80%,.03) 25%,hsla(0,0%,42.4%,.03) 0,hsla(0,0%,42.4%,.03) 37.5%,hsla(0,0%,74.9%,.03) 0,hsla(0,0%,74.9%,.03) 50%,hsla(0,0%,90.6%,.03) 0,hsla(0,0%,90.6%,.03) 62.5%,rgba(70,70,70,.03) 0,rgba(70,70,70,.03) 75%,hsla(0,0%,65.1%,.03) 0,hsla(0,0%,65.1%,.03) 87.5%,hsla(0,0%,78%,.03) 0,hsla(0,0%,78%,.03)),linear-gradient(395deg
+  ,hsla(0,0%,45.5%,.02),hsla(0,0%,45.5%,.02) 20%,hsla(0,0%,55.3%,.02) 0,hsla(0,0%,55.3%,.02) 40%,hsla(0,0%,59.6%,.02) 0,hsla(0,0%,59.6%,.02) 60%,rgba(61,61,61,.02) 0,rgba(61,61,61,.02) 80%,hsla(0,0%,54.5%,.02) 0,hsla(0,0%,54.5%,.02)),linear-gradient(345deg
+  ,hsla(0,0%,89%,.01),hsla(0,0%,89%,.01) 20%,hsla(0,0%,41.2%,.01) 0,hsla(0,0%,41.2%,.01) 40%,rgba(72,72,72,.01) 0,rgba(72,72,72,.01) 60%,rgba(33,33,33,.01) 0,rgba(33,33,33,.01) 80%,rgba(57,57,57,.01) 0,rgba(57,57,57,.01)),linear-gradient(241deg
+   ,#111, rgb(165, 161, 161));
 }
 footer h2{
   font-size: 30px;
@@ -171,9 +196,10 @@ footer h2{
 
 #footerLeft {
  float: left;
+ padding-left: 40px;
 }
 #footerLeft h2 {
-  margin-top: -120px;
+  margin-top: -119px;
   font-weight: bold;
  
  }
@@ -188,7 +214,7 @@ footer ul li {
 }
 #footerRight{
   float: right;
-  padding-right: 10px;
+  padding-right: 30px;
   
 }
 #footerRight iframe{
@@ -217,8 +243,9 @@ padding:3px;
   font-weight: bold;
 }
 #mid i {
- margin-left: -740px;
+ margin-left: -617px;
  padding-right: 10px;
+
 }
 #mid ul li{
   padding-right: 95px;
@@ -342,13 +369,13 @@ hr{
 
 .box-grey{
 
-  background-image: linear-gradient(to right,#810000,  #0a0a0a);
+  background-image: linear-gradient(to right,#e40017, #000000);
 }
 
 .box-red{
   
 
-  background-image: linear-gradient(to bottom right, #000000 ,#810000, #000000);
+  background-image: linear-gradient(to bottom right,#000000 ,#e40017, #000000);
   
 
 }
@@ -359,12 +386,14 @@ hr{
 
 
 #introPar {
-  margin-top: 10px;
+  margin-top: 35px;
   text-align: justify;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+ font-weight: bold;
   font-size: 20px;
-  line-height: 29px;
+  line-height: 34px;
+  margin-bottom: 50px;
+  
 }
 
 #ourInfo {
