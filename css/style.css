@@ -598,7 +598,7 @@ hr{
   display: block;
   /* margin-left: 170px; */
   /* margin-bottom: 50px; */
-  color: #e40017;
+  
   margin-top: 6%;
 }
 
@@ -607,7 +607,7 @@ hr{
   font-stretch: wider;
   font-size: 28px;
   text-align: center;
-  color: #e40017;
+  
   font-family: 'Philosopher', sans-serif;
   
 
@@ -647,7 +647,7 @@ hr{
 .card {
   width: 300px;
   display: inline-block;
-  border: groove 2px #e40017;
+  border: groove 2px rgba(121, 119, 119);
   text-transform: capitalize;
   margin:1%;
   /* margin-right: 60px; */
@@ -662,14 +662,14 @@ hr{
   margin: 10px;
   margin-top: 20px;
   border-radius: 15px 50px ;
-  border: solid #e40017 1px;
+  border: solid rgba(121, 119, 119) 1px;
 
 }
 
 
 .card:hover {
   transform: scale(1.1);
-  box-shadow: 5px 10px #e40017;
+  box-shadow: 5px 10px #40404446;
   background-color: #a5a59d70;
 }
 

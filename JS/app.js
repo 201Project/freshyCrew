@@ -84,7 +84,7 @@ GymCategories.prototype.inject = function (gym) {
   textContainer.appendChild(reserveBtn);
 
   reserveBtn.textContent = 'Book Now!';
-
+  reserveBtn.id='booknow';
 
   reserveBtn.addEventListener('click', goToCheckout);
   function goToCheckout() {
