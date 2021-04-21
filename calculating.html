@@ -83,6 +83,41 @@
 </head>
 
 <body>
+    <header>
+
+        <h1 id="logo"><span>F</span>reshy</h1>
+        <center>
+            <nav>
+                <ul>
+                    <li> <a href="index.html">Home</a> </li>
+                    <li> <a href="reservations.html" style="word-spacing: -5px">Book now</a> </li>
+                    <li> <a href="checkout.html">Checkout</a> </li>
+                    <li id="cart"></li>
+                    <li> <a href="calculating.html">BMI</a> </li>
+                    <li> <a href="aboutus.html" style="word-spacing: -5px">About Us</a> </li>
+                </ul>
+
+
+            </nav>
+        </center>
+        <span id="DarkSwitch">
+            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle"
+                for="switch-check">Toggle</label>
+
+        </span>
+
+        <!-- ------------------if we want to move it to app.js-------------------------------dark mode Function -->
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+
+            }
+        </script>
+
+        <!-------------------- the end of the dark-mode Function--------------------------------------------------------------------- -->
+    </header>
+    <hr>
     <main>
         <center>
 
@@ -208,10 +243,12 @@
 
 
     </footer>
+    
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <script src="JS/calculating.js"></script>
         <script src="JS/cart.js"></script>
+    
 </body>
 
 </html>

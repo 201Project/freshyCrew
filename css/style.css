@@ -99,6 +99,8 @@ header nav ul li a:hover{
   width: 30px;
   height: 30px;
   background: rgb(12, 11, 11);
+
+color: #FFFFE3;
   border-radius: 90px;
   transition: 0.3s;
 }
@@ -392,7 +394,7 @@ hr{
   border-radius: 15px 0px 30px;
   border: #810000 solid 6px;
   border-style: inset;
-  color: #460000;
+  /* color: #460000; */
   width: 250px;
   display: inline-block;
   height: 450px;
@@ -410,7 +412,7 @@ hr{
   border-radius: 15px 50px 30px;
   transform: scale(1.1);
   font-weight: bolder;
-  color: #810000;
+  /* color: #810000; */
 }
 .questionCard div h2{
   font-size: 25px;
@@ -446,7 +448,7 @@ hr{
   margin-top: 60px;
   border: #810000 solid 3px;
   border-style: groove;
-  color: #630000;
+  /* color: #630000; */
   font-family: 'RocknRoll One', sans-serif;
   font-size: 15px;
 }
@@ -491,7 +493,7 @@ hr{
  
 }
 .location:hover{
-  background-color: #FFE8C7;
+  /* background-color: #FFE8C7; */
   transform: scale(1.05);
   border: 5px solid #810000 ;
   border-style: double;
@@ -510,7 +512,7 @@ hr{
   width: 75%;
   float: right;
   margin-right: -65px;
-  color: #630000;
+  /* color: #630000; */
 }
 
 .divRight h2 {
@@ -525,9 +527,12 @@ hr{
 }
 
 .description {
+  margin-top: 10px;
+  width: 75%;
   height: 130px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  /* overflow-y: scroll; */
+  /* scroll-behavior: smooth; */
+  line-height: 25px;
   margin-bottom: 10px;
 }
 #booknow{
