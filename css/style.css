@@ -415,18 +415,18 @@ hr{
 
 /**************************************Reservations Style****************************/
 /**************************************nazmia***************************************************/
-#questions{
+/* #questions{
   display: block;
   margin: 0px 60px;
-  height: 500px;
+  height: 500px; */
   /* border: #243238 solid 1px; */
-}
-.questionCard{
+/* } */
+/* .questionCard{
   border-radius: 15px 0px 30px;
   border: #810000 solid 6px;
-  border-style: inset;
+  border-style: inset; */
   /* color: #460000; */
-  width: 250px;
+  /* width: 250px;
   display: inline-block;
   height: 450px;
   margin: 1%;
@@ -434,18 +434,18 @@ hr{
   font-family: 'PT Sans', sans-serif;
   font-size: 17px;
   /* font-weight: bold; */
-  line-height: 23px;
+  /* line-height: 23px; */
   /* text-transform: capitalize; */
-  text-align: justify;
+  /* text-align: justify; */ 
   
-}
+/* }
 .questionCard:hover{
   border-radius: 15px 50px 30px;
   transform: scale(1.1);
-  font-weight: bolder;
+  font-weight: bolder; */
   /* color: #810000; */
-}
-.questionCard div h2{
+/* } */
+/* .questionCard div h2{
   font-size: 25px;
   font-family: 'PT Sans', sans-serif;
   line-height: 30px;
@@ -454,9 +454,7 @@ hr{
 .questionCard div p{
   margin-top: 10px;
 }
-#firstQ{
-  float: left;
-}
+
 #secondQ{
   float: left;
 }
@@ -465,8 +463,19 @@ hr{
 }
 #forthQ{
   float: right;
+} */
+#firstQ p{
+  line-height: 25px;
+  text-align: justify;
 }
-
+#secondQ p{
+  line-height: 25px;
+  text-align: justify;
+}
+#thirdQ p{
+  line-height: 25px;
+  text-align: justify;
+}
 #result {
   margin: 0px 100px;
   font-family: 'RocknRoll One', sans-serif;
@@ -477,7 +486,7 @@ hr{
   margin: 0px 120px;
   margin-bottom: 20px;
   margin-top: 60px;
-  border: #810000 solid 3px;
+  border: #e40017 solid 3px;
   border-style: groove;
   /* color: #630000; */
   font-family: 'RocknRoll One', sans-serif;
@@ -485,19 +494,19 @@ hr{
 }
 #customerData select{
   margin-right: 15px;
-  color: #810000;
+  color: #e40017;
   background-color: #FFE8C7;
   font-family: 'RocknRoll One', sans-serif;
 
 }
 #Online{
-  background-color: #810000;
+  background-color: #e40017;
 }
 #submit{
   margin-top: 10px;
   width: 150px;
   height: 30px;
-  background-color: #810000;
+  background-color: #e40017;
   color: #FFFFE3;
   font-size: 18px;
   border-style: outset;
@@ -520,16 +529,16 @@ hr{
   margin: 20px;
   margin-bottom: 15px;
   height: 300px;
-  border: 3px double #810000;
+  border: 3px double #e40017;
  
 }
-.location:hover{
+/* .location:hover{ */
   /* background-color: #FFE8C7; */
-  transform: scale(1.05);
+  /* transform: scale(1.05);
   border: 5px solid #810000 ;
   border-style: double;
   border-radius: 10px ;
-}
+} */
 
 .divLeft {
   width: 15%;
@@ -569,7 +578,7 @@ hr{
 #booknow{
   width: 150px;
   height: 40px;
-  background-color: #810000;
+  background-color: #e40017;
   color: #FFFFE3;
   font-size: 20px;
   border-style: outset;
@@ -589,7 +598,7 @@ hr{
   display: block;
   /* margin-left: 170px; */
   /* margin-bottom: 50px; */
-  color: #810000;
+  color: #e40017;
 }
 
 .container h2 {
@@ -597,7 +606,7 @@ hr{
   font-stretch: wider;
   font-size: 28px;
   text-align: center;
-  color: #810000;
+  color: #e40017;
   font-family: 'Philosopher', sans-serif;
   
 
@@ -608,15 +617,15 @@ hr{
   margin-bottom: 0.05%;
   font-size: 60px;
   text-align: center;
-  color: #810000;
-  border: double 2px #810000;
+  color: #e40017;
+  border: double 2px #e40017;
   border-radius: 15px 50px ;
   width: 80%;
   padding: 5px;
   background-color: #FFE8C7;
 }
 #ourImagesTitle:hover{
-  border: 5px double #810000;
+  border: 5px double #e40017;
 }
 
 .title {
@@ -637,7 +646,7 @@ hr{
 .card {
   width: 300px;
   display: inline-block;
-  border: groove 2px #810000;
+  border: groove 2px #e40017;
   text-transform: capitalize;
   margin: 30px;
   /* margin-right: 60px; */
@@ -652,14 +661,14 @@ hr{
   margin: 10px;
   margin-top: 20px;
   border-radius: 15px 50px ;
-  border: solid #810000 1px;
+  border: solid #e40017 1px;
 
 }
 
 
 .card:hover {
   transform: scale(1.1);
-  box-shadow: 5px 10px #810000;
+  box-shadow: 5px 10px #e40017;
   background-color: #FFE8C7;
 }
 
@@ -669,7 +678,7 @@ hr{
 }
 
 .container ul li i{
-  color: #810000;
+  color: #e40017;
   transition: width 1s, height 1s, transform 1s;
 }
 .container ul li i:hover{
