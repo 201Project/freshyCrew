@@ -11,10 +11,11 @@ let emptytable = document.getElementById('emptytable');
 let stringToArrayData;
 let table = document.createElement('table');
 let reservedGym = document.getElementById('reservedGym');
-let majorTotal = 0;
+let majorTotal =0;
+let total=0;
 let cart = document.getElementById('cart');
 let icon = document.createElement('i');
-
+let totaldiv=document.getElementById('total');
 function cartIcon() {
   
   cart.appendChild(icon);
@@ -82,8 +83,6 @@ function getFromStorage() {
     tHead.textContent = headingsArr[i];
   }
 
-
-
   let data = localStorage.getItem('gyms');
 
   stringToArrayData = JSON.parse(data);
@@ -92,7 +91,6 @@ function getFromStorage() {
     //hide the empty cart message
     emptytable.style.display = 'none';
     for (let i = 0; i < stringToArrayData.length; i++) {
-
       let tr = document.createElement('tr');
       table.appendChild(tr);
 
@@ -121,14 +119,16 @@ function getFromStorage() {
       let priceTd = document.createElement('td');
       tr.appendChild(priceTd);
       priceTd.textContent = stringToArrayData[i].gymCoast;
-
+      
       let totalTd = document.createElement('td');
       tr.appendChild(totalTd);
       totalTd.textContent = stringToArrayData[i].gymCoast;
 
       reserveNumber.addEventListener('change', calculateTotal);
       function calculateTotal() {
-        totalTd.textContent = stringToArrayData[i].gymCoast * reserveNumber.value;
+        total=stringToArrayData[i].gymCoast * reserveNumber.value;
+        totalTd.textContent = total;
+        totaldiv.textContent=majorTotal;
       }
       let clearTd = document.createElement('td');
       tr.appendChild(clearTd);
@@ -150,12 +150,15 @@ function getFromStorage() {
           emptyContent();
         }
       }
+      
     }
+  
   }
   else {
     emptyContent();
   }
 }
+
 getFromStorage();
 function emptyContent() {
   localStorage.removeItem('gyms');
