@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway:wght@600&family=Roboto&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -34,7 +39,8 @@
             </nav>
         </center>
         <span id="DarkSwitch">
-            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle" for="switch-check">Toggle</label>
+            <input type="checkbox" id="switch-check" onclick="myFunction()" /><label id="toggle"
+                for="switch-check">Toggle</label>
 
         </span>
 
@@ -51,61 +57,61 @@
     </header>
     <hr>
 
-  <main>
-
-  <form action="reservations.html" id="customerData">
-<fieldset>
-    <!-- <label for="lable1"> Name Region </label> -->
-    <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
-   
+    <main>
+        <center>
+            <form action="reservations.html" id="customerData">
+                <fieldset>
+                    <!-- <label for="lable1"> Name Region </label> -->
+                    <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
     
-    <!-- <label id="lable2"> how many person? </label>
-    <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20"> -->
+    
+                    <!-- <label id="lable2"> how many person? </label>
+                    <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20"> -->
+    
+                    <!-- <label for="slider">slide your budget</label>
+                    <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required> -->
+                    <!-- <p id='sliderValue'></p> -->
+                    <input type="checkbox" name="Online" id="Online">
+                    <label for="Online" id="onlineLabel">Online Course Only </label>
+    
+    
+                    <label for="categouryGender"> You Are Intrested In : </label>
+                    <select name="categouryGender" id="categouryGender">
+                        <option value="NoCategoury">--Please choose What Kind Of Gym--</option>
+                        <option value="Men" required>Men</option>
+                        <option value="Women" required>Women</option>
+                        <option value="Mix" required>Mix</option>
+    
+                    </select>
+                    <!--  
+                        <label for="categouryRemot"> choose one gym pt online </label>
+                        <select name="categouryRemot" id="categouryRemot">
+                            <option value="NoACategoury">--Please choose an option--</option> 
+                            <option value=" Online"required>Online Courses</option>
+                            <option value="OnlinePt"required>Online Personal Trainer</option>
+                            <option value="goTO"required>Go To Gym</option>
+                            <option value="Child"required>Child</option> -->
+    
+                    <!-- </select> -->
+    
+                    <label for="categouryPlace"> You Are In : </label>
+                    <select name="categouryPlace" id="categouryPlace">
+                        <option value="NoPlaceCategoury">--Please choose Your City--</option>
+                        <option value="Amman" required>Amman</option>
+                        <option value="Zarqa" required>Zarqa</option>
+                        <option value="Irbid" required>Irbid</option>
+                        <!-- <option value=""required>Child</option> -->
+                    </select>
+                    <input id="submit" value="Filter Gyms" type="submit">
+                </fieldset>
+            </form>
+        </center>
 
-    <!-- <label for="slider">slide your budget</label>
-    <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required> -->
-<!-- <p id='sliderValue'></p> -->
-<input type="checkbox" name="Online" id="Online"> 
-<label for="Online">Online Course Only </label> 
+       
 
 
-     <label for="categouryGender"> You Are Intrested In : </label>
-        <select name="categouryGender" id="categouryGender">
-            <option value="NoCategoury">--Please choose What Kind Of Gym--</option> 
-            <option value="Men" required>Men</option>
-            <option value="Women" required>Women</option>
-            <option value="Mix" required>Mix</option>
-                  
-            </select>
-<!--  
-            <label for="categouryRemot"> choose one gym pt online </label>
-            <select name="categouryRemot" id="categouryRemot">
-                <option value="NoACategoury">--Please choose an option--</option> 
-                <option value=" Online"required>Online Courses</option>
-                <option value="OnlinePt"required>Online Personal Trainer</option>
-                <option value="goTO"required>Go To Gym</option>
-                <option value="Child"required>Child</option> -->
-                      
-                <!-- </select> -->
-     
-                <label for="categouryPlace"> You Are In : </label>
-        <select name="categouryPlace" id="categouryPlace">
-            <option value="NoPlaceCategoury">--Please choose Your City--</option> 
-            <option value="Amman"required>Amman</option>
-            <option value="Zarqa"required>Zarqa</option>
-            <option value="Irbid"required>Irbid</option>
-            <!-- <option value=""required>Child</option> -->
-                  
-            </select>
-         
-            
-   <input id="submit" value="Submit" type="submit"> 
-</fieldset>
-</form>
-
-  
-    <!-- getting the sliderr value ------------------------------------------------------------------>
-     <!-- <script>
+        <!-- getting the sliderr value ------------------------------------------------------------------>
+        <!-- <script>
         var slider = document.getElementById("slider");
         var output = document.getElementById("sliderValue");
         output.innerHTML = slider.value;
@@ -115,57 +121,114 @@
         }
         console.log(output.innerHTML);
         </script>  -->
-      <!-- getting the sliderr value ------------------------------------------------------------------>
+        <!-- getting the sliderr value ------------------------------------------------------------------>
+        <section id="questions">
+            <center>
 
-      
-<section id="result">
+            
+            <div class="questionCard">
+                <div id="firstQ">
+                    <h2>How Much Do Gym Memberships Cost?</h2>
+                    <p>
+                        Gym memberships range from approximately $10 to $200 a month, with discounts available for
+                        longer
+                        subscriptions. Prices vary based on the equipment, hours of operation, number of classes
+                        offered,
+                        quality of instructors and workouts, included amenities and services, and access to other
+                        locations.
+                    </p>
+                </div>
+            </div>
+            <div class="questionCard">
+                <div id="secondQ">
+                    <h2>Is Gym Membership Worth It?</h2>
+                    <p>
+                        If you’re committed to a regular exercise routine, a gym membership can help you improve your
+                        physical and mental health, lose weight, expand your social circle, and give you access to lots
+                        of
+                        exercise equipment and amenities.
+                        Whether paying for a gym membership is worth it comes down to your lifestyle, preferences for
+                        exercise, and schedule. 
+                </div>
+            </div>
+            <div class="questionCard">
+                <div id="thirdQ">
+                    <h2>Can Joining a Gym Help Me Lose Weight?</h2>
+                    <p>
+                        Regular exercise can definitely help with weight loss efforts, especially if you meet or exceed
+                        the
+                        recommended amount of weekly exercise to lose weight. At a gym, you’ll have access to a variety
+                        of
+                        cardio machines, free weights, weight machines, and classes that may motivate you to do.
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="questionCard">
+                <div id="forthQ">
+                    <h2>What Should I Wear to the Gym?</h2>
+                    <p>
+                        Workout clothing should be made from fabrics that are light, breathable, and moisture-wicking,
+                        such
+                        as spandex and polyester blends. Working out could lead to profuse sweating, so technical
+                        fabrics
+                        will help keep you dry and chafe-free. Whether you wear loose or tight-fitting is your personal
+                        preference, as long as your clothes are comfortable and allow for a full range of motion.
+                       
+                    </p>
+                </div>
+            </div>
+        </center>
+        </section>
+        
+        <section id="result">
 
 
-</section>
-<section id='resultSubmit'>
+        </section>
+        <section id='resultSubmit'>
 
-</section>
+        </section>
 
 
 
-</main>  
-<hr>
+    </main>
+    <hr>
 
-<footer>
-    <p> our vision we took it on us to show you all of the jordanian culture</p>
-    contact us
-    <ul id="contactUs">
-        <!-- instagram logo -->
-        <li> <a href="instagram.com"><i class="fa fa-instagram" style="font-size:36px "> </i> </a> </li>
-        <!-- facebooklogo -->
-        <li><a href="facebook.com"><i class="fa fa-facebook-square" style="font-size:36px"></i></a></li>
-        <!-- githublogo -->
-        <li> <a href="github.com"><i class="fa fa-github" style="font-size:36px"></i></a> </li>
-    </ul>
-    <ol>
-        <li>Amman-Jordan</li>
-        <li> phone:+9627999999 </li>
-    </ol>
-    <!-- creating the social media logos and link  -->
+    <footer>
+        <p> our vision we took it on us to show you all of the jordanian culture</p>
+        contact us
+        <ul id="contactUs">
+            <!-- instagram logo -->
+            <li> <a href="instagram.com"><i class="fa fa-instagram" style="font-size:36px "> </i> </a> </li>
+            <!-- facebooklogo -->
+            <li><a href="facebook.com"><i class="fa fa-facebook-square" style="font-size:36px"></i></a></li>
+            <!-- githublogo -->
+            <li> <a href="github.com"><i class="fa fa-github" style="font-size:36px"></i></a> </li>
+        </ul>
+        <ol>
+            <li>Amman-Jordan</li>
+            <li> phone:+9627999999 </li>
+        </ol>
+        <!-- creating the social media logos and link  -->
 
-    <ul>
-        <li> <i class="fa fa-cc-paypal" style="font-size:36px"></i></li>
-    </ul>
-    <ul id="ourInfo">
-        <li>About Us
-            <br>
-            ☎
-        </li>
-        <li>What We Do
+        <ul>
+            <li> <i class="fa fa-cc-paypal" style="font-size:36px"></i></li>
+        </ul>
+        <ul id="ourInfo">
+            <li>About Us
+                <br>
+                ☎
+            </li>
+            <li>What We Do
 
-        </li>
-        <li>How It Work</li>
-    </ul>
-    Payment Methods
-    &copy;Copyright2021 Reserved For freshy Crew&trade;
-</footer>
-<script src="JS/cart.js"></script>
-<script src="JS/app.js"></script>
+            </li>
+            <li>How It Work</li>
+        </ul>
+        Payment Methods
+        &copy;Copyright2021 Reserved For freshy Crew&trade;
+    </footer>
+    <script src="JS/cart.js"></script>
+    <script src="JS/app.js"></script>
 
 </body>
 

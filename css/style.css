@@ -4,17 +4,18 @@
 
 body {
   padding: 25px;
-  background-color: rgb(187, 176, 176);
+  background-color: #FFFFE3;
   color: black;
   max-width: 100%;
   overflow-x: hidden;
 }
 
+
 /*************************** Header Area Style **********************************/
 
 header {
   background-color: #717171;
-  height: 75px;
+  height: 100px;
   top: 0;
   width: 100%;
   margin-left: -25px;
@@ -22,16 +23,9 @@ header {
   z-index: 22;
 }
 
-header h1 {
-  padding-top: 2%;
+header nav{
+  margin-top: -30px;
 }
-
-#logo {
-  float: left;
-  margin-left: 1%;
-  margin-top: 0%;
-}
-
 header nav ul {
   padding-right: 150px;
 }
@@ -43,7 +37,8 @@ header nav ul li {
 header nav ul li a {
   color: #afacac;
   text-decoration: none;
-  padding: 5px;
+  padding-left: 30px;
+  
   ;
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;
@@ -54,7 +49,21 @@ header button {
   float: right;
   margin-right: 10px;
 }
+header nav ul li a:hover{
+  font-size: 200%;
+}
 
+#logo{
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  font-weight: bolder;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+#logo span{
+  font-size: 70px;
+  color: #D50000;
+}
 /************************* Dark Mode Style *****************************/
 
 #switch-check{
@@ -133,17 +142,60 @@ footer {
   position: relative;
   bottom: -25px;
   clear: both;
-  width: 1518px;
+  width: 105%;
   background-color: rgb(113, 113, 113);
-  height: 100px;
+  height: 200px;
   margin-left: -25px;
+  padding: 15px;
+}
+footer h2{
+  font-size: 30px;
+  margin-bottom:10px ;
 }
 
+#footerLeft {
+ float: left;
+}
+#footerLeft h2 {
+  margin-top: -90px;
+  font-weight: bold;
+ }
+ #footerLeft ol li a {
+  text-decoration: none;
+ }
 footer ul li {
   display: inline;
   float: right;
   
 }
+#footerRight{
+  float: right;
+  padding-right: 10px;
+}
+#footerLeft ol li{
+padding:3px;
+}
+#mid{
+  position: relative;
+  left:30%;
+}
+#mid h6{
+  
+  position: relative;
+  top: 100px;
+}
+#mid h2{
+  font-weight: bold;
+}
+#mid i {
+ margin-left: -740px;
+ padding-right: 10px;
+}
+#mid ul li{
+  padding-right: 70px;}
+  #mid ul{
+    margin-top: 30px;
+  } 
 
 /*********************************Footer Area Style End****************************************/
 
@@ -296,27 +348,121 @@ hr{
 }
 
 /**************************************Reservations Style****************************/
+/**************************************nazmia***************************************************/
+#questions{
+  display: block;
+  margin: 0px 60px;
+  height: 500px;
+  /* border: #243238 solid 1px; */
+}
+.questionCard{
+  border-radius: 15px 0px 30px;
+  border: #810000 solid 6px;
+  border-style: inset;
+  color: #460000;
+  width: 250px;
+  display: inline-block;
+  height: 450px;
+  margin: 1%;
+  padding: 10px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  /* font-weight: bold; */
+  line-height: 23px;
+  /* text-transform: capitalize; */
+  text-align: justify;
+  
+}
+.questionCard:hover{
+  border-radius: 15px 50px 30px;
+  transform: scale(1.1);
+  font-weight: bolder;
+  color: #810000;
+}
+.questionCard div h2{
+  font-size: 25px;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 30px;
+  font-weight: bold;
+}
+.questionCard div p{
+  margin-top: 10px;
+}
+#firstQ{
+  float: left;
+}
+#secondQ{
+  float: left;
+}
+#thirdQ{
+  float: right;
+}
+#forthQ{
+  float: right;
+}
 
 #result {
   margin: 0px 100px;
-  border: 1px solid black;
+  font-family: 'RocknRoll One', sans-serif;
 }
 
 #customerData {
-  margin-left: 100px;
+  padding: 10px;
+  margin: 0px 120px;
   margin-bottom: 20px;
   margin-top: 60px;
+  border: #810000 solid 3px;
+  border-style: groove;
+  color: #630000;
+  font-family: 'RocknRoll One', sans-serif;
+  font-size: 15px;
+}
+#customerData select{
+  margin-right: 15px;
+  color: #810000;
+  background-color: #FFE8C7;
+  font-family: 'RocknRoll One', sans-serif;
+
+}
+#Online{
+  background-color: #810000;
+}
+#submit{
+  margin-top: 10px;
+  width: 150px;
+  height: 30px;
+  background-color: #810000;
+  color: #FFFFE3;
+  font-size: 18px;
+  border-style: outset;
+}
+#submit:hover{
+  transform:scale(1.1) ;
+  height: 35px;
+  border-radius: 10px ;
+}
+#onlineLabel{
+  margin-right: 20px;
 }
 
 #result div img {
-  width: 250px;
+  width: 300px;
   height: 250px;
 }
 
 .location {
-  margin: 10px;
+  margin: 20px;
+  margin-bottom: 15px;
   height: 300px;
-  border: 1px solid black;
+  border: 3px double #810000;
+ 
+}
+.location:hover{
+  background-color: #FFE8C7;
+  transform: scale(1.05);
+  border: 5px solid #810000 ;
+  border-style: double;
+  border-radius: 10px ;
 }
 
 .divLeft {
@@ -330,13 +476,15 @@ hr{
   margin-top: 20px;
   width: 75%;
   float: right;
-  margin-right: 10px;
+  margin-right: -65px;
+  color: #630000;
 }
 
 .divRight h2 {
   font-size: 30px;
   font-weight: 800;
   padding-bottom: 10px;
+  
 }
 
 .divRight p {
@@ -349,61 +497,101 @@ hr{
   scroll-behavior: smooth;
   margin-bottom: 10px;
 }
+#booknow{
+  width: 150px;
+  height: 40px;
+  background-color: #810000;
+  color: #FFFFE3;
+  font-size: 20px;
+  border-style: outset;
+}
+#booknow:hover{
+  transform: scale(1.1) ;
+  height: 45px;
+  border-radius: 10px ;
+}
 
 /**************************************Reservations Style End****************************/
 
 /**************************************About US Style***********************************/
-
+/*******************************************nazmia*************/
 .row {
   margin: 5px;
   display: block;
-  margin-left: 170px;
-  margin-bottom: 50px;
+  /* margin-left: 170px; */
+  /* margin-bottom: 50px; */
+  color: #810000;
 }
 
 .container h2 {
   padding: 5px;
-  font-weight: 900;
-  font-size: larger;
+  font-stretch: wider;
+  font-size: 28px;
   text-align: center;
+  color: #810000;
+  font-family: 'Philosopher', sans-serif;
+  
+
+}
+#ourImagesTitle{
+  font-family: 'Philosopher', sans-serif;
+  margin-top: 7%;
+  margin-bottom: 0.05%;
+  font-size: 60px;
+  text-align: center;
+  color: #810000;
+  border: double 2px #810000;
+  border-radius: 15px 50px ;
+  width: 80%;
+  padding: 5px;
+  background-color: #FFE8C7;
+}
+#ourImagesTitle:hover{
+  border: 5px double #810000;
 }
 
 .title {
   text-align: center;
   font-weight: 800;
   font-size: large;
+  font-family: 'Merienda', cursive;
+
 }
 
 .container p {
   padding: 5px 10px;
   text-align: center;
+  font-family: 'Philosopher', sans-serif;
+
 }
 
 .card {
   width: 300px;
   display: inline-block;
-  border: solid 1px black;
+  border: groove 2px #810000;
   text-transform: capitalize;
-  margin-right: 60px;
+  margin: 30px;
+  /* margin-right: 60px; */
+  border-radius: 15px 50px ;
+
 }
 
 .card img {
   height: 250px;
   width: 250px;
-  margin-left: 25px;
-  margin-top: 10px;
+  /* margin-left: 25px; */
+  margin: 10px;
+  margin-top: 20px;
+  border-radius: 15px 50px ;
+  border: solid #810000 1px;
+
 }
 
-main h1 {
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  margin: 30px;
-}
 
 .card:hover {
   transform: scale(1.1);
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #810000;
+  background-color: #FFE8C7;
 }
 
 .container ul li {
@@ -411,45 +599,13 @@ main h1 {
   padding: 10px;
 }
 
-.container ul {
-  width: 80%;
-  margin-left: 70px;
+.container ul li i{
+  color: #810000;
+  transition: width 1s, height 1s, transform 1s;
 }
+.container ul li i:hover{
+  transform: rotate(180deg)
+}
+
 
 /**************************************About US Style End***********************************/
-#reservedGym{
-  margin-top: 30px;
-}
-#reservedGym table tr td img {
- width: 300px;
- height: 150px;
-}
-#reservedGym table{
- width: 1000px;
- height: 200px;
- background-image: linear-gradient(#A5A59D
- 
- ,rgb(190, 109, 109) ,#810000
-  
- );
-}
-#reservedGym  td {
-
-  border-collapse: collapse;
-  padding: 50px;
-}
-#reservedGym td:not(:first-child)
-{
-  vertical-align: middle;
-  line-height: 100px;
-  font-size: 18px;
-}
-#reservedGym th{
-  font-weight: bolder;
-  padding: 20px;
-  color: white;
-  font-size: 24px;
-}
-#formCheckout{
-  padding-top: 30px ;
-}
