@@ -1,24 +1,8 @@
 'use strict';
 let locations = [];
-let clickedItem = [];
-let result= document.getElementById('result');
-let counter=0;
-let cart = document.getElementById('cart');
-let icon = document.createElement('i');
-function cartIcon() {
 
-  cart.appendChild(icon);
-  icon.textContent = '(' + localStorage.getItem('cartCounter') + ')';
-  icon.className = 'fa fa-shopping-cart';
-  icon.style.fontSize = '24px';
-  cart.style.display = 'inline-block';
-}
+let result = document.getElementById('result');
 
-if (localStorage.getItem('gyms') !== null) {
-  let lc = localStorage.getItem('gyms');
-  let parsedStorage = JSON.parse(lc);
-  clickedItem = parsedStorage;
-}
 
 const gymName = ['Gaia\'s Cocoon Spa and gym',' Gold\'s Gym','Power-hut The Experience','Trainers Gym','Fitness First Abdoun','PLANET Gym & Fitness','BXR','Z-energy','Fairmont Banff Springs','North End Fitness & Training','Embody fitness','24-Hour Fitness','Planet Fitness','Anytime Fitness','Equinox','LAFitness','Crunch Fitness','Orangetheory Fitness','Platinum Gym','PureGym','I_gym_ladies','Total Fitness','Curves','MOTION FITNESS-CENTER','STRONG LADIES GYM','IN SHAPE LADIES FITNESS CLUB','Yoga with Adriene','Sweat with SELF','Calorie-Crushing-Workouts','Blogilates'];
 
@@ -31,7 +15,7 @@ const gymDesq =['Resistance training equipment including,,,Fixed weight machines
 const gymImg = ['./img/gymimgs/1.jpg', './img/gymimgs/2.jpg','./img/gymimgs/3.jpg', './img/gymimgs/4.jpg', './img/gymimgs/5.jpg', './img/gymimgs/31.jpg', './img/gymimgs/6.jpg', './img/gymimgs/7.jpg','./img/gymimgs/8.jpg', './img/gymimgs/9.jpg','./img/gymimgs/10.jpg', './img/gymimgs/11.jpg','./img/gymimgs/12.jpg', './img/gymimgs/13.jpg','./img/gymimgs/14.jpg', './img/gymimgs/15.jpg','./img/gymimgs/16.jpg', './img/gymimgs/17.jpg','./img/gymimgs/18.jpg', './img/gymimgs/19.jpg', './img/gymimgs/20.jpg', './img/10.jpg', './img/gymimgs/21.jpg', './img/gymimgs/22.jpg','./img/gymimgs/23.jpg', './img/gymimgs/24.jpg','./img/gymimgs/25.jpg', './img/gymimgs/26.jpg','./img/gymimgs/27.jpg', './img/gymimgs/28.jpg','./img/gymimgs/29.jpg'];
 
 
-const gymCoast = ['76 JoD/month', '50 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', '76 JoD/month', ' 23$ /Cours',' 21$ /Cours', '30$ /Cours', '22$ /Cours', '25$ /Cours','20$ /Cours',];
+const gymCoast = ['76 JoD/month', '50 JoD/month', '70 JoD/month', '35 JoD/month', '28 JoD/month', '47 JoD/month', '53 JoD/month', '65 JoD/month', '33 JoD/month', '60 JoD/month', '25 JoD/month', '30 JoD/month', '31 JoD/month', '39 JoD/month', '76 JoD/month', '44 JoD/month', '76 JoD/month', '76 JoD/month', '25 JoD/month', '40 JoD/month', '35 JoD/month', '45 JoD/month', '55 JoD/month', '18 JoD/month', ' 23$ /Cours',' 21$ /Cours', '30$ /Cours', '22$ /Cours', '25$ /Cours','20$ /Cours',];
 
 
 const gymGender = ['Male', 'Female', 'Both', 'Both', 'Male', 'Female', 'Both', 'Both','Both','Female','Male', 'Female','Both', 'Both', 'Male', 'Female','Both','Both','Female', 'Female','Both', 'Both', 'Male', 'Female','Both', 'Both','Both','Both', 'Both','Both'];
@@ -47,66 +31,86 @@ function GymCategories(name, cities, description, image, price, gender) {
   locations.push(this);
 }
 for (let i = 0; i < gymLocation.length; i++) {
-  new GymCategories(gymName[i], gymLocation[i], gymDesq[i], gymImg[i], gymCoast[i], gymGender[i]);
-}
-
-
-GymCategories.prototype.inject = function (gym) {
-
-
-  let locationContainer = document.createElement('div');
-  locationContainer.className = 'location';
-  result.appendChild(locationContainer);
-
-  let imgContainer = document.createElement('div');
-  imgContainer.className = 'divLeft';
-  locationContainer.appendChild(imgContainer);
-
-  let locationImage = document.createElement('img');
-  imgContainer.appendChild(locationImage);
-  locationImage.src = gym.gymImg;
-
-  let textContainer = document.createElement('div');
-  textContainer.className = 'divRight';
-  locationContainer.appendChild(textContainer);
-
-  let heading = document.createElement('h2');
-  textContainer.appendChild(heading);
-  heading.textContent = gym.gymName;
-
-  let description = document.createElement('p');
-  description.className = 'description';
-  textContainer.appendChild(description);
-  description.textContent = gym.gymDesq;
-
-  let price = document.createElement('p');
-  textContainer.appendChild(price);
-  price.textContent = 'Price: ' + gym.gymCoast;
-
-  let reserveBtn = document.createElement('button');
-  textContainer.appendChild(reserveBtn);
-
-  reserveBtn.textContent = 'Book Now!';
-
-
-  reserveBtn.addEventListener('click', goToCheckout);
-  function goToCheckout() {
-
-    if (!clickedItem.includes(gym)) {
-      clickedItem.push(gym);
-      console.log('unique');
-      let str = JSON.stringify(clickedItem);
-      localStorage.setItem('gyms', str);
-      counter++;
-      localStorage.setItem('cartCounter',counter);
-      cartIcon();
-    }
-
-  }
+new GymCategories(gymName[i], gymLocation[i], gymDesq[i], gymImg[i], gymCoast[i], gymGender[i]);
 
 }
+ let clickedItem=[];
+if (localStorage.getItem('gyms') !== null) {
+   let parsedStorage = JSON.parse(localStorage.getItem('gyms'));
+  clickedItem = parsedStorage;
+}
+GymCategories.prototype.inject =function(gym){
 
-for (let i = 0; i < locations.length; i++) {
+
+    let locationContainer = document.createElement('div');
+    locationContainer.className = 'location';
+    result.appendChild(locationContainer);
+
+    let imgContainer = document.createElement("div");
+    imgContainer.className = "divLeft";
+    locationContainer.appendChild(imgContainer);
+
+    let locationImage = document.createElement("img");
+    imgContainer.appendChild(locationImage);
+    locationImage.src = gym.gymImg;
+
+    let textContainer = document.createElement("div");
+    textContainer.className = "divRight";
+    locationContainer.appendChild(textContainer);
+
+    let heading = document.createElement("h2");
+    textContainer.appendChild(heading);
+    heading.textContent = gym.gymName;
+
+    let description = document.createElement("p");
+    description.className = "description";
+    textContainer.appendChild(description);
+    description.textContent =gym.gymDesq;
+
+    let price = document.createElement("p");
+    textContainer.appendChild(price);
+    price.textContent = 'Price: ' + gym.gymCoast;
+
+    let reserveBtn = document.createElement("button");
+    textContainer.appendChild(reserveBtn);
+    reserveBtn.id='booknow';
+    // console.log(reserveBtn);
+    reserveBtn.textContent = 'Book Now!'; //add link in array to book
+// console.log(this);
+
+    reserveBtn.addEventListener('click', goToCheckout);
+
+    function goToCheckout(event) {
+      event.preventDefault();
+      let count = 0;
+     console.log(gym);
+
+            if(!(clickedItem.includes(gym)))
+            {
+              alert('added!');
+              clickedItem.push(gym);
+              let stringOfLocations = JSON.stringify(clickedItem);
+              localStorage.setItem('gyms', stringOfLocations);
+              if(localStorage.getItem('cartCounter')){
+                let paresedNumber=parseInt(localStorage.getItem('cartCounter'));
+                localStorage.setItem('cartCounter',paresedNumber+1);
+              }
+              
+              else
+              {
+                count++;
+                localStorage.setItem('cartCounter',count);
+              }
+              let counter=document.getElementById('cart');
+              counter.textContent=localStorage.getItem('cartCounter');
+            }
+            else{
+              alert('already there');
+            }
+          }
+
+}
+for(let i=0;i<locations.length;i++){
   GymCategories.prototype.inject(locations[i]);
 }
 
@@ -133,32 +137,35 @@ function handleCustomerSubmit(event) {
     OnlineCourse = '';
   }
 
-  result.innerHTML = "";
-
-  for (let i = 0; i < locations.length; i++) {
-    if (locations[i].gymLocation == OnlineCourse) {
-
-      GymCategories.prototype.inject(locations[i]);
-
-      console.log('first', GymCategories);
 
 
-    } if ((locations[i].gymGender == genderCategouries) && (locations[i].gymLocation == place)) {
+
+
+    result.innerHTML="";
+
+for (let i = 0; i < locations.length; i++) {
+  if (locations[i].gymLocation == OnlineCourse) {
+
+    GymCategories.prototype.inject(locations[i]);
+
+    console.log('first',GymCategories);
+
+
+    }  if ((locations[i].gymGender == genderCategouries) && (locations[i].gymLocation == place)) {
       GymCategories.prototype.inject(locations[i]);
 
       // console.log('secondelse', locations[i]);
 
 
-      // }else if ((locations[i].gymGender == genderCategouries) && (genderCategouries !== 'NoCategoury')){
+    // }else if ((locations[i].gymGender == genderCategouries) && (genderCategouries !== 'NoCategoury')){
 
-      //   console.log('third', locations[i]);
+    //   console.log('third', locations[i]);
 
-      // } else if  ((locations[i].gymLocation == place) && (place !== 'NoPlaceCategoury')){
-      //   console.log('fourth', locations[i]);
+    // } else if  ((locations[i].gymLocation == place) && (place !== 'NoPlaceCategoury')){
+    //   console.log('fourth', locations[i]);
 
-    }
   }
-
-
 }
 
+   
+}
