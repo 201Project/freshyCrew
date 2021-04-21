@@ -15,23 +15,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
         input[type=number]:focus {
-            background-color: #ffb4b4;
+            background-color: #d64c4c;
             border-radius: 4px;
 
         }
 
         input[type=button] {
-            background-color: #ffb4b4;
+            background-color: white;
             border-radius: 4px;
-            width: 150px;
-            color: #810000;
-            font-size: 20px;
-            font-weight: bolder;
+            width: 105px;
+            color: black;
+            font-size: 15px;
 
         }
 
+
+        input[type=button]:hover {
+            background-color: #e40017;
+            border-radius: 4px;
+            width: 105px;
+            color: black;
+            font-size: 15px;
+
+
+        }
+
+
+
         #Cal:hover {
-            transform: scale(1.25);
+
             font-weight: bolder;
         }
 
@@ -68,15 +80,111 @@
 
         }
 
-        #Bmi-logo:hover {
-            transform: scale(1.25);
 
+
+        @-webkit-keyframes skew {
+            from {
+                -webkit-transform: skewX(0deg);
+            }
+
+            25% {
+                -webkit-transform: skewX(30deg);
+            }
+
+            50% {
+                -webkit-transform: skewX(0);
+            }
+
+            75% {
+                -webkit-transform: skewX(-30deg);
+            }
+
+            to {
+                -webkit-transform: skewX(0);
+            }
+        }
+
+
+
+
+        #myChart {
+
+            width: 350px !important;
+            height: 350px !important;
+            position: relative;
+            top: 120px;
+
+            float: right;
+            margin-bottom: 50px;
+        }
+
+        #defBMI {
+
+            width: 1010px;
+            height: 210px;
+            overflow: auto;
+            text-align: justify;
+            text-justify: inter-word;
+            font-size: 25px;
+        }
+
+
+        #addData2 {
+            line-height: 50px;
+            text-align: justify;
+            margin-left: 450px;
+            position: relative;
+            top: 180px;
+            left: 100px;     
+        }
+
+
+
+        /*   
+
+
+
+        #addData h1 {
+
+
+text-align: justify;
+text-justify: inter-word;
+font-size: 25px;
+float: right;
+}
+#addData ul  {
+
+
+text-align: justify;
+text-justify: inter-word;
+font-size: 25px;
+float: right;
+}
+*/
+
+        #addData IFRAME {
+
+            border-radius: 50px;
 
         }
 
-        #divBMI h1:hover {
-            transform: scale(1.25);
 
+        #addData p {
+
+
+            overflow: auto;
+            width: 1010px;
+            height: 410px;
+            text-align: justify;
+            position: absolute;
+            top: 50px;
+            right: 100px;
+
+
+
+
+
+            
         }
     </style>
 
@@ -119,30 +227,84 @@
     </header>
     <hr>
     <main>
+
+
+
         <center>
 
+            <div id="divBMI">
 
 
+                <img src="./img/BMI.jpg" width="250" height="250" alt="BMI"
+                    style="border-radius: 30px; float:left;margin-left: 40px; margin-top:190px;box-shadow:-25px 15px 20px #da4655;">
 
-            <div id="divBMI" style="  border: 5px dotted #FFFFE3;  border-radius: 30px;
-        background-image: linear-gradient(#a5a59d,rgb(190, 109, 109) ,#810000);padding-bottom:50px;padding-top:50px;
-        ">
-                <h1> Body Mass Index</h1>
-                <img id="Bmi-logo" src="./img/BMI-logo.png" width="200" height="200" alt="BMI"
-                    style="border-radius: 80px;">
-                <p>
+
+                <h1
+                    style="margin-top:140px;float: right;margin-right:500px;font-weight:bolder;font-size:27px;text-shadow:-25px 25px 20px #e40017;font-size:30px; -webkit-animation: skew 5s infinite linear;animation: skew 5s infinite linear;">
+                    Body Mass Index</h1>
+
+                <div id="defBMI">
+
                     Body Mass Index is a simple calculation using a person's height and weight. The formula is BMI =
                     kg/m2
                     where kg is a person's weight in kilograms and m2 is their height in metres squared. A BMI of 25.0
-                    or
-                    more is overweight, while the healthy range is 18.5 to 24.9. BMI applies to most adults 18-65 years.
-                    <br>
+                    or more is overweight, while the healthy range is 18.5 to 24.9. BMI applies to most adults 18-65
+                    years.
+
                     After calculating you BMI you will be given the perfect weight that fits you, the category that you
                     are
                     in and what to do to achieve the perfect weight .
 
-                </p>
-                <img src="./img/BMI.jpg" width="1000" height="400" alt="BMI" style="border-radius: 80px;">
+
+                </div>
+            </div>
+
+
+
+        </center>
+        <!---------------------------------------------------- Form to calculate  BMI--------------------------------------------------->
+        <center>
+            <div class="bmi-text"
+                style="float: left; margin-left:-280px;border:solid black 2px; width:280px;margin-top :150px;border-radius: 30px;">
+                <h3 id="Cal" style="font-weight: bolder;font-size: 25px;margin-top: 20px;"> Calculate your bmi</h3><br>
+
+
+                <form action="#">
+                    <fieldset>
+
+
+
+                        <label style="font-weight: bolder;">
+
+
+
+                            <br> Height : <br>
+                            <input type="number" id="Height" placeholder="in cm" min="110" max='300'
+                                style=" width: 60%;"></label>
+                        <br><br>
+
+
+                        <br>
+                        <label style="font-weight: bolder;"> Weight : <br><input type="number" id="Weight"
+                                placeholder="in kg " size="10" min="0" style=" width: 60%;"></label>
+                        <br><br>
+
+                        <input class="template-btn" type="button" value="What is BMI" id="button">
+                        <br>
+                        <br>
+
+                    </fieldset>
+                </form>
+
+
+
+
+
+                <br><br>
+            </div>
+
+            <div id="addData2" style="margin-left: 350px;">
+
             </div>
 
 
@@ -150,105 +312,29 @@
                 <canvas id="myChart"></canvas>
             </div>
         </center>
-        <!---------------------------------------------------- Form to calculate  BMI--------------------------------------------------->
-        <center>
-            <div class="bmi-text" style="  border: 5px dotted #FFFFE3;  border-radius: 30px;
-          ;padding-bottom:50px;padding-top:50px;">
-                <h3 id="Cal" style="font-weight: bolder"> Calculate your bmi</h3><br>
-
-
-                <img src="./img/DO you Know.jpg" width="400" height="200" alt="BMI" style="border-radius: 80px;">
-                <form action="#">
-
-                    <span style="font-weight: bolder">
-                        <br>hint : maximum height is 300 cm and minimum and minimum height is 110 cm</span>
-                    <label style="font-weight: bolder;">
-
-
-
-                        <br> Height : <br>
-                        <input type="number" id="Height" placeholder="in cm" min="110" max='300'
-                            style=" width: 10%;"></label>
-                    <br><br>
-
-
-                    <br>
-                    <label style="font-weight: bolder;"> Weight : <br><input type="number" id="Weight"
-                            placeholder="in kg " size="10" min="0" style=" width: 30%;"></label>
-                    <br><br>
-
-                    <input class="template-btn" type="button" value="What is BMI" id="button">
-                    <br>
-                    <br>
-
-
-                </form>
-                <div id="addData2">
-
-                </div> <br><br>
-            </div>
-
-        </center>
         <!---------------------------------------------------- End form to calculate  BMI--------------------------------------------------->
 
 
-        <center>
-            <!-- Add Div for render Data  -->
-            <div id="addData">
 
-            </div>
+        <div id="addData" style="position:relative; top:100px;margin-top:500px ">
 
-        </center>
+        </div>
+
+
     </main>
-    <footer>
-        <div id="footerRight">
-            <ol>
-                <li>Location: Amman-Jordan</li>
-                
-            </ol>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433868.0837108358!2d35.66743328283859!3d31.836036761128852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fb85d7981af%3A0x631c30c0f8dc65e8!2sAmman!5e0!3m2!1sen!2sjo!4v1618909378643!5m2!1sen!2sjo"
-                width="300" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-        </div>
-
-        <div id="mid">
-            <h2>Contact Us</h2>
-            <p>freshyCrew@gmail.com <br>
-               phone: +9627999999
-            </p>
-            <ul>
-                <!-- instagram logo -->
-                <li> <a href="instagram.com"><i class="fa fa-instagram" style="font-size:36px "> </i> </a> </li>
-                <!-- facebooklogo -->
-                <li><a href="facebook.com"><i class="fa fa-facebook-square" style="font-size:36px"></i></a></li>
-                <!-- githublogo -->
-                <li> <a href="github.com"><i class="fa fa-github" style="font-size:36px"></i></a> </li>
-            </ul>
-            <h6> &copy;Copyright2021 Reserved For freshy Crew&trade;</h6>
-        </div>
-
-        <!-- creating the social media logos and link  -->
-        <div id="footerLeft">
-            <h2>Sitemap</h2>
-            <ol>
-                <li> <a href="index.html">Home</a> </li>
-                <li> <a href="reservations.html">Book now</a> </li>
-                <li> <a href="checkout.html">Checkout</a> </li>
-                <li> <a href="calculating.html">BMI</a> </li>
-                <li> <a href="aboutus.html">About Us</a> </li>
-            </ol>
-        </div>
 
 
 
-    </footer>
-    
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        <script src="JS/calculating.js"></script>
-        <script src="JS/cart.js"></script>
-    
+
+    <!---------------------------------------------------------------------------------------------->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="JS/calculating.js"></script>
+    <script src="JS/cart.js"></script>
+
 </body>
 
 </html>
