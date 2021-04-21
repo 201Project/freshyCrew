@@ -77,19 +77,22 @@
                     <!-- <label for="slider">slide your budget</label>
                     <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required> -->
                     <!-- <p id='sliderValue'></p> -->
-                    <input type="checkbox" name="Online" id="Online">
-                    <label for="Online" id="onlineLabel">Online Course Also!! </label>
+                    <div id="upForm">
 
 
-                    <label for="categouryGender"> You Are Looking For a Gym To : </label>
-                    <select name="categouryGender" id="categouryGender">
-                        <option value="NoCategoury">--Please choose What Kind Of Gym--</option>
-                        <option value="Male" required>Male</option>
-                        <option value="Female" required>Female</option>
-                        <option value="Both" required>Both</option>
+                        <input type="checkbox" name="Online" id="Online">
+                        <label for="Online" id="onlineLabel">Online Course!</label>
 
-                    </select>
-                    <!--  
+
+                        <label for="categouryGender">Kind of Gym:</label>
+                        <select name="categouryGender" id="categouryGender">
+                            <option value="NoCategoury">-Please choose Kind Of Gym-</option>
+                            <option value="Male" required>Male</option>
+                            <option value="Female" required>Female</option>
+                            <option value="Both" required>Both</option>
+
+                        </select>
+                        <!--  
                         <label for="categouryRemot"> choose one gym pt online </label>
                         <select name="categouryRemot" id="categouryRemot">
                             <option value="NoACategoury">--Please choose an option--</option> 
@@ -98,21 +101,23 @@
                             <option value="goTO"required>Go To Gym</option>
                             <option value="Child"required>Child</option> -->
 
-                    <!-- </select> -->
+                        <!-- </select> -->
 
-                    <label for="categouryPlace"> You Are Looking In : </label>
-                    <select name="categouryPlace" id="categouryPlace">
-                        <option value="NoPlaceCategoury">--Please choose Your City--</option>
-                        <option value="Amman" required>Amman</option>
-                        <option value="Zarqa" required>Zarqa</option>
-                        <option value="Irbid" required>Irbid</option>
-                        <!-- <option value=""required>Child</option> -->
-                    </select>
-                    <input id="submit" value="Filter Gyms" type="submit">
+                        <label for="categouryPlace">You Are Looking In:</label>
+                        <select name="categouryPlace" id="categouryPlace">
+                            <option value="NoPlaceCategoury">-Please choose Your City-</option>
+                            <option value="Amman" required>Amman</option>
+                            <option value="Zarqa" required>Zarqa</option>
+                            <option value="Irbid" required>Irbid</option>
+                            <!-- <option value=""required>Child</option> -->
+                        </select>
+                    </div>
+                    <div id="downForm">
+                        <input id="submit" value="Filter Gyms" type="submit">
+                    </div>
                 </fieldset>
             </form>
         </center>
-
 
 
 
