@@ -147,7 +147,6 @@ for (let i = 0; i < locations.length; i++) {
   if (locations[i].gymLocation == OnlineCourse) {
 
     GymCategories.prototype.inject(locations[i]);
-
     console.log('first',GymCategories);
 
 
