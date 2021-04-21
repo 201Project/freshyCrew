@@ -106,7 +106,7 @@ function inject() {
     let reserveBtn = document.createElement("button");
     textContainer.appendChild(reserveBtn);
 
-    price.textContent = "Price: " + locations[i].price;
+    price.textContent = "Price: "+ locations[i].price;
     heading.textContent = locations[i].names;
     description.textContent = locations[i].description;
     locationImage.src = locations[i].locationImg;
