@@ -16,23 +16,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway:wght@600&family=Roboto&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
 
-        <a href="index.html"><img src="http://via.placeholder.com/90x70/sss" alt="Logo" id="logo"></a>
-
-        <h1>Freshy Crew</h1>
+        <h1 id="logo"><span>F</span>reshy</h1>
         <center>
             <nav>
                 <ul>
                     <li> <a href="index.html">Home</a> </li>
-                    <li> <a href="reservations.html">Book Now</a> </li>
-                    <li> <a href="aboutus.html">About Us</a> </li>
+                    <li> <a href="reservations.html" style="word-spacing: -5px">Book now</a> </li>
                     <li> <a href="checkout.html">Checkout</a> </li>
-                    <li id="cart"></li>
+                    <li> <a href="calculating.html">BMI</a> </li>
+                    <li> <a href="aboutus.html" style="word-spacing: -5px">About Us</a> </li>
                 </ul>
 
 
@@ -44,7 +50,7 @@
 
         </span>
 
-        <!--------------------if we want to move it to app.js-------------------------------dark mode Function -->
+        <!-- ------------------if we want to move it to app.js-------------------------------dark mode Function -->
         <script>
             function myFunction() {
                 var element = document.body;
@@ -53,35 +59,34 @@
             }
         </script>
 
-        <!-- the end of the dark-mode Function--------------------------------------------------------------------- -->
+        <!-------------------- the end of the dark-mode Function--------------------------------------------------------------------- -->
     </header>
     <hr>
-
     <main>
         <center>
             <form action="reservations.html" id="customerData">
                 <fieldset>
                     <!-- <label for="lable1"> Name Region </label> -->
                     <!-- <input type="text" id="NameRegion" name="NameRegion" autocomplete="off" required> -->
-    
-    
+
+
                     <!-- <label id="lable2"> how many person? </label>
                     <input type="number" name="numberOfPer" id="numberOfPer" required   min="1" max="20"> -->
-    
+
                     <!-- <label for="slider">slide your budget</label>
                     <input type="range" min="50" max="250" value="100" name="slider"  id="slider"required> -->
                     <!-- <p id='sliderValue'></p> -->
                     <input type="checkbox" name="Online" id="Online">
                     <label for="Online" id="onlineLabel">Online Course Also!! </label>
-    
-    
+
+
                     <label for="categouryGender"> You Are Looking For a Gym To : </label>
                     <select name="categouryGender" id="categouryGender">
                         <option value="NoCategoury">--Please choose What Kind Of Gym--</option>
                         <option value="Male" required>Male</option>
                         <option value="Female" required>Female</option>
                         <option value="Both" required>Both</option>
-    
+
                     </select>
                     <!--  
                         <label for="categouryRemot"> choose one gym pt online </label>
@@ -91,9 +96,9 @@
                             <option value="OnlinePt"required>Online Personal Trainer</option>
                             <option value="goTO"required>Go To Gym</option>
                             <option value="Child"required>Child</option> -->
-    
+
                     <!-- </select> -->
-    
+
                     <label for="categouryPlace"> You Are Looking In : </label>
                     <select name="categouryPlace" id="categouryPlace">
                         <option value="NoPlaceCategoury">--Please choose Your City--</option>
@@ -107,7 +112,7 @@
             </form>
         </center>
 
-       
+
 
 
         <!-- getting the sliderr value ------------------------------------------------------------------>
@@ -125,62 +130,69 @@
         <section id="questions">
             <center>
 
-            
-            <div class="questionCard">
-                <div id="firstQ">
-                    <h2>How Much Do Gym Memberships Cost?</h2>
-                    <p>
-                        Gym memberships range from approximately $10 to $200 a month, with discounts available for
-                        longer
-                        subscriptions. Prices vary based on the equipment, hours of operation, number of classes
-                        offered,
-                        quality of instructors and workouts, included amenities and services, and access to other
-                        locations.
-                    </p>
+
+                <div class="questionCard">
+                    <div id="firstQ">
+                        <h2>How Much Do Gym Memberships Cost?</h2>
+                        <p>
+                            Gym memberships range from approximately $10 to $200 a month, with discounts available for
+                            longer
+                            subscriptions. Prices vary based on the equipment, hours of operation, number of classes
+                            offered,
+                            quality of instructors and workouts, included amenities and services, and access to other
+                            locations.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="questionCard">
-                <div id="secondQ">
-                    <h2>Is Gym Membership Worth It?</h2>
-                    <p>
-                        If you’re committed to a regular exercise routine, a gym membership can help you improve your
-                        physical and mental health, lose weight, expand your social circle, and give you access to lots
-                        of
-                        exercise equipment and amenities.
-                        Whether paying for a gym membership is worth it comes down to your lifestyle, preferences for
-                        exercise, and schedule. 
+                <div class="questionCard">
+                    <div id="secondQ">
+                        <h2>Is Gym Membership Worth It?</h2>
+                        <p>
+                            If you’re committed to a regular exercise routine, a gym membership can help you improve
+                            your
+                            physical and mental health, lose weight, expand your social circle, and give you access to
+                            lots
+                            of
+                            exercise equipment and amenities.
+                            Whether paying for a gym membership is worth it comes down to your lifestyle, preferences
+                            for
+                            exercise, and schedule.
+                    </div>
                 </div>
-            </div>
-            <div class="questionCard">
-                <div id="thirdQ">
-                    <h2>Can Joining a Gym Help Me Lose Weight?</h2>
-                    <p>
-                        Regular exercise can definitely help with weight loss efforts, especially if you meet or exceed
-                        the
-                        recommended amount of weekly exercise to lose weight. At a gym, you’ll have access to a variety
-                        of
-                        cardio machines, free weights, weight machines, and classes that may motivate you to do.
-                        
-                    </p>
+                <div class="questionCard">
+                    <div id="thirdQ">
+                        <h2>Can Joining a Gym Help Me Lose Weight?</h2>
+                        <p>
+                            Regular exercise can definitely help with weight loss efforts, especially if you meet or
+                            exceed
+                            the
+                            recommended amount of weekly exercise to lose weight. At a gym, you’ll have access to a
+                            variety
+                            of
+                            cardio machines, free weights, weight machines, and classes that may motivate you to do.
+
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="questionCard">
-                <div id="forthQ">
-                    <h2>What Should I Wear to the Gym?</h2>
-                    <p>
-                        Workout clothing should be made from fabrics that are light, breathable, and moisture-wicking,
-                        such
-                        as spandex and polyester blends. Working out could lead to profuse sweating, so technical
-                        fabrics
-                        will help keep you dry and chafe-free. Whether you wear loose or tight-fitting is your personal
-                        preference, as long as your clothes are comfortable and allow for a full range of motion.
-                       
-                    </p>
+                <div class="questionCard">
+                    <div id="forthQ">
+                        <h2>What Should I Wear to the Gym?</h2>
+                        <p>
+                            Workout clothing should be made from fabrics that are light, breathable, and
+                            moisture-wicking,
+                            such
+                            as spandex and polyester blends. Working out could lead to profuse sweating, so technical
+                            fabrics
+                            will help keep you dry and chafe-free. Whether you wear loose or tight-fitting is your
+                            personal
+                            preference, as long as your clothes are comfortable and allow for a full range of motion.
+
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </center>
+            </center>
         </section>
-        
+
         <section id="result">
 
 
@@ -195,38 +207,50 @@
     <hr>
 
     <footer>
-        <p> our vision we took it on us to show you all of the jordanian culture</p>
-        contact us
-        <ul id="contactUs">
-            <!-- instagram logo -->
-            <li> <a href="instagram.com"><i class="fa fa-instagram" style="font-size:36px "> </i> </a> </li>
-            <!-- facebooklogo -->
-            <li><a href="facebook.com"><i class="fa fa-facebook-square" style="font-size:36px"></i></a></li>
-            <!-- githublogo -->
-            <li> <a href="github.com"><i class="fa fa-github" style="font-size:36px"></i></a> </li>
-        </ul>
-        <ol>
-            <li>Amman-Jordan</li>
-            <li> phone:+9627999999 </li>
-        </ol>
+        <div id="footerRight">
+            <ol>
+                <li>Location: Amman-Jordan</li>
+                
+            </ol>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433868.0837108358!2d35.66743328283859!3d31.836036761128852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fb85d7981af%3A0x631c30c0f8dc65e8!2sAmman!5e0!3m2!1sen!2sjo!4v1618909378643!5m2!1sen!2sjo"
+                width="300" height="130" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+
+        <div id="mid">
+            <h2>Contact Us</h2>
+            <p>freshyCrew@gmail.com <br>
+               phone: +9627999999
+            </p>
+            <ul>
+                <!-- instagram logo -->
+                <li> <a href="instagram.com"><i class="fa fa-instagram" style="font-size:36px "> </i> </a> </li>
+                <!-- facebooklogo -->
+                <li><a href="facebook.com"><i class="fa fa-facebook-square" style="font-size:36px"></i></a></li>
+                <!-- githublogo -->
+                <li> <a href="github.com"><i class="fa fa-github" style="font-size:36px"></i></a> </li>
+            </ul>
+            <h6> &copy;Copyright2021 Reserved For freshy Crew&trade;</h6>
+        </div>
+
         <!-- creating the social media logos and link  -->
+        <div id="footerLeft">
+            <h2>Sitemap</h2>
+            <ol>
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="reservations.html">Book now</a> </li>
+                <li> <a href="checkout.html">Checkout</a> </li>
+                <li> <a href="calculating.html">BMI</a> </li>
+                <li> <a href="aboutus.html">About Us</a> </li>
+            </ol>
+        </div>
 
-        <ul>
-            <li> <i class="fa fa-cc-paypal" style="font-size:36px"></i></li>
-        </ul>
-        <ul id="ourInfo">
-            <li>About Us
-                <br>
-                ☎
-            </li>
-            <li>What We Do
 
-            </li>
-            <li>How It Work</li>
-        </ul>
-        Payment Methods
-        &copy;Copyright2021 Reserved For freshy Crew&trade;
+
     </footer>
+
+
     <script src="JS/cart.js"></script>
     <script src="JS/app.js"></script>
 
