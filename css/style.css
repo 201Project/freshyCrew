@@ -142,6 +142,7 @@ footer {
 footer ul li {
   display: inline;
   float: right;
+  
 }
 
 /*********************************Footer Area Style End****************************************/
@@ -290,10 +291,8 @@ hr{
 }
 
 #userInfo {
-  border: solid black 1px;
-  margin-top: 100px;
-  width: 60%;
-  margin-left: 250px;
+ padding-top: 30px;
+
 }
 
 /**************************************Reservations Style****************************/
@@ -418,3 +417,39 @@ main h1 {
 }
 
 /**************************************About US Style End***********************************/
+#reservedGym{
+  margin-top: 30px;
+}
+#reservedGym table tr td img {
+ width: 300px;
+ height: 150px;
+}
+#reservedGym table{
+ width: 1000px;
+ height: 200px;
+ background-image: linear-gradient(#A5A59D
+ 
+ ,rgb(190, 109, 109) ,#810000
+  
+ );
+}
+#reservedGym  td {
+
+  border-collapse: collapse;
+  padding: 50px;
+}
+#reservedGym td:not(:first-child)
+{
+  vertical-align: middle;
+  line-height: 100px;
+  font-size: 18px;
+}
+#reservedGym th{
+  font-weight: bolder;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+}
+#formCheckout{
+  padding-top: 30px ;
+}
