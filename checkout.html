@@ -63,7 +63,33 @@
 
     <main>
         <center>
-        <h2 id="emptytable">Nothing to show here, try adding some!</h2>
+            <h2 id="emptytable">Your cart is empty, Try adding some items from <a href="reservations.html">here</a></h2>
+            <section id="userInfo">
+            
+                <form id="formCheckout">
+                    <fieldset>
+                        <h3 id="form-header">Checkout Information</h3>
+                        <label for="userName">Name:&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" name="userName" id="userName" required autocomplete="off">
+                        <br>
+                        <label for="email">Email:&nbsp;&nbsp;&nbsp;</label>
+                        <input type="email" placeholder="example@gmail.com" name="email" id="email" required
+                            autocomplete="off">
+                        <br>
+                        <label for="phone">Phone:&nbsp;&nbsp;&nbsp;</label>
+                        <input type="tel" placeholder="962-792955860" name="phone" id="phone" required autocomplete="off">
+                        <br>
+                        <label for="address">Address:</label>
+                        <input type="text" name="address" id="address" required autocomplete="off">
+                        <br>
+                        <input type="submit" name="submit" id="submit-info">
+                        <input type="button" value="Cancel" name="cancel" id="cancel">
+    
+                    </fieldset>
+                </form>
+            </section>
+
+        
          <section id="reservedGym">
               <!--Table-->
 
@@ -75,30 +101,7 @@
 
         <!-----------------------Section for add Form By Alaa & Zainb-------------------------->
         <center>
-        <section id="userInfo">
-            
-            <form id="formCheckout">
-                
-                <fieldset>
-                    <label for="userName">Name:</label>
-                    <input type="text" name="userName" id="userName" required autocomplete="off">
-                    <br>
-                    <label for="email">Email:</label>
-                    <input type="email" placeholder="example@gmail.com" name="email" id="email" required
-                        autocomplete="off">
-                    <br>
-                    <label for="phone">Phone:</label>
-                    <input type="tel" placeholder="962-792955860" name="phone" id="phone" required autocomplete="off">
-                    <br>
-                    <label for="address">Address:</label>
-                    <input type="text" name="address" id="address" required autocomplete="off">
-                    <br>
-                    <input type="submit" name="submit" id="submit">
-                    <input type="button" value="Cancel" name="cancel" id="cancel">
-
-                </fieldset>
-            </form>
-        </section>
+        
     </center>
 <!-------------------------------------STARTnazmih and mohamad-------------------------------------------->
 

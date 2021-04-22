@@ -1,9 +1,8 @@
 'use strict';
 //-------------start form function for the checkout page By Alaa & Zainb---------------------------------------------------//
 
-let details = document.getElementById('detailsCheckout');
 let formCheckout = document.getElementById('formCheckout');
-formCheckout.addEventListener('submit', handleSaveCheckout);
+formCheckout.addEventListener('submit-info', handleSaveCheckout);
 let cartCounter = localStorage.getItem('cartCounter');
 let counter = document.getElementById('cart');
 let cancelBtn = document.getElementById('cancel');
@@ -11,30 +10,32 @@ let emptytable = document.getElementById('emptytable');
 let stringToArrayData;
 let table = document.createElement('table');
 let reservedGym = document.getElementById('reservedGym');
-let majorTotal =0;
-let total=0;
+let majorTotal = 0;
+let total = 0;
 let cart = document.getElementById('cart');
 let icon = document.createElement('i');
-let totaldiv=document.getElementById('total');
+let totaldiv = document.getElementById('total');
 function cartIcon() {
-  
+
   cart.appendChild(icon);
   icon.textContent = '(' + localStorage.getItem('cartCounter') + ')';
   icon.className = 'fa fa-shopping-cart';
   icon.style.fontSize = '24px';
-  cart.style.display='inline-block';
+  cart.style.display = 'inline-block';
 }
 
 
 
 if (cartCounter > 0) {
   emptytable.style.display = 'none';
+  formCheckout.style.display = 'inline-block';
 }
 else {
   counter.textContent = '';
   localStorage.removeItem('gyms');
   localStorage.removeItem('cartCounter');
   emptytable.style.display = 'block';
+  formCheckout.style.display = 'none';
 }
 
 
@@ -115,21 +116,32 @@ function getFromStorage() {
       reserveNumber.max = 12;
       tr.appendChild(reserveNumberTd);
       reserveNumberTd.appendChild(reserveNumber);
-
       let priceTd = document.createElement('td');
       tr.appendChild(priceTd);
       priceTd.textContent = stringToArrayData[i].gymCoast;
+      let productPrice= parseInt(priceTd.textContent);
       
       let totalTd = document.createElement('td');
       tr.appendChild(totalTd);
       totalTd.textContent = stringToArrayData[i].gymCoast;
-
+      
       reserveNumber.addEventListener('change', calculateTotal);
-      function calculateTotal() {
-        total=stringToArrayData[i].gymCoast * reserveNumber.value;
+      // let priceArr=[];
+      // console.log(productPrice++, 'dana');            
+      
+      // function calculateTotal() {
+      //   for (let j = 0; j < stringToArrayData[i].gymCoast.length; j++) {
+      //    let loopingPrice= priceArr[j].push(productPrice);
+      //   console.log('dana1',loopingPrice);
+      //   console.log('daana3',productPrice);
+      //   }
+        total = stringToArrayData[i].gymCoast * reserveNumber.value;
         totalTd.textContent = total;
         totaldiv.textContent=majorTotal;
+        console.log('fira', stringToArrayData[i].gymCoast * reserveNumber.value);
       }
+
+
       let clearTd = document.createElement('td');
       tr.appendChild(clearTd);
       let clearBtn = document.createElement('button');
@@ -150,9 +162,9 @@ function getFromStorage() {
           emptyContent();
         }
       }
-      
+
     }
-  
+
   }
   else {
     emptyContent();
@@ -166,8 +178,6 @@ function emptyContent() {
   reservedGym.innerHTML = '';
   table.innerHTML = '';
   emptytable.style.display = 'block';
-  cart.style.display='none';
+  cart.style.display = 'none';
+  formCheckout.style.display = 'none';
 }
-
-
-
