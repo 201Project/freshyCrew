@@ -15,24 +15,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
         input[type=number]:focus {
-            background-color: #d64c4c;
-            border-radius: 4px;
+            /* background-color: #d64c4c; */
+            background-color: whitesmoke;
+            border-radius: 8px;
 
         }
 
         input[type=button] {
             background-color: white;
-            border-radius: 4px;
+            border: 0 solid ;
+            border-radius: 8px;
             width: 105px;
             color: black;
             font-size: 15px;
 
         }
+        #calcStyle{
+            /* display: flex; */
+            width: 70%;
+    text-align: center;
+    display: flex;
+    margin: auto
+        }
 
 
         input[type=button]:hover {
-            background-color: #e40017;
-            border-radius: 4px;
+            /* background-color: #background-color: whitesmoke;; */
+            background-color: whitesmoke;
+            border: 1px solid  black;
+
+            border-radius: 8px;
             width: 105px;
             color: black;
             font-size: 15px;
@@ -61,22 +73,32 @@
 
         }
 
-        #addData h3 {
-            text-align: left;
+        
+
+
+        #cont1{
+            margin: auto auto;
+            width: 70%;
         }
-
-        #addData ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            text-align: left;
-
+        .bmi-text{
+            padding: 13px;
+            background-image: linear-gradient(480deg
+  ,hsla(0,0%,100%,.01),hsla(0,0%,100%,.01) 16.667%,rgba(46,46,46,.01) 0,rgba(46,46,46,.01) 33.334%,hsla(0,0%,88.6%,.01) 0,hsla(0,0%,88.6%,.01) 50.001000000000005%,hsla(0,0%,62.4%,.01) 0,hsla(0,0%,62.4%,.01) 66.668%,hsla(0,0%,58.4%,.01) 0,hsla(0,0%,58.4%,.01) 83.33500000000001%,rgba(43,43,43,.01) 0,rgba(43,43,43,.01) 100.002%),linear-gradient(503deg
+  ,hsla(0,0%,65.1%,.03),hsla(0,0%,65.1%,.03) 25%,hsla(0,0%,94.1%,.03) 0,hsla(0,0%,94.1%,.03) 50%,hsla(0,0%,47.5%,.03) 0,hsla(0,0%,47.5%,.03) 75%,rgba(40,40,40,.03) 0,rgba(40,40,40,.03)),linear-gradient(504deg
+  ,hsla(0,0%,82%,.01),hsla(0,0%,82%,.01) 25%,rgba(22,22,22,.01) 0,rgba(22,22,22,.01) 50%,hsla(0,0%,49%,.01) 0,hsla(0,0%,49%,.01) 75%,hsla(0,0%,80.4%,.01) 0,hsla(0,0%,80.4%,.01)),linear-gradient(247deg
+  ,hsla(0,0%,76.5%,.01),hsla(0,0%,76.5%,.01) 14.286%,rgba(64,64,64,.01) 0,rgba(64,64,64,.01) 28.572%,rgba(67,67,67,.01) 0,rgba(67,67,67,.01) 42.858%,hsla(0,0%,83.9%,.01) 0,hsla(0,0%,83.9%,.01) 57.144%,rgba(45,45,45,.01) 0,rgba(45,45,45,.01) 71.42999999999999%,rgba(47,47,47,.01) 71.43%,rgba(47,47,47,.01) 85.71600000000001%,hsla(0,0%,67.5%,.01) 0,hsla(0,0%,67.5%,.01) 100.002%),linear-gradient(230deg
+  ,hsla(0,0%,43.5%,.03),hsla(0,0%,43.5%,.03) 16.667%,hsla(0,0%,79.2%,.03) 0,hsla(0,0%,79.2%,.03) 33.334%,rgba(57,57,57,.03) 0,rgba(57,57,57,.03) 50.001000000000005%,hsla(0,0%,77.3%,.03) 0,hsla(0,0%,77.3%,.03) 66.668%,rgba(97,97,97,.03) 0,rgba(97,97,97,.03) 83.33500000000001%,rgba(56,56,56,.03) 0,rgba(56,56,56,.03) 100.002%),linear-gradient(289deg
+  ,rgba(88,88,88,.03),rgba(88,88,88,.03) 20%,hsla(0,0%,97.6%,.03) 0,hsla(0,0%,97.6%,.03) 40%,rgba(2,2,2,.03) 0,rgba(2,2,2,.03) 60%,hsla(0,0%,72.5%,.03) 0,hsla(0,0%,72.5%,.03) 80%,hsla(0,0%,76.9%,.03) 0,hsla(0,0%,76.9%,.03)),linear-gradient(299deg
+  ,hsla(0,0%,62.7%,.03),hsla(0,0%,62.7%,.03) 12.5%,hsla(0,0%,80%,.03) 0,hsla(0,0%,80%,.03) 25%,hsla(0,0%,42.4%,.03) 0,hsla(0,0%,42.4%,.03) 37.5%,hsla(0,0%,74.9%,.03) 0,hsla(0,0%,74.9%,.03) 50%,hsla(0,0%,90.6%,.03) 0,hsla(0,0%,90.6%,.03) 62.5%,rgba(70,70,70,.03) 0,rgba(70,70,70,.03) 75%,hsla(0,0%,65.1%,.03) 0,hsla(0,0%,65.1%,.03) 87.5%,hsla(0,0%,78%,.03) 0,hsla(0,0%,78%,.03)),linear-gradient(395deg
+  ,hsla(0,0%,45.5%,.02),hsla(0,0%,45.5%,.02) 20%,hsla(0,0%,55.3%,.02) 0,hsla(0,0%,55.3%,.02) 40%,hsla(0,0%,59.6%,.02) 0,hsla(0,0%,59.6%,.02) 60%,rgba(61,61,61,.02) 0,rgba(61,61,61,.02) 80%,hsla(0,0%,54.5%,.02) 0,hsla(0,0%,54.5%,.02)),linear-gradient(345deg
+  ,hsla(0,0%,89%,.01),hsla(0,0%,89%,.01) 20%,hsla(0,0%,41.2%,.01) 0,hsla(0,0%,41.2%,.01) 40%,rgba(72,72,72,.01) 0,rgba(72,72,72,.01) 60%,rgba(33,33,33,.01) 0,rgba(33,33,33,.01) 80%,rgba(57,57,57,.01) 0,rgba(57,57,57,.01)),linear-gradient(241deg
+   ,#FAFAFA, #e40017);
         }
-
-
 
         #divBMI {
 
-            line-height: 50px;
+            margin-top: 60px;
+            display: inline-block;
 
         }
 
@@ -105,37 +127,50 @@
         }
 
 
-
+#sec2{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    width: 80%;
+        margin: auto auto;
+}
 
         #myChart {
-
-            width: 350px !important;
-            height: 350px !important;
-            position: relative;
-            top: 120px;
-
-            float: right;
-            margin-bottom: 50px;
+            margin-top: 76px;
+    width: 481px !important;
+    height: 437px !important;
+    /* position: relative; */
+    /* top: 120px; */
+    /* float: right; */
+    margin-top: 50px !important;
+    margin-bottom: 50px;
+    margin: auto;
         }
 
         #defBMI {
-
-            width: 1010px;
+            width: 522px;
+            display: inline-block;
+            /* width: 1010px; */
             height: 210px;
             overflow: auto;
             text-align: justify;
             text-justify: inter-word;
             font-size: 25px;
+            margin-left: 108px;
+            line-height: 1.2;
         }
 
 
         #addData2 {
             line-height: 50px;
             text-align: justify;
-            margin-left: 450px;
+            margin-left: 140px;
             position: relative;
             top: 180px;
             left: 100px;
+        }
+        #addData h1{
+            
+    margin-bottom: 27px;
         }
 
 
@@ -163,25 +198,28 @@ float: right;
 */
 
         #addData IFRAME {
-
+            display: inline-block;
             border-radius: 50px;
 
         }
 
-
+#addData div{
+    display: inline-block;
+    width: 56%;
+    margin-left: 90px;
+    font-weight: 200;
+}
         #addData p {
             overflow: auto;
-            width: 1010px;
-            height: 410px;
+            /* width: 1010px; */
+            /* height: 410px; */
+            margin-bottom: 25px;
             text-align: justify;
-            position: absolute;
-            top: 50px;
-            right: 100px;
+            /* position: absolute; */
+            /* top: 50px; */
+            /* right: 100px; */
         }
-
-
-
-        
+        #addData h1{margin-bottom: 25px;}
     </style>
 
 </head>
@@ -225,19 +263,19 @@ float: right;
     <main>
 
 
-
-        <center>
-
-            <div id="divBMI">
+        <section id="para">
 
 
-                <img src="./img/BMI.jpg" width="250" height="250" alt="BMI"
-                    style="border-radius: 30px; float:left;margin-left: 40px; margin-top:190px;box-shadow:-25px 15px 20px #da4655;">
+            <h1
+                style="margin-top: 100px;text-align: center;;font-weight:bolder;font-size:27px;text-shadow:-25px 25px 20px #e40017;font-size:30px; -webkit-animation: skew 5s infinite linear;animation: skew 5s infinite linear;">
+                Body Mass Index
+            </h1>
+            <section id="cont1">
+                <div id="divBMI">
 
-
-                <h1
-                    style="margin-top:140px;float: right;margin-right:500px;font-weight:bolder;font-size:27px;text-shadow:-25px 25px 20px #e40017;font-size:30px; -webkit-animation: skew 5s infinite linear;animation: skew 5s infinite linear;">
-                    Body Mass Index</h1>
+                    <img src="./img/BMI.jpg" width="250" height="250" alt="BMI"
+                        style="border-radius: 30px;box-shadow:-25px 15px 20px #da4655;">
+                </div>
 
                 <div id="defBMI">
 
@@ -253,19 +291,20 @@ float: right;
 
 
                 </div>
-            </div>
+            </section>
 
 
+        </section>
 
-        </center>
         <!---------------------------------------------------- Form to calculate  BMI--------------------------------------------------->
-        <center>
-            <div class="bmi-text"
-                style="float: left; margin-left:-280px;border:solid black 2px; width:280px;margin-top :150px;border-radius: 30px;">
-                <h3 id="Cal" style="font-weight: bolder;font-size: 25px;margin-top: 20px;"> Calculate your bmi</h3><br>
+        <section id="calcStyle">
 
+        <div class="bmi-text"
+                style="           box-shadow:  8px 8px 8px 0 rgb(0 0 0 / 40%);
+                ; width:280px;margin-top :150px;border-radius: 30px;">
+                <h3 id="Cal" style="padding: 6px;font-weight: bolder;font-size: 25px;margin-top: 20px;"> Calculate your bmi</h3><br>
 
-                <form action="#">
+                <form action="#" id="formStyle">
                     <fieldset>
 
 
@@ -276,16 +315,18 @@ float: right;
 
                             <br> Height : <br>
                             <input type="number" id="Height" placeholder="in cm" min="110" max='300'
-                                style=" width: 60%;"></label>
+                                style=" padding: 10px;width: 60%;margin-top: 8px;background-color: whitesmoke;"></label>
                         <br><br>
-
-
+<!-- 
+                        padding: 10px;
+                        width: 60%;
+                        margin-top: 8px; -->
                         <br>
                         <label style="font-weight: bolder;"> Weight : <br><input type="number" id="Weight"
-                                placeholder="in kg " size="10" min="0" style=" width: 60%;"></label>
+                                placeholder="in kg " size="10" min="0" style="padding: 10px; width: 60%;background-color: whitesmoke;"></label>
                         <br><br>
 
-                        <input class="template-btn" type="button" value="What is BMI" id="button">
+                        <input class="template-btn" type="button" value="What is BMI" id="button"style="padding: 10px; background-color: whitesmoke;">
                         <br>
                         <br>
 
@@ -295,27 +336,30 @@ float: right;
 
 
 
-
-                <br><br>
             </div>
 
-            <div id="addData2" style="margin-left: 350px;">
+            <div id="addData2" style="">
 
             </div>
+        </section>   
+
+<section id="sec2">
+
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+<!---------------------------------------------------- End form to calculate  BMI--------------------------------------------------->
 
 
-            <div>
-                <canvas id="myChart"></canvas>
-            </div>
-        </center>
-        <!---------------------------------------------------- End form to calculate  BMI--------------------------------------------------->
+
+<div id="addData" ></div>
+
+</div>
 
 
+</section>
 
-        <div id="addData" style="position:relative; top:100px;margin-top:500px ">
-
-        </div>
-
+    
 
     </main>
 

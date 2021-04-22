@@ -88,14 +88,14 @@ function calBmi() {
         parent.textContent = '';
         // result2.setAttribute("value", resultBMI);
         underWeight.renderObjects();
-        listTips(tipsUnderWeight);
+        // listTips(tipsUnderWeight);
 
     } else if (bmi >= 16.5 && bmi <= 18.4) {
         resultBMI = "you are underweight";
         parent.textContent = '';
         //  result2.setAttribute("value", resultBMI);
         underWeight.renderObjects();
-        listTips(tipsUnderWeight);
+        // listTips(tipsUnderWeight);
 
     }
 
@@ -104,7 +104,7 @@ function calBmi() {
         parent.textContent = '';
         //  result2.setAttribute("value", resultBMI);
         normalWeight.renderObjects();
-        listTips(tipsNormalWeight);
+        // listTips(tipsNormalWeight);
     }
 
     else if (bmi >= 25 && bmi <= 30) {
@@ -112,7 +112,7 @@ function calBmi() {
         parent.textContent = '';
         //  result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
-        listTips(tipsOverWeight);
+        // listTips(tipsOverWeight);
     }
 
     else if (bmi >= 30.1 && bmi <= 34.9) {
@@ -120,7 +120,7 @@ function calBmi() {
         parent.textContent = '';
         // result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
-        listTips(tipsOverWeight);
+        // listTips(tipsOverWeight);
     }
 
     else if (bmi >= 35 && bmi <= 40) {
@@ -128,7 +128,7 @@ function calBmi() {
         parent.textContent = '';
         //result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
-        listTips(tipsOverWeight);
+        // listTips(tipsOverWeight);
     }
 
     else if (bmi > 40) {
@@ -136,7 +136,7 @@ function calBmi() {
         parent.textContent = '';
         //  result2.setAttribute("value", resultBMI);
         overWeight.renderObjects();
-        listTips(tipsOverWeight);
+        // listTips(tipsOverWeight);
     }
     button.removeEventListener("click", calBmi);
 }
@@ -186,18 +186,20 @@ advice.prototype.renderObjects = function () {
     apperVideo.setAttribute('src', this.source);
     apperVideo.setAttribute("height", "340");
     apperVideo.setAttribute("width", "340");
+    console.log(apperVideo)
     parent.appendChild(apperVideo);
 
 
-
+    let div=document.createElement('div')
+    parent.appendChild(div)
     let titlCaseEl = document.createElement('h1');
-    parent.appendChild(titlCaseEl);
+    div.appendChild(titlCaseEl);
     titlCaseEl.textContent = this.titlCase;
 
 
 
-    let def = document.createElement('p');
-    parent.appendChild(def);
+    var def = document.createElement('p');
+    div.appendChild(def);
     def.textContent = this.defintion;
 
 
@@ -241,7 +243,7 @@ advice.prototype.renderObjects = function () {
 
 
     let ULTitleEl = document.createElement('h3');
-    parent.appendChild(ULTitleEl)
+    def.appendChild(ULTitleEl)
     ULTitleEl.textContent = this.titlUl;
     console.log(this.titlUl);
     console.log(ULTitleEl);
