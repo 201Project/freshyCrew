@@ -51,10 +51,12 @@ header nav ul li a {
   color: #FFFFE3;
   text-decoration: none;
   padding-left: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
   
   
   
-  font-size: 22px;
+  ;
 }
 
 header button {
@@ -395,7 +397,7 @@ hr{
   font-size: 20px;
   line-height: 34px;
   margin-bottom: 50px;
-  text-align: center;
+  text-align:justify;
   
 }
 
@@ -772,3 +774,18 @@ hr{
 #myChart{
 width: 50% !important;
 }
+
+#total{
+  font-size: 23px;
+  font-family: monospace;
+  font-weight: bolder;
+  width: 43%;
+  height: 14%;
+  border: 2px solid black;
+  padding: 9px;
+  margin-top: -5%;
+}
+
+
+
+
