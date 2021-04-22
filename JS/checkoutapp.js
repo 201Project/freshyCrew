@@ -1,7 +1,7 @@
 'use strict';
 //-------------start form function for the checkout page By Alaa & Zainb---------------------------------------------------//
 let formCheckout = document.getElementById('formCheckout');
-formCheckout.addEventListener('submit-info', handleSaveCheckout);
+
 let cartCounter = localStorage.getItem('cartCounter');
 let counter = document.getElementById('cart');
 let cancelBtn = document.getElementById('cancel');
@@ -32,10 +32,12 @@ else {
   emptytable.style.display = 'block';
   formCheckout.style.display='none';
 }
+formCheckout.addEventListener('submit', handleSaveCheckout);
 function handleSaveCheckout(e) {
   e.preventDefault();
   let userName = e.target.userName.value;
   alert('Thanks from buying from us!, ' + userName);
+  console.log(userName);
   let nameInput = document.getElementById('userName');
   nameInput.value = '';
   let email = document.getElementById('email');
@@ -44,7 +46,8 @@ function handleSaveCheckout(e) {
   phone.value = '';
   let address = document.getElementById('address');
   address.value = '';
-  emptyContent();
+  
+  
 }
 cancelBtn.addEventListener('click', cancelOrder);
 function cancelOrder() {
@@ -176,6 +179,7 @@ function emptyContent() {
   emptytable.style.display = 'block';
   cart.style.display='none';
   formCheckout.style.display='none';
+  totaldiv.style.display='none';
 }
 
 
